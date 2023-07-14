@@ -29,7 +29,6 @@ interface ImportMetaEnv {
   readonly VITE_COMPRESS_TYPE?: 'gzip' | 'brotliCompress' | 'deflate' | 'deflateRaw';
   /**
    * 是否开启生产模式下的mock
-   * @description 生产模式下会拦截XHR，导致无法获取response，不使用mock请求时设置为N
    */
   readonly VITE_PROD_MOCK?: 'Y' | 'N';
 }
