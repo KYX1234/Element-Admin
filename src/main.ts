@@ -1,5 +1,15 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import { setupAssets } from './plugins'
 
-createApp(App).mount('#app')
+async function setupApp() {
+	const app = createApp(App)
+
+	// 静态资源css,js,font等
+	setupAssets()
+
+	// mount app
+	app.mount('#app')
+}
+
+void setupApp()
