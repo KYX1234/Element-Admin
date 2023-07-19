@@ -1,0 +1,6 @@
+dist
+.husky
+*.d.ts
+public
+node_modules
+components.d.ts
