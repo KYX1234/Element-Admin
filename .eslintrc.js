@@ -6,7 +6,7 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 2020,
+    ecmaVersion: 2018,
     sourceType: 'module',
     jsxPragma: 'React',
     ecmaFeatures: {
@@ -46,6 +46,7 @@ module.exports = {
         varsIgnorePattern: '^_'
       }
     ],
+    'vue/comment-directive': 'off',
     'vue/script-setup-uses-vars': 'error',
     'vue/multi-word-component-names': 'off',
     'vue/custom-event-name-casing': 'off',
