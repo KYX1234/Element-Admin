@@ -30,9 +30,6 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
-    "@iconify-icons/ep": "^1.2.12",
-    "@iconify-json/ep": "^1.1.11",
-    "@iconify/vue": "^4.1.1",
     "@types/node": "^18.16.19",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^6.1.0",

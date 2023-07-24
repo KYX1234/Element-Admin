@@ -3,9 +3,10 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { createStyleImportPlugin, ElementPlusResolve } from 'vite-plugin-style-import'
+import path from 'path'
 
 export default function unplugin(viteEnv: ImportMetaEnv) {
-  const { VITE_LOCAL_ICON_PREFFIX } = viteEnv
+  const { VITE_LOCAL_ICON_PREFIX } = viteEnv
 
   return [
     AutoImport({
@@ -20,8 +21,8 @@ export default function unplugin(viteEnv: ImportMetaEnv) {
       resolves: [ElementPlusResolve()]
     }),
     createSvgIconsPlugin({
-      iconDirs: ['src/assets/svg'],
-      symbolId: `${VITE_LOCAL_ICON_PREFFIX}-[dir]-[name]`
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
+      symbolId: `${VITE_LOCAL_ICON_PREFIX}-[dir]-[name]`
     })
   ]
 }

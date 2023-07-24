@@ -8,7 +8,7 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  iconName: {
+  name: {
     type: String,
     required: true
   },
@@ -21,12 +21,5 @@ const props = defineProps({
     default: 18
   }
 })
-const symbolId = computed(() => `#icon-${props.iconName}`)
+const symbolId = computed(() => `#${props.name}`)
 </script>
-
-<style scoped>
-.svg-icon {
-  fill: currentColor;
-  vertical-align: middle;
-}
-</style>
