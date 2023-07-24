@@ -27,7 +27,7 @@ stats.html
 *.sln
 *.sw?
 
-/src/types/components.d.ts
+types/components.d.ts
+types/auto-imports.d.ts
 package-lock.json
-pnpm-lock.yaml
 yarn.lock

@@ -18,7 +18,7 @@ export function setupVitePlugins(viteEnv: ImportMetaEnv): (PluginOption | Plugin
     vue(),
     vueJsx(),
     VueDevtools(),
-    ...unplugin(),
+    ...unplugin(viteEnv),
     mock(viteEnv),
     unocss(),
     progress()
