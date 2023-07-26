@@ -6,7 +6,6 @@ import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './src/util'
 
 export default defineComponent({
   name: 'Icon',
-  components: { svgIcon },
   props: {
     name: {
       type: String,

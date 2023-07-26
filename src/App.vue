@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <el-button type="primary" class="m-4" @click="test">123</el-button>
-    <Icon name="local-icon-user" />
-    <!-- <svg-icon name="local-icon-user" /> -->
-  </div>
+  <el-config-provider :locale="zhCN">
+    <router-view />
+  </el-config-provider>
 </template>
 
 <script lang="ts" setup>
-const test = () => {
-  ElMessage.success('hahhasd')
-}
+import zhCN from 'element-plus/es/locale/lang/zh-cn'
+// import en from 'element-plus/es/locale/en'
 </script>
 
 <style lang="scss" scoped></style>
