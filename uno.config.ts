@@ -59,6 +59,7 @@ export default defineConfig({
   theme: {
     colors: {
       primary: 'var(--el-color-primary)',
+      primary_dark:'var(--el-color-primary-dark-2)',
       info: 'var(--el-info-color)',
       success: 'var(--el-success-color)',
       warning: 'var(--el-warning-color)',
