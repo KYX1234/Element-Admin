@@ -34,6 +34,7 @@
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
+    "@unocss/eslint-config": "^0.53.6",
     "@unocss/preset-uno": "0.53.5",
     "@unocss/transformer-directives": "0.53.5",
     "@unocss/vite": "0.53.5",

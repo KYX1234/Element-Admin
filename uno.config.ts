@@ -54,17 +54,23 @@ export default defineConfig({
     'fixed-center': 'fixed-lt flex-center wh-full',
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden text-ellipsis',
-    'transition-base': 'transition-all duration-300 ease-in-out'
+    'transition-base': 'transition-all duration-300 ease-in-out',
+    card: 'overflow-hidden rounded-2 bg-white shadow-md p-4'
   },
   theme: {
     colors: {
       primary: 'var(--el-color-primary)',
-      primary_dark:'var(--el-color-primary-dark-2)',
+      primary_dark: 'var(--el-color-primary-dark-2)',
       info: 'var(--el-info-color)',
       success: 'var(--el-success-color)',
       warning: 'var(--el-warning-color)',
       error: 'var(--el-error-color)',
       dark: '#18181c'
+    },
+    animation: {
+      keyframes: {
+        wiggle: '{0%,100%{transform: translateX(-10px);}50%{transform: translateX(10px);}}'
+      }
     }
   }
 })
