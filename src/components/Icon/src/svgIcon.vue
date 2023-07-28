@@ -18,7 +18,7 @@ const props = defineProps({
   },
   size: {
     type: [Number, String],
-    default: 18
+    default: 16
   }
 })
 const symbolId = computed(() => `#${props.name}`)

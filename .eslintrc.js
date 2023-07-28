@@ -18,7 +18,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'eslint-config-prettier',
-    '@unocss'
+
   ],
   rules: {
     'space-before-function-paren': 'off',
