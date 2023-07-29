@@ -35,7 +35,7 @@ export default defineComponent({
     }
     // 本地icon
     if (props.name.indexOf(VITE_LOCAL_ICON_PREFIX) === 0) {
-      return () => createVNode(svgIcon, { ...props })
+      return () => createVNode('i', {}, [createVNode(svgIcon, { ...props })])
     }
   }
 })

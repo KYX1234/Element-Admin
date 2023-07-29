@@ -55,7 +55,6 @@ export default defineConfig({
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden text-ellipsis',
     'transition-base': 'transition-all duration-300 ease-in-out',
-    card: 'overflow-hidden rounded-2 bg-white shadow-md p-4'
   },
   theme: {
     colors: {
