@@ -1,12 +1,14 @@
 import { App } from 'vue'
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { LoginRoute, RootRoute, ErrorPageRoute } from './routes'
 import { createRouterGuard } from './guard'
 /** 静态路由 */
 export const constantRoutes: RouteRecordRaw[] = [LoginRoute, RootRoute, ErrorPageRoute]
 
+const { VITE_ROUTE_HISTORY } = import.meta.env
+
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: VITE_ROUTE_HISTORY === 'hash' ? createWebHashHistory() : createWebHistory(),
   routes: constantRoutes,
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
