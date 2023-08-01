@@ -12,6 +12,7 @@ const __APP_INFO__ = {
 
 export default defineConfig((configEnv: ConfigEnv) => {
   const viteEnv = loadEnv(configEnv.mode, process.cwd()) as ImportMetaEnv
+
   return {
     base: viteEnv.VITE_BASE_URL,
     resolve: {

@@ -21,7 +21,7 @@
           </div>
         </el-form-item>
         <el-form-item>
-          <el-button class="w-full" size="large" type="primary">登录</el-button>
+          <el-button class="w-full" size="large" type="primary" @click="onLogin">登录</el-button>
         </el-form-item>
         <el-form-item>
           <el-button class="w-full" size="large">注册</el-button>
@@ -33,12 +33,19 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
+import { login } from '@/api/user'
 import LoginBg from './components/login-bg/index.vue'
+
 const checked = ref(false)
 const form = reactive({
   username: 'admin',
   passsword: '123456'
 })
+
+const onLogin = async () => {
+  const { data } = await login(form)
+  localStorage.setItem('token', data.token)
+}
 </script>
 
 <style lang="scss" scoped></style>
