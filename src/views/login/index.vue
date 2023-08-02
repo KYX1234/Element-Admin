@@ -17,7 +17,7 @@
         <el-form-item>
           <div class="w-full flex-y-center justify-between">
             <el-checkbox v-model="checked">记住密码</el-checkbox>
-            <el-text type="primary">忘记密码?</el-text>
+            <el-text type="primary" class="cursor-pointer">忘记密码?</el-text>
           </div>
         </el-form-item>
         <el-form-item>

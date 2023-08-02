@@ -1,4 +1,5 @@
 import type { Router } from 'vue-router'
+import { storage } from '@/utils/storage'
 
 /**
  * 路由守卫函数
@@ -6,7 +7,7 @@ import type { Router } from 'vue-router'
  */
 export function createRouterGuard(router: Router) {
   const whiteList = ['/login']
-  const isLogin = Boolean(localStorage.getItem('token'))
+  const isLogin = Boolean(storage.get('token'))
 
   router.beforeEach(async (to, from, next) => {
     if (whiteList.includes(to.path)) {
