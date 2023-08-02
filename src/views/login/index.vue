@@ -40,7 +40,6 @@ import { storage } from '@/utils/storage'
 import LoginBg from './components/loginBg.vue'
 import { formRules } from './utils/rule'
 import { useRoute, useRouter } from 'vue-router'
-
 const formRef = ref()
 const checked = ref(false)
 const loading = ref(false)
