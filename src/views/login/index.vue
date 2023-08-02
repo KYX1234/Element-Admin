@@ -7,12 +7,12 @@
         <el-text class="!text-7" type="primary">ElementAdmin</el-text>
       </div>
       <h3 class="mt-6 font-500 text-primary text-18px" type="primary">登录</h3>
-      <el-form :model="form" class="mt-6" label-position="top">
-        <el-form-item>
-          <el-input v-model="form.username" size="large" placeholder="请输入账号" />
+      <el-form ref="formRef" :model="form" :rules="formRules" class="mt-6" size="large">
+        <el-form-item prop="username">
+          <el-input v-model="form.username" placeholder="请输入账号" />
         </el-form-item>
-        <el-form-item>
-          <el-input v-model="form.passsword" show-password size="large" placeholder="请输入密码" />
+        <el-form-item prop="password">
+          <el-input v-model="form.password" show-password placeholder="请输入密码" />
         </el-form-item>
         <el-form-item>
           <div class="w-full flex-y-center justify-between">
@@ -21,10 +21,12 @@
           </div>
         </el-form-item>
         <el-form-item>
-          <el-button class="w-full" size="large" type="primary" @click="onLogin">登录</el-button>
+          <el-button class="w-full" type="primary" @click="onLogin" :loading="loading"
+            >登录
+          </el-button>
         </el-form-item>
         <el-form-item>
-          <el-button class="w-full" size="large">注册</el-button>
+          <el-button class="w-full">注册</el-button>
         </el-form-item>
       </el-form>
     </el-card>
@@ -34,17 +36,36 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { login } from '@/api/user'
-import LoginBg from './components/login-bg/index.vue'
+import { storage } from '@/utils/storage'
+import LoginBg from './components/loginBg.vue'
+import { formRules } from './utils/rule'
+import { useRoute, useRouter } from 'vue-router'
 
+const formRef = ref()
 const checked = ref(false)
+const loading = ref(false)
+const route = useRoute()
+const router = useRouter()
 const form = reactive({
   username: 'admin',
-  passsword: '123456'
+  password: '123456'
 })
 
 const onLogin = async () => {
-  const { data } = await login(form)
-  localStorage.setItem('token', data.token)
+  await formRef.value?.validate()
+  try {
+    loading.value = true
+    const { data } = await login(form)
+    storage.set('token', data.token)
+    router.push((route.query?.redirect || '/') as string)
+    ElNotification({
+      title: '登录成功!',
+      type: 'success',
+      message: '欢迎回来，admin'
+    })
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
