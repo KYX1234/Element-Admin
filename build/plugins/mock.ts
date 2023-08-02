@@ -5,8 +5,8 @@ export default (viteEnv: ImportMetaEnv) => {
   return viteMockServe({
     mockPath: 'mock',
     prodEnabled: prodMock, //生产是否启用mock开关(默认开启)
-    configPath: `
-			import { setupProdMockServer } from '../../mock';
+    injectCode: `
+      import { setupProdMockServer } from '../mock'
 			setupProdMockServer()
 		`
   })
