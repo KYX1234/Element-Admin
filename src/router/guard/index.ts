@@ -15,6 +15,7 @@ export function createRouterGuard(router: Router) {
     if (!isLogin) {
       return next({ path: '/login', query: { redirect: to.fullPath } })
     }
+    next()
   })
   // router.afterEach((to) => {})
 }
