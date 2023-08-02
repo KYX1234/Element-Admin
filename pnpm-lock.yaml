@@ -17,9 +17,6 @@ dependencies:
   element-plus:
     specifier: ^2.3.8
     version: 2.3.8(vue@3.3.4)
-  mockjs:
-    specifier: ^1.1.0
-    version: 1.1.0
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -94,6 +91,9 @@ devDependencies:
   lint-staged:
     specifier: ^13.2.3
     version: 13.2.3
+  mockjs:
+    specifier: ^1.1.0
+    version: 1.1.0
   prettier:
     specifier: ^3.0.0
     version: 3.0.0
@@ -2121,6 +2121,7 @@ packages:
   /commander@11.0.0:
     resolution: {integrity: sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==}
     engines: {node: '>=16'}
+    dev: true
 
   /commander@7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
@@ -3905,6 +3906,7 @@ packages:
     hasBin: true
     dependencies:
       commander: 11.0.0
+    dev: true
 
   /mrmime@1.0.1:
     resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
