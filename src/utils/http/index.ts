@@ -1,5 +1,4 @@
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
-import { ElMessage } from 'element-plus'
 import { useUserStore } from '@/store/modules/user'
 
 const request = axios.create({

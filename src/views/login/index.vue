@@ -3,7 +3,7 @@
     <LoginBg />
     <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80" shadow="never">
       <div class="flex-y-center justify-between">
-        <SystemLogo size="64" color="var(--el-color-primary)" />
+        <Icon name="local-icon-logo" size="64" color="var(--el-color-primary)" />
         <el-text class="!text-7" type="primary">ElementAdmin</el-text>
       </div>
       <h3 class="mt-6 font-500 text-primary text-18px" type="primary">登录</h3>

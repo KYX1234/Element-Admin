@@ -1,5 +1,5 @@
 import type { Router } from 'vue-router'
-import { storage } from '@/utils/storage'
+import { useUserStore } from '@/store/modules/user'
 
 const whiteList = ['/login']
 /**
@@ -8,11 +8,12 @@ const whiteList = ['/login']
  */
 export function createRouterGuard(router: Router) {
   router.beforeEach(async (to, from, next) => {
-    const isLogin = Boolean(storage.get('token'))
+    const user = useUserStore()
+
     if (whiteList.includes(to.path)) {
       return next()
     }
-    if (!isLogin) {
+    if (!user.isLogin) {
       return next({ path: '/login', query: { redirect: to.fullPath } })
     }
     next()

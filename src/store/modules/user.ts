@@ -6,5 +6,10 @@ export const useUserStore = defineStore({
   state: () => ({
     token: storage.get('token')
   }),
+  getters: {
+    isLogin(state) {
+      return Boolean(state.token)
+    }
+  },
   actions: {}
 })
