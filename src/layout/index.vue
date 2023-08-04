@@ -1,24 +1,20 @@
 <template>
-  <el-container>
-    <el-aside width="200px" class="flex-col-stretch sider">
-      <Logo :show-title="collapsed" />
-      <Menu />
-    </el-aside>
-    <el-container class="h-screen">
-      <el-header>Header</el-header>
-      <el-main>
-        <router-view />
-      </el-main>
+  <el-container class="h-full">
+    <Asider />
+    <el-container direction="vertical">
+      <Header />
+      <TagsView />
+      <Main />
       <el-backtop title="回到顶部" />
     </el-container>
   </el-container>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import Logo from './components/Logo/index.vue'
-import Menu from './components/Menu/index.vue'
-const collapsed = ref<boolean>(true)
+import Asider from './components/Asider/index.vue'
+import Header from './components/Header/index.vue'
+import TagsView from './components/TagsView/index.vue'
+import Main from './components/Main/index.vue'
 </script>
 
 <style lang="scss" scoped>
