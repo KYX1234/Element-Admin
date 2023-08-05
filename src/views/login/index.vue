@@ -35,16 +35,16 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { login } from '@/api/user'
-import { storage } from '@/utils/storage'
 import LoginBg from './components/loginBg.vue'
 import { formRules } from './utils/rule'
-import { useRoute, useRouter } from 'vue-router'
+import { useUserStore } from '@/store/modules/user'
+
+defineOptions({ name: 'Login' })
+
 const formRef = ref()
 const checked = ref(false)
 const loading = ref(false)
-const route = useRoute()
-const router = useRouter()
+const userStore = useUserStore()
 const form = reactive({
   username: 'admin',
   password: '123456'
@@ -54,14 +54,7 @@ const onLogin = async () => {
   await formRef.value?.validate()
   try {
     loading.value = true
-    const { data } = await login(form)
-    storage.set('token', data.token)
-    router.push((route.query?.redirect || '/') as string)
-    ElNotification({
-      title: '登录成功!',
-      type: 'success',
-      message: '欢迎回来，admin'
-    })
+    await userStore.login(form)
   } finally {
     loading.value = false
   }

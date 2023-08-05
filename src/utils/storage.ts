@@ -15,6 +15,7 @@ const creatStorage = () => {
       const data = JSON.parse(item)
       const { value, expire } = data
       if (expire === null || expire >= Date.now()) {
+        console.log(222, value)
         return value
       } else {
         remove(key)
