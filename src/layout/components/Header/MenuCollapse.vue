@@ -7,7 +7,6 @@
 
 <script lang="ts" setup>
 import { useAppStore } from '@/store/modules/app'
-defineOptions({ name: 'MenuCollapse' })
 const app = useAppStore()
 </script>
 

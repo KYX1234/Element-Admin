@@ -1,15 +1,19 @@
 <template>
-  <el-aside width="200px" class="flex-col-stretch sider">
-    <Logo :show-title="collapsed" />
+  <el-aside
+    :width="app.isCollapse ? '65px' : '210px'"
+    class="flex-col-stretch border-r border-r-[var(--el-border-color-light)] transition-width duration-300"
+  >
+    <Logo />
     <Menu />
   </el-aside>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
 import Logo from './Logo.vue'
 import Menu from './Menu.vue'
-const collapsed = ref<boolean>(true)
+import { useAppStore } from '@/store/modules/app'
+defineOptions({ name: 'Asider' })
+const app = useAppStore()
 </script>
 
 <style lang="scss" scoped></style>

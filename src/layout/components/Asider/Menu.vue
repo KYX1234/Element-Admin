@@ -1,6 +1,11 @@
 <template>
   <el-scrollbar>
-    <el-menu default-active="2" class="!border-0">
+    <el-menu
+      default-active="2"
+      class="!border-0"
+      :collapse-transition="false"
+      :collapse="app.isCollapse"
+    >
       <el-sub-menu index="1">
         <template #title>
           <el-icon><el-icon-location /></el-icon>
@@ -26,6 +31,10 @@
   </el-scrollbar>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useAppStore } from '@/store/modules/app'
+
+const app = useAppStore()
+</script>
 
 <style lang="scss" scoped></style>
