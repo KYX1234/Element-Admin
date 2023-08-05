@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 export const useAppStore = defineStore({
   id: 'app',
   state: () => ({
-    isCollapse: false
+    isCollapse: false,
+    isMobile: false
   }),
   getters: {},
   actions: {
