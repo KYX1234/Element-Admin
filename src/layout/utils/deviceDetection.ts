@@ -1,15 +1,24 @@
 import { useResizeObserver, MaybeComputedElementRef } from '@vueuse/core'
-export const isMobile = () => {
+import { useAppStore } from '@/store/modules/app'
+
+const appStore = useAppStore()
+appStore.setIsMobile(isMobile())
+
+function isMobile() {
   return ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod'].some((i: string) => {
     return navigator.userAgent.includes(i)
   })
 }
 
-export const deviceDetection = (target: MaybeComputedElementRef | MaybeComputedElementRef[]) => {
-  return useResizeObserver(target, (entries) => {
-    if (isMobile()) return
+export function deviceDetection(target: MaybeComputedElementRef | MaybeComputedElementRef[]) {
+  useResizeObserver(target, (entries) => {
+    if (appStore.isMobile) return
     const { width } = entries[0].contentRect
-    console.log(width)
     // 兼容app
+    if (width <= 640) {
+      appStore.setSmallScreen(true)
+    } else {
+      appStore.setSmallScreen(false)
+    }
   })
 }

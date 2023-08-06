@@ -4,13 +4,19 @@ export const useAppStore = defineStore({
   id: 'app',
   state: () => ({
     isCollapse: false,
-    isMobile: false
+    isMobile: false,
+    isSmallScreen: false
   }),
   getters: {},
   actions: {
-    /** 折叠菜单 */
-    toggleCollapse() {
-      this.isCollapse = !this.isCollapse
+    setIsCollapse(collapse: boolean) {
+      this.isCollapse = collapse
+    },
+    setIsMobile(mobile: boolean) {
+      this.isMobile = mobile
+    },
+    setSmallScreen(smallScreen: boolean) {
+      this.isSmallScreen = smallScreen
     }
   }
 })
