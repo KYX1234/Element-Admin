@@ -1,0 +1,10 @@
+<template>
+  <div class="flex-center h-14 w-10 cursor-pointer hover:bg-#f6f6f6">
+    <Icon name="local-icon-fullscreen" size="20" v-if="true" />
+    <Icon name="local-icon-fullscreen-exit" size="20" v-else />
+  </div>
+</template>
+
+<script lang="ts" setup></script>
+
+<style lang="scss" scoped></style>

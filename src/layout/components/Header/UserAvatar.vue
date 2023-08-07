@@ -1,7 +1,9 @@
 <template>
   <el-dropdown trigger="click">
-    <el-avatar :src="avatar" />
-    <span>{{ user.userInfo.userName }}</span>
+    <div class="flex-center h-14 p-3 cursor-pointer hover:bg-#f6f6f6">
+      <el-avatar :src="avatar" size="small" class="shrink-0 m-r-2" />
+      <span>{{ user.userInfo.userName || 'xxxxx' }}</span>
+    </div>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item>个人中心</el-dropdown-item>
