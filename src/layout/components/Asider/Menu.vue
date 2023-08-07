@@ -2,9 +2,9 @@
   <el-scrollbar>
     <el-menu
       default-active="2"
-      class="!border-0"
+      class="!border-0 !w-full"
       :collapse-transition="false"
-      :collapse="app.isCollapse"
+      :collapse="appStore.isCollapse"
     >
       <el-sub-menu index="1">
         <template #title>
@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import { useAppStore } from '@/store/modules/app'
 
-const app = useAppStore()
+const appStore = useAppStore()
 </script>
 
 <style lang="scss" scoped></style>

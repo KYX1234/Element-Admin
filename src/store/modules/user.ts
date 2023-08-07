@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
-import { storage } from '@/utils/storage'
 import router from '@/router'
 import { login } from '@/api/user'
+import { storage } from '@/utils/storage'
 
 export const useUserStore = defineStore({
   id: 'user',
@@ -17,10 +17,10 @@ export const useUserStore = defineStore({
   actions: {
     setToken(token: string) {
       this.token = token
+      storage.set('token', token)
     },
     async login(params: any) {
       const { data } = await login(params)
-      storage.set('token', data.token)
       this.setToken(data.token)
       router.push((router.currentRoute.value.query?.redirect || '/') as string)
       ElNotification({
