@@ -1,7 +1,5 @@
 <template>
-  <el-header
-    class="flex-y-center border-b border-b-[var(--el-border-color-light)] !h-14 !p-x-0 justify-between"
-  >
+  <el-header class="header">
     <div class="flex-y-center h-full">
       <MenuCollapse />
     </div>
@@ -17,4 +15,8 @@ import UserAvatar from './UserAvatar.vue'
 defineOptions({ name: 'PageHeader' })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.header {
+  @apply flex-y-center justify-between h-14 p-x-0 bg-white border-b border-b-[var(--el-border-color-light)];
+}
+</style>

@@ -4,8 +4,7 @@ export const useAppStore = defineStore({
   id: 'app',
   state: () => ({
     isCollapse: false,
-    isMobile: false,
-    isSmallScreen: false
+    isMobile: false
   }),
   getters: {},
   actions: {
@@ -14,9 +13,6 @@ export const useAppStore = defineStore({
     },
     setIsMobile(mobile: boolean) {
       this.isMobile = mobile
-    },
-    setSmallScreen(smallScreen: boolean) {
-      this.isSmallScreen = smallScreen
     }
   }
 })

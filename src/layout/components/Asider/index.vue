@@ -1,7 +1,7 @@
 <template>
   <el-aside
     class="sider"
-    :class="appStore.isSmallScreen ? 'fixed top-0 bottom-0 left-0' : ''"
+    :class="appStore.isMobile ? 'fixed top-0 bottom-0 left-0' : ''"
     :width="collapseWidth"
   >
     <Logo />
@@ -18,8 +18,7 @@ defineOptions({ name: 'Asider' })
 const appStore = useAppStore()
 
 const collapseWidth = computed(() => {
-  if (appStore.isSmallScreen) {
-    appStore.setIsCollapse(true)
+  if (appStore.isMobile) {
     return appStore.isCollapse ? '0' : '210px'
   } else {
     return appStore.isCollapse ? '65px' : '210px'
@@ -29,6 +28,6 @@ const collapseWidth = computed(() => {
 
 <style lang="scss" scoped>
 .sider {
-  @apply flex-col-stretch border-r test border-r-[var(--el-border-color-light)] transition-all duration-300;
+  @apply flex-col-stretch bg-white z-99 shadow-[0_0_3px_var(--el-border-color-light)] transition-all duration-300;
 }
 </style>
