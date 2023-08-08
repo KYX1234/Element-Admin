@@ -1,14 +1,23 @@
-import { useResizeObserver, MaybeComputedElementRef } from '@vueuse/core'
+import {
+  useResizeObserver,
+  MaybeComputedElementRef,
+  breakpointsTailwind,
+  useBreakpoints
+} from '@vueuse/core'
 import { useAppStore } from '@/store/modules/app'
+import { unref } from 'vue'
 
 const appStore = useAppStore()
-appStore.setIsCollapse(isMobile())
 
 export function isMobile() {
-  return ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod'].some((i: string) => {
-    return navigator.userAgent.includes(i)
-  })
+  const breakpoints = useBreakpoints(breakpointsTailwind)
+  const status = unref(breakpoints.smaller('sm'))
+  appStore.setIsCollapse(status)
+  appStore.setIsMobile(status)
+  return status
 }
+
+isMobile()
 
 export function deviceDetection(target: MaybeComputedElementRef | MaybeComputedElementRef[]) {
   useResizeObserver(target, (entries) => {

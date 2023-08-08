@@ -1,18 +1,40 @@
-# Vue 3 + TypeScript + Vite
+## 简介
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+ElementAdmin 是一个基于 Vue3、Vite、TypeScript、Unocss、Element plus、Pinia、VueUse 的后台模版，它使用了最新的前端技术栈，内置主题配置、动态菜单、权限校验等，基于 mock 实现的动态数据展示，可以当作开箱的模板，也可用于学习参考。
 
-## Recommended IDE Setup
+## 特性
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 动态路由菜单
+- 二次封装实用高扩展性组件
+- 最新技术栈，使用 `Vue3`、`Typescript`、`Pinia`、`Vite` 等前端前沿技术
 
-## Type Support For `.vue` Imports in TS
+## 预览
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- https://a1059784729.gitee.io/element-admin/
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## 代码仓库
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- [gitee](https://gitee.com/A1059784729/Element-Admin)
+- [github](https://github.com/KYX1234/Element-Admin)
+
+## 项目示例图
+
+## 安装使用
+
+- 安装依赖
+
+```bash
+npm install
+```
+
+- 运行
+
+```bash
+npm run dev
+```
+
+- 打包
+
+```bash
+npm run build
+```
