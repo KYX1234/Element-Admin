@@ -28,6 +28,6 @@ const collapseWidth = computed(() => {
 
 <style lang="scss" scoped>
 .sider {
-  @apply flex-col-stretch bg-white z-99 shadow-[0_0_1px_#888] transition-width duration-300;
+  @apply flex-col-stretch bg-white z-99  shadow-[0_0_1px_#888] transition-width duration-300;
 }
 </style>
