@@ -13,11 +13,11 @@
       <el-tab-pane label="代办(1)" name="3" />
     </el-tabs>
     <section>
-      <div v-for="(item, index) in list" :key="index" class="flex m-b-5">
-        <el-avatar class="w-10 h-10 rounded-full m-r-4 shrink-0" :src="item.avatar" />
+      <div v-for="(item, index) in list" :key="index" class="flex mb-5">
+        <el-avatar class="w-10 h-10 rounded-full mr-4 shrink-0" :src="item.avatar" />
         <div class="flex-1 w-0">
           <div>
-            <span class="m-r-4 text-14px">{{ item.name }}</span>
+            <span class="mr-4 text-14px">{{ item.name }}</span>
             <span class="time text-12px text-gray">{{ item.datetime }}</span>
           </div>
           <div class="truncate">{{ item.content }}</div>

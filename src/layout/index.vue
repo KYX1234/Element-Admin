@@ -19,7 +19,6 @@ import Header from './components/Header/index.vue'
 import TagsView from './components/TagsView/index.vue'
 import Main from './components/Main/index.vue'
 import { deviceDetection } from './utils/deviceDetection'
-import { onMounted } from 'vue'
 import { useAppStore } from '@/store/modules/app'
 
 defineOptions({ name: 'Layout' })
@@ -28,9 +27,8 @@ const appWrapperRef = ref()
 const appStore = useAppStore()
 const showAppMask = computed(() => appStore.isMobile && !appStore.isCollapse)
 const closeAppMask = () => appStore.setIsCollapse(true)
-onMounted(() => {
-  deviceDetection(appWrapperRef)
-})
+
+deviceDetection(appWrapperRef)
 </script>
 
 <style lang="scss" scoped></style>

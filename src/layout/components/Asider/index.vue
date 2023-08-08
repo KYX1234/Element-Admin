@@ -14,11 +14,12 @@ import { computed } from 'vue'
 import Logo from './Logo.vue'
 import Menu from './Menu.vue'
 import { useAppStore } from '@/store/modules/app'
+import { isMobile } from '@/layout/utils/deviceDetection'
 defineOptions({ name: 'Asider' })
 const appStore = useAppStore()
 
 const collapseWidth = computed(() => {
-  if (appStore.isMobile) {
+  if (isMobile()) {
     return appStore.isCollapse ? '0' : '210px'
   } else {
     return appStore.isCollapse ? '65px' : '210px'

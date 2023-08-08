@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar>
+  <el-scrollbar class="w-99%">
     <el-menu
       default-active="2"
       class="!border-0 !w-full"
@@ -22,6 +22,62 @@
       <el-menu-item index="2">
         <el-icon><el-icon-menu /></el-icon>
         <span>Navigator Two</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
+      </el-menu-item>
+      <el-menu-item index="3" disabled>
+        <el-icon><el-icon-document /></el-icon>
+        <span>Navigator Three</span>
       </el-menu-item>
       <el-menu-item index="3" disabled>
         <el-icon><el-icon-document /></el-icon>
