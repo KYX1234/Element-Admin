@@ -1,6 +1,6 @@
 <template>
-  <svg aria-hidden="true" :style="{ width: size + 'px', height: size + 'px' }">
-    <use :xlink:href="symbolId" :fill="color" />
+  <svg aria-hidden="true" :style="styles">
+    <use :xlink:href="symbolId" fill="currentColor" />
   </svg>
 </template>
 
@@ -22,4 +22,11 @@ const props = defineProps({
   }
 })
 const symbolId = computed(() => `#${props.name}`)
+const styles = computed(() => {
+  return {
+    width: props.size + 'px',
+    height: props.size + 'px',
+    color: props.color
+  }
+})
 </script>

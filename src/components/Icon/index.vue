@@ -1,5 +1,5 @@
 <script lang="ts">
-import { createVNode, defineComponent, resolveComponent } from 'vue'
+import { h, defineComponent, resolveComponent } from 'vue'
 import { ElIcon } from 'element-plus'
 import svgIcon from './src/svgIcon.vue'
 import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './src/util'
@@ -24,18 +24,18 @@ export default defineComponent({
     // el-icon
     if (props.name.indexOf(VITE_EL_ICON_PREFIX) === 0) {
       return () =>
-        createVNode(
+        h(
           ElIcon,
           {
             size: props.size,
             color: props.color
           },
-          [createVNode(resolveComponent(props.name.replace(`${VITE_EL_ICON_PREFIX}-`, '')))]
+          () => h(resolveComponent(props.name.replace(`${VITE_EL_ICON_PREFIX}-`, '')))
         )
     }
     // 本地icon
     if (props.name.indexOf(VITE_LOCAL_ICON_PREFIX) === 0) {
-      return () => createVNode('i', {}, [createVNode(svgIcon, { ...props })])
+      return () => h('i', h(svgIcon, { ...props }))
     }
   }
 })

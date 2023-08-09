@@ -1,5 +1,5 @@
 <template>
-  <el-main class="m-1px bg-#f0f2f5 dark:bg-#101014">
+  <el-main class="mt-1px bg-#f0f2f5 dark:bg-#101014">
     <router-view />
   </el-main>
 </template>
