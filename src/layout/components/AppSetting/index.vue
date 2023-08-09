@@ -24,7 +24,8 @@
 import { ref } from 'vue'
 import { Sunny, Moon } from '@element-plus/icons-vue'
 import { useAppStore } from '@/store/modules/app'
-const showButton = import.meta.env.DEV
+// 生产模式不需要可自行修改
+const showButton = import.meta.env.DEV || import.meta.env.VITE_APP_SETTING === 'Y'
 const appStore = useAppStore()
 const settingVisible = ref(false)
 </script>
