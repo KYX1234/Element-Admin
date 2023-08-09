@@ -1,7 +1,7 @@
 <template>
   <el-popover ref="popover" placement="bottom-end" width="250" trigger="click">
     <template #reference>
-      <div class="flex-center h-14 w-10 cursor-pointer hover:bg-#f6f6f6">
+      <div class="flex-center h-14 w-10 cursor-pointer hover:bg-fill">
         <el-badge :value="3" :max="99">
           <Icon name="local-icon-bell" size="20" />
         </el-badge>

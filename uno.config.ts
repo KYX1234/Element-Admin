@@ -54,16 +54,18 @@ export default defineConfig({
     'fixed-center': 'fixed-lt flex-center wh-full',
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden text-ellipsis',
-    'transition-base': 'transition-all duration-300 ease-in-out',
+    'transition-base': 'transition-all duration-300 ease-in-out'
   },
   theme: {
     colors: {
       primary: 'var(--el-color-primary)',
-      primary_dark: 'var(--el-color-primary-dark-2)',
+      primary_dark: 'var(--el-color-primary-light-7)',
       info: 'var(--el-info-color)',
       success: 'var(--el-success-color)',
       warning: 'var(--el-warning-color)',
       error: 'var(--el-error-color)',
+      fill: 'var(--el-fill-color-lighter)',
+      background: 'var(--el-bg-color)',
       dark: '#18181c'
     },
     animation: {

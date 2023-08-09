@@ -1,5 +1,5 @@
 <template>
-  <div class="relative wh-full flex-center bg-#eef2f6">
+  <div class="relative wh-full flex-center bg-#eef2f6 dark:bg-#00152900">
     <LoginBg />
     <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80" shadow="never">
       <div class="flex-y-center justify-between">

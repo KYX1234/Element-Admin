@@ -1,6 +1,6 @@
 <template>
   <el-dropdown trigger="click">
-    <div class="flex-center h-14 w-10 cursor-pointer hover:bg-#f6f6f6">
+    <div class="flex-center h-14 w-10 cursor-pointer hover:bg-fill">
       <Icon name="local-icon-language" size="20" />
     </div>
     <template #dropdown>

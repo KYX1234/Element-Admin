@@ -1,6 +1,6 @@
 <template>
   <el-dropdown trigger="click">
-    <div class="flex-center h-14 p-3 cursor-pointer hover:bg-#f6f6f6">
+    <div class="flex-center h-14 p-3 cursor-pointer hover:bg-fill">
       <el-avatar :src="avatar" size="small" class="shrink-0 mr-2" />
       <span>{{ user.userInfo.userName || 'xxxxx' }}</span>
     </div>

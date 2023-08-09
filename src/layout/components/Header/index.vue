@@ -25,6 +25,6 @@ defineOptions({ name: 'PageHeader' })
 
 <style lang="scss" scoped>
 .header {
-  @apply flex-y-center justify-between h-14 p-x-0 bg-white shadow-[0_1px_2px_#0015291];
+  @apply flex-y-center justify-between h-14 p-x-0 bg-[var(--el-bg-color)] shadow-[0_1px_2px_#0015291];
 }
 </style>

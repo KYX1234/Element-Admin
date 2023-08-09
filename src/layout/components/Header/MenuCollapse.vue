@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center h-14 w-10 cursor-pointer hover:bg-#f6f6f6" @click="toggleCollapse">
+  <div class="flex-center h-14 w-10 cursor-pointer hover:bg-fill" @click="toggleCollapse">
     <Icon name="local-icon-align-left" size="20" v-if="!appStore.isCollapse" />
     <Icon name="local-icon-align-right" size="20" v-else />
   </div>
