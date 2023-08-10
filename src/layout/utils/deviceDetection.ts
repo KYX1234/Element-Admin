@@ -6,7 +6,6 @@ import {
 } from '@vueuse/core'
 import { useAppStore } from '@/store/modules/app'
 import { unref } from 'vue'
-import { storage } from '@/utils/storage'
 
 const appStore = useAppStore()
 
@@ -19,14 +18,6 @@ export function isMobile() {
 }
 
 isMobile()
-
-export function setDefaultTheme() {
-  if (storage.get('isDark') !== null) {
-    appStore.setIsDark(storage.get('isDark')!)
-    return
-  }
-}
-setDefaultTheme()
 
 export function deviceDetection(target: MaybeComputedElementRef | MaybeComputedElementRef[]) {
   useResizeObserver(target, (entries) => {
