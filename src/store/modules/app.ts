@@ -17,7 +17,11 @@ export const useAppStore = defineStore({
     },
     setIsDark(dark: boolean) {
       this.isDark = dark
-      document.documentElement.classList.toggle('dark')
+      if (dark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
       storage.set('isDark', dark)
     }
   }
