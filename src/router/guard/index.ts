@@ -1,23 +1,36 @@
 import type { Router } from 'vue-router'
-import { useUserStore } from '@/store/modules/user'
 import NProgress from '@/utils/nprogress'
+import { useUserStore } from '@/store/modules/user'
+import { useRouteStore } from '@/store/modules/route'
+
 const whiteList = ['/login']
 /**
  * 路由守卫函数
  * @param router - 路由实例
  */
 export function createRouterGuard(router: Router) {
+  const userStore = useUserStore()
+  const routeStore = useRouteStore()
   router.beforeEach(async (to, from, next) => {
     NProgress.start()
-    const user = useUserStore()
-
-    if (whiteList.includes(to.path)) {
+    // 访问登录页，有token不做跳转，没有跳转登录页
+    if (to.path === '/login') {
+      if (userStore.isLogin) return next(from.fullPath)
       return next()
     }
+    // 白名单放行
+    if (whiteList.includes(to.path)) return next()
 
-    if (!user.isLogin) {
-      return next({ path: '/login', query: { redirect: to.fullPath } })
+    // token不存在，跳登录页
+    if (!userStore.isLogin) return next({ path: '/login', query: { redirect: to.fullPath } })
+
+    // 未初始化路由，等待执行
+    if (!routeStore.isInitRoute) {
+      await routeStore.initRoute()
+      return next({ ...to, replace: true })
     }
+
+    // 默认放行
     next()
   })
 

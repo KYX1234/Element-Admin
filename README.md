@@ -24,17 +24,17 @@ ElementAdmin 是一个基于 Vue3、Vite、TypeScript、Unocss、Element plus、
 - 安装依赖
 
 ```bash
-npm install
+pnpm install
 ```
 
 - 运行
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 - 打包
 
 ```bash
-npm run build
+pnpm run build
 ```
