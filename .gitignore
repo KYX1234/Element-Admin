@@ -10,9 +10,9 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-# dist
-# dist-ssr
-# dist.zip
+dist
+dist-ssr
+dist.zip
 *.local
 stats.html
 
