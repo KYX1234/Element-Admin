@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute-lt z-1 wh-full overflow-hidden">
+  <div class="absolute-lt z-1 wh-full overflow-hidden bg-contain bg">
     <div class="squares square1"></div>
     <div class="squares square2"></div>
     <div class="squares square3"></div>
@@ -13,6 +13,9 @@
 <script lang="ts" setup></script>
 
 <style scoped lang="scss">
+.bg {
+  background-image: url('@/assets/image/dots.png');
+}
 .squares {
   @apply absolute rounded-20% bg-gradient-to-r from-primary to-primary_dark;
 }
