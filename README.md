@@ -38,3 +38,7 @@ pnpm run dev
 ```bash
 pnpm run build
 ```
+
+## 更新日志
+
+[更新日志](./CHANGELOG.md)
