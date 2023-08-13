@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
 import { asyncRouter } from '@/router/modules'
-import { filterRoutesByRole } from '@/router/helpers/filterRoutesByRole'
+import router from '@/router'
 import { useUserStore } from './user'
+import { addPathMatch, filterRoutesByRole } from '@/router/helpers'
 
 interface IRouteState {
   /** 权限路由的模式(static|dynamic) */
@@ -25,11 +26,14 @@ export const useRouteStore = defineStore({
       } else {
         this.initDynamicRoute()
       }
+      addPathMatch()
     },
     initStaticRoute() {
       const userStore = useUserStore()
       const routes = filterRoutesByRole(asyncRouter, userStore.userInfo.role)
-      console.log(routes)
+      routes.forEach((route) => {
+        router.addRoute(route)
+      })
       this.isInitRoute = true
     },
     initDynamicRoute() {}

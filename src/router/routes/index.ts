@@ -23,17 +23,18 @@ export const LoginRoute: RouteRecordRaw = {
 
 /** error */
 export const ErrorPageRoute: RouteRecordRaw = {
-  path: '/:path(.*)*',
-  name: 'errorPage',
+  path: '/error',
+  name: 'error',
+  redirect: '/error/404',
   component: Layout,
   meta: {
-    title: 'errorPage',
+    title: 'error',
     hideBreadcrumb: true
   },
   children: [
     {
-      path: '/:path(.*)*',
-      name: 'ErrorPageSon',
+      path: '/error/404',
+      name: '404',
       component: () => import('@/views/error/404.vue')
     }
   ]
