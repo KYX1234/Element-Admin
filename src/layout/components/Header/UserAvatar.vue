@@ -2,7 +2,7 @@
   <el-dropdown trigger="click">
     <div class="flex-center h-14 p-3 cursor-pointer hover:bg-fill">
       <el-avatar :src="avatar" size="small" class="shrink-0 mr-2" />
-      <span>{{ user.userInfo.userName || 'xxxxx' }}</span>
+      <span>{{ userStore.userInfo.username || 'xxxxx' }}</span>
     </div>
     <template #dropdown>
       <el-dropdown-menu>
@@ -16,9 +16,9 @@
 <script lang="ts" setup>
 import avatar from '@/assets/image/avatar.jpg'
 import { useUserStore } from '@/store/modules/user'
-const user = useUserStore()
+const userStore = useUserStore()
 
-const onLogout = () => user.logout()
+const onLogout = () => userStore.logout()
 </script>
 
 <style lang="scss" scoped></style>
