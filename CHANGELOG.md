@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/KYX1234/Element-Admin/compare/v1.0.0...v1.0.1) (2023-08-13)
+
+
+### Docs
+
+* 新增changelog ([ebd76f2](https://github.com/KYX1234/Element-Admin/commit/ebd76f2e564329752aaa1e9de359235f5a56937b))
+
 ## 1.0.0 (2023-08-13)
 
 
