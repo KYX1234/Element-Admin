@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/KYX1234/Element-Admin/compare/v1.2.2...v1.2.3) (2023-08-14)
+
+
+### CI
+
+* 修改 ([c340df7](https://github.com/KYX1234/Element-Admin/commit/c340df70983596b1728c0cbf34c6da20ef4a0b59))
+
 ## [1.2.2](https://github.com/KYX1234/Element-Admin/compare/v1.2.1...v1.2.2) (2023-08-14)
 
 
