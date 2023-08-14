@@ -1,5 +1,4 @@
 import { RouteRecordRaw } from 'vue-router'
-const Layout = () => import('@/layout/index.vue')
 
 /** 根路由 */
 export const RootRoute: RouteRecordRaw = {
@@ -19,23 +18,4 @@ export const LoginRoute: RouteRecordRaw = {
   meta: {
     title: '登录'
   }
-}
-
-/** error */
-export const ErrorPageRoute: RouteRecordRaw = {
-  path: '/error',
-  name: 'error',
-  redirect: '/error/404',
-  component: Layout,
-  meta: {
-    title: 'error',
-    hideBreadcrumb: true
-  },
-  children: [
-    {
-      path: '/error/404',
-      name: '404',
-      component: () => import('@/views/error/404.vue')
-    }
-  ]
 }

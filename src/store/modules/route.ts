@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
-import { asyncRouter } from '@/router/modules'
 import router from '@/router'
 import { useUserStore } from './user'
+import { asyncRouter } from '@/router/modules'
+import { RouteRecordRaw } from 'vue-router'
 import { addPathMatch, filterRoutesByRole } from '@/router/helpers'
 
 interface IRouteState {
@@ -9,13 +10,15 @@ interface IRouteState {
   routeMode: ImportMetaEnv['VITE_ROUTE_MODE']
   /** 是否初始化权限路由的生成 */
   isInitRoute: boolean
+  menus: RouteRecordRaw[]
 }
 
 export const useRouteStore = defineStore({
   id: 'route',
   state: (): IRouteState => ({
     routeMode: import.meta.env.VITE_ROUTE_MODE,
-    isInitRoute: false
+    isInitRoute: false,
+    menus: []
   }),
   getters: {},
   actions: {
@@ -26,16 +29,23 @@ export const useRouteStore = defineStore({
       } else {
         this.initDynamicRoute()
       }
-      addPathMatch()
     },
+    /** 静态权限路由 */
     initStaticRoute() {
       const userStore = useUserStore()
       const routes = filterRoutesByRole(asyncRouter, userStore.userInfo.role)
       routes.forEach((route) => {
         router.addRoute(route)
       })
+      addPathMatch()
+      this.setMenus(routes)
       this.isInitRoute = true
     },
-    initDynamicRoute() {}
+    /** 动态权限路由 */
+    initDynamicRoute() {},
+    /** 设置菜单 */
+    setMenus(menus: RouteRecordRaw[]) {
+      this.menus = menus
+    }
   }
 })

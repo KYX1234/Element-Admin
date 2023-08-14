@@ -17,6 +17,5 @@ export function getModulesRoutes(modules: Record<string, any>) {
   Object.keys(modules).forEach((key: string) => {
     routes.push(modules[key].default)
   })
-
   return sortRoutes(routes)
 }

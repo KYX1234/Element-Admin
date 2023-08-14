@@ -26,7 +26,7 @@ export function createRouterGuard(router: Router) {
 
     // 未初始化路由，等待执行
     if (!routeStore.isInitRoute) {
-      await routeStore.initRoute()
+      routeStore.initRoute()
       return next({ ...to, replace: true })
     }
 
