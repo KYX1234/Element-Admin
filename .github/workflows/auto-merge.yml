@@ -43,32 +43,25 @@ jobs:
         with:
           node-version: 16
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
+      # 添加缓存，逻辑和CI Workflow里的一样
+      - name: Cache
+        id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{hashFiles('**/pnpm-lock.yaml')}}
+
+      # 安装依赖。命中缓存则跳过此步
+      - name: Installing Dependencies
+        if: steps.cache-dependencies.outputs.cache-hit !== 'true'
         run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-        # 安装 pnpm
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
+          npm i pnpm -g
+          pnpm install
 
       # 安装项目依赖
       - name: Build Github
         run: |
-          pnpm install --no-frozen-lockfile
           pnpm run build
 
       # 将构建后的文件部署到 gh-pages 分支
