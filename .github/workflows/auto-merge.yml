@@ -32,24 +32,46 @@ jobs:
     needs: [auto-merge]
     runs-on: ubuntu-latest
     steps:
+        # 检出仓库代码
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Pnpm
-        uses: pnpm/action-setup@v2
+        # 安装 node.js 环境
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          version: latest
+          node-version: 16
 
-      - name: use Node
-        uses: actions/setup-node@v2.1.2
+        # 安装 pnpm
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
         with:
-          node-version: '16.x'
+          version: 7
+          run_install: false
 
+        # 检查和设置 pnpm 缓存
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      # 安装项目依赖
       - name: Build Github
         run: |
           pnpm install --no-frozen-lockfile
           pnpm run build
 
+      # 将构建后的文件部署到 gh-pages 分支
       - name: Deploy Github
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -64,7 +86,7 @@ jobs:
           src: github/KYX1234 # 源端账户名(github)
           dst: gitee/A1059784729 # 目的端账户名(gitee)
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }} # SSH密钥对中的私钥
-          dst_token: ${{ secrets.MY_TOKEN2 }} # Gitee账户的私人令牌
+          dst_token: ${{ secrets.GITEE_TOKEN }} # Gitee账户的私人令牌
           account_type: user # 账户类型
           clone_style: 'https' # 使用https方式进行clone，也可以使用ssh
           debug: true # 启用后会显示所有执行命令
