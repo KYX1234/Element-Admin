@@ -1,8 +1,9 @@
 <template>
   <el-scrollbar class="w-99%">
     <el-menu
-      default-active="2"
+      :default-active="activeMenu"
       class="!border-0 !w-full"
+      router
       :collapse-transition="false"
       :collapse="appStore.isCollapse"
     >
@@ -13,14 +14,17 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/modules/app'
 import { useRouteStore } from '@/store/modules/route'
 import { filterRoutesToMenus } from '@/router/helpers/filterMenus'
 import MenuItem from './MenuItem.vue'
 
+const route = useRoute()
 const appStore = useAppStore()
 const routeStore = useRouteStore()
 const menus = computed(() => filterRoutesToMenus(routeStore.menus))
+const activeMenu = computed(() => route.path)
 </script>
 
 <style lang="scss" scoped></style>

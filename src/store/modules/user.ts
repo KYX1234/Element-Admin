@@ -28,11 +28,11 @@ export const useUserStore = defineStore({
       const { data } = await login(params)
       this.setToken(data.token)
       router.push((router.currentRoute.value.query?.redirect || '/') as string)
-      this.setUserInfo()
+      await this.setUserInfo()
       ElNotification({
         title: '登录成功!',
         type: 'success',
-        message: '欢迎回来，admin'
+        message: `欢迎回来，${this.userInfo.username}`
       })
     },
     logout() {
