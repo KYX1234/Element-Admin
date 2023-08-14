@@ -1,9 +1,9 @@
 import { App } from 'vue'
 import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router'
-import { LoginRoute, RootRoute } from './routes'
+import { LoginRoute, RootRoute, PathMatchRoute } from './routes'
 import { createRouterGuard } from './guard'
 /** 静态路由 */
-export const constantRoutes: RouteRecordRaw[] = [LoginRoute, RootRoute]
+export const constantRoutes: RouteRecordRaw[] = [LoginRoute, RootRoute, PathMatchRoute]
 
 const { VITE_ROUTE_HASH } = import.meta.env
 

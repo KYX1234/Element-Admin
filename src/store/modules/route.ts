@@ -3,7 +3,7 @@ import router from '@/router'
 import { useUserStore } from './user'
 import { asyncRouter } from '@/router/modules'
 import { RouteRecordRaw } from 'vue-router'
-import { addPathMatch, filterRoutesByRole } from '@/router/helpers'
+import { filterRoutesByRole } from '@/router/helpers'
 
 interface IRouteState {
   /** 权限路由的模式(static|dynamic) */
@@ -37,7 +37,6 @@ export const useRouteStore = defineStore({
       routes.forEach((route) => {
         router.addRoute(route)
       })
-      addPathMatch()
       this.setMenus(routes)
       this.isInitRoute = true
     },

@@ -1,4 +1,5 @@
 import { RouteRecordRaw } from 'vue-router'
+const Layout = () => import('@/layout/index.vue')
 
 /** 根路由 */
 export const RootRoute: RouteRecordRaw = {
@@ -17,5 +18,15 @@ export const LoginRoute: RouteRecordRaw = {
   component: () => import('@/views/login/index.vue'),
   meta: {
     title: '登录'
+  }
+}
+
+/** 任意路由 */
+export const PathMatchRoute: RouteRecordRaw = {
+  name: 'not-found',
+  path: '/:pathMatch(.*)*',
+  component: Layout,
+  meta: {
+    title: '未找到'
   }
 }

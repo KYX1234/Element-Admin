@@ -27,8 +27,11 @@ export function createRouterGuard(router: Router) {
     // 未初始化路由，等待执行
     if (!routeStore.isInitRoute) {
       routeStore.initRoute()
-      return next({ ...to, replace: true })
+      return next({ path: to.fullPath, replace: true, query: to.query, hash: to.hash })
     }
+
+    // 匹配到未知路径,跳404
+    if (to.name === 'not-found') return next({ path: '/error' })
 
     // 默认放行
     next()
