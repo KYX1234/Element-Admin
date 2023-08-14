@@ -54,7 +54,7 @@ jobs:
 
       # 安装依赖。命中缓存则跳过此步
       - name: Installing Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit !== 'true'
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           npm i pnpm -g
           pnpm install
