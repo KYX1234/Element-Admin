@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/KYX1234/Element-Admin/compare/v1.0.1...v1.1.0) (2023-08-14)
+
+
+### Features
+
+* 路由 ([884af93](https://github.com/KYX1234/Element-Admin/commit/884af93ff1daf3ad9b5af75081c3c778dc38a321))
+
 ## [1.0.1](https://github.com/KYX1234/Element-Admin/compare/v1.0.0...v1.0.1) (2023-08-13)
 
 
