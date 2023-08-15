@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.3.0](https://github.com/KYX1234/Element-Admin/compare/v1.2.1...v1.3.0) (2023-08-15)
+
+
+### Features
+
+* tabs开发 ([551e812](https://github.com/KYX1234/Element-Admin/commit/551e812a790abe4f156eaf56ce030966b0d92d07))
+
+
+### Bug Fixes
+
+* ci ([b24195e](https://github.com/KYX1234/Element-Admin/commit/b24195e8bb8fc04e1c9e8d27d06da16975236b7f))
+
+
+### CI
+
+* 修改 ([07a4eb5](https://github.com/KYX1234/Element-Admin/commit/07a4eb5dcc13c4178ee8079ed53c7e983359780d))
+* 修改ci ([95c3eed](https://github.com/KYX1234/Element-Admin/commit/95c3eede7b99c7e3300a6033c613738b45b46386))
+* 修改缓存 ([f53e7c1](https://github.com/KYX1234/Element-Admin/commit/f53e7c19203136be658eedcacec372b4df2f3b6e))
+
 ## [1.2.1](https://github.com/KYX1234/Element-Admin/compare/v1.2.0...v1.2.1) (2023-08-14)
 
 
