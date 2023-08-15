@@ -25,6 +25,7 @@ jobs:
         uses: 'pascalgn/automerge-action@v0.15.6'
         env:
           GITHUB_TOKEN: '${{ secrets.MY_TOKEN2 }}'
+          MERGE_LABELS: ''
           MERGE_FILTER_AUTHOR: 'KYX1234'
 
   push-to-gh-pages:
