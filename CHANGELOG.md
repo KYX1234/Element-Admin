@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.2](https://github.com/KYX1234/Element-Admin/compare/v1.2.1...v1.2.2) (2023-08-15)
+
+
+### CI
+
+* 修改 ([07a4eb5](https://github.com/KYX1234/Element-Admin/commit/07a4eb5dcc13c4178ee8079ed53c7e983359780d))
+* 修改ci ([95c3eed](https://github.com/KYX1234/Element-Admin/commit/95c3eede7b99c7e3300a6033c613738b45b46386))
+* 修改缓存 ([f53e7c1](https://github.com/KYX1234/Element-Admin/commit/f53e7c19203136be658eedcacec372b4df2f3b6e))
+
 ## [1.2.1](https://github.com/KYX1234/Element-Admin/compare/v1.2.0...v1.2.1) (2023-08-14)
 
 
