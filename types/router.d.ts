@@ -8,6 +8,8 @@ declare module 'vue-router' {
     icon?: string
     /** 菜单排序 */
     sort?: number
+    /** 固定页签 */
+    affix?: boolean
     /** 是否缓存 */
     isKeep?: boolean
     /** 是否隐藏菜单(路由还在) */

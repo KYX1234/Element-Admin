@@ -1,5 +1,7 @@
 <template>
-  <div>Analysis-待开发</div>
+  <el-card shadow="never">
+    <div>Analysis-待开发</div>
+  </el-card>
 </template>
 
 <script lang="ts" setup>

@@ -38,7 +38,7 @@
 import { reactive, ref } from 'vue'
 import LoginBg from './components/loginBg.vue'
 import DarkSwitch from './components/darkSwitch.vue'
-import { formRules } from './utils/rule'
+import { formRules } from './helpers/rule'
 import { useUserStore } from '@/store/modules/user'
 
 defineOptions({ name: 'Login' })
@@ -64,3 +64,4 @@ const onLogin = async () => {
 </script>
 
 <style lang="scss" scoped></style>
+./helpers/rule

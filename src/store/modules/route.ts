@@ -2,15 +2,14 @@ import { defineStore } from 'pinia'
 import router from '@/router'
 import { useUserStore } from './user'
 import { asyncRouter } from '@/router/modules'
-import { RouteRecordRaw } from 'vue-router'
-import { filterRoutesByRole } from '@/router/helpers'
+import { filterRoutesByRole, filterRoutesToMenus } from '@/router/helpers'
 
 interface IRouteState {
   /** 权限路由的模式(static|dynamic) */
   routeMode: ImportMetaEnv['VITE_ROUTE_MODE']
   /** 是否初始化权限路由的生成 */
   isInitRoute: boolean
-  menus: RouteRecordRaw[]
+  menus: App.Menu[]
 }
 
 export const useRouteStore = defineStore({
@@ -37,13 +36,14 @@ export const useRouteStore = defineStore({
       routes.forEach((route) => {
         router.addRoute(route)
       })
-      this.setMenus(routes)
+      const menus = filterRoutesToMenus(routes)
+      this.setMenus(menus)
       this.isInitRoute = true
     },
     /** 动态权限路由 */
     initDynamicRoute() {},
     /** 设置菜单 */
-    setMenus(menus: RouteRecordRaw[]) {
+    setMenus(menus: App.Menu[]) {
       this.menus = menus
     }
   }

@@ -5,6 +5,10 @@ export default {
   path: '/dashboard',
   component: () => import('@/layout/index.vue'),
   redirect: '/dashboard/analysis',
+  meta: {
+    title: '仪表盘',
+    icon: 'el-icon-odometer'
+  },
   children: [
     {
       name: 'dashboard_analysis',
@@ -13,12 +17,8 @@ export default {
       meta: {
         title: '分析页',
         icon: 'el-icon-dataLine',
-        sort: 1
+        affix: true
       }
     }
-  ],
-  meta: {
-    title: '仪表盘',
-    icon: 'el-icon-odometer'
-  }
+  ]
 } as RouteRecordRaw

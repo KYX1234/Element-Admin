@@ -1,5 +1,5 @@
 <template>
-  <el-main class="mt-1px bg-[var(--el-bg-color)]">
+  <el-main class="mt-1px bg-[var(--el-bg-color-page)]">
     <router-view />
   </el-main>
 </template>

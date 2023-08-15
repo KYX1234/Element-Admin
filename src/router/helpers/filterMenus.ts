@@ -6,7 +6,7 @@ export function filterRoutesToMenus(routes: RouteRecordRaw[]) {
   routes.forEach((route: RouteRecordRaw) => {
     const menuItem: App.Menu = {
       path: route.path,
-      title: route.meta?.title,
+      name: route.meta?.title,
       icon: route.meta?.icon,
       isLink: route.meta?.isLink
     }
