@@ -1,16 +1,11 @@
 import { RouteRecordRaw } from 'vue-router'
 
-interface Itags {
-  name: string
-  path: string
-}
-
 /** 过滤固定页签 */
 export const filterAffixTags = (routes: RouteRecordRaw[]) => {
-  const tags: Itags[] = []
+  const tags: App.TabsView[] = []
   routes.forEach((route: RouteRecordRaw) => {
     if (route.meta?.affix) {
-      tags.push({ name: route.meta?.title, path: route.path })
+      tags.push({ name: route.meta?.title, fullPath: route.path, affix: route.meta?.affix })
     }
   })
 
