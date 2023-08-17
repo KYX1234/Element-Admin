@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/KYX1234/Element-Admin/compare/v1.3.0...v1.3.1) (2023-08-17)
+
+
+### Styling
+
+* tabs样式调整 ([c4fa58a](https://github.com/KYX1234/Element-Admin/commit/c4fa58a2f3d777ac1b68dde7e67224f94f820e2b))
+
 ## [1.3.0](https://github.com/KYX1234/Element-Admin/compare/v1.2.1...v1.3.0) (2023-08-15)
 
 
