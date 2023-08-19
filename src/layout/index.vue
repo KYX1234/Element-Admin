@@ -4,7 +4,7 @@
     <Asider />
     <el-container direction="vertical">
       <Header />
-      <TabsView />
+      <NavTab />
       <Main />
       <el-backtop title="回到顶部" />
       <AppSetting />
@@ -16,7 +16,7 @@
 import { computed, ref } from 'vue'
 import Asider from './components/Asider/index.vue'
 import Header from './components/Header/index.vue'
-import TabsView from './components/TabsView/index.vue'
+import NavTab from './components/NavTab/index.vue'
 import Main from './components/Main/index.vue'
 import AppMask from './components/AppMask/index.vue'
 import AppSetting from './components/AppSetting/index.vue'
@@ -34,3 +34,4 @@ deviceDetection(appWrapperRef)
 </script>
 
 <style lang="scss" scoped></style>
+./components/NavTabs/index.vue

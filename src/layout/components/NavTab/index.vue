@@ -1,27 +1,30 @@
 <template>
-  <div class="flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)]">
-    <el-tabs :model-value="activeName" @tab-change="handleChange">
+  <nav class="flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)]">
+    <el-tabs :model-value="activeName" @tab-change="handleChange" @tab-remove="handleRemove">
       <el-tab-pane
-        v-for="item in tabsViewStore.tabsList"
+        v-for="item in navTabStore.tabsList"
         :key="item.fullPath"
         :name="item.fullPath"
         :label="item.name"
         :closable="!item.affix"
       />
     </el-tabs>
-  </div>
+    <TabTools />
+  </nav>
 </template>
 
 <script lang="ts" setup>
+import { computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { filterAffixTags } from './helper'
-import { useTabsViewStore } from '@/store/modules/tabsView'
-import { computed, onMounted, watch } from 'vue'
 import { TabPaneName } from 'element-plus'
+import { useNavTabStore } from '@/store/modules/navTab'
+import TabTools from './TabTools.vue'
 
+defineOptions({ name: 'NavTab' })
 const router = useRouter()
 const route = useRoute()
-const tabsViewStore = useTabsViewStore()
+const navTabStore = useNavTabStore()
 const activeName = computed(() => route.fullPath)
 
 // 初始化tabs
@@ -29,7 +32,7 @@ const initTabs = () => {
   const routes = router.getRoutes()
   const tabs = filterAffixTags(routes)
   for (const tab of tabs) {
-    tabsViewStore.addTab(tab)
+    navTabStore.addTab(tab)
   }
 }
 
@@ -40,12 +43,17 @@ const addTab = () => {
     name: route.meta.title,
     affix: route.meta.affix || false
   }
-  tabsViewStore.addTab(tab)
+  navTabStore.addTab(tab)
 }
 
 // 切换tab
 const handleChange = (fullPath: TabPaneName) => {
   router.push(fullPath as string)
+}
+
+// 删除tab
+const handleRemove = (fullPath: TabPaneName) => {
+  navTabStore.removeTab(fullPath as string)
 }
 
 onMounted(() => {

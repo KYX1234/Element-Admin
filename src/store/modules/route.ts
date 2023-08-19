@@ -9,7 +9,10 @@ interface IRouteState {
   routeMode: ImportMetaEnv['VITE_ROUTE_MODE']
   /** 是否初始化权限路由的生成 */
   isInitRoute: boolean
+  /** 菜单渲染数据 */
   menus: App.Menu[]
+  /** 缓存的路由 */
+  cacheList: string[]
 }
 
 export const useRouteStore = defineStore({
@@ -17,7 +20,8 @@ export const useRouteStore = defineStore({
   state: (): IRouteState => ({
     routeMode: import.meta.env.VITE_ROUTE_MODE,
     isInitRoute: false,
-    menus: []
+    menus: [],
+    cacheList: []
   }),
   getters: {},
   actions: {
