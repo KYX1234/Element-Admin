@@ -1,1 +1,0 @@
-import{y as a,E as s,F as n,G as o,I as t}from"./index-7182e2d0.js";import{E as r}from"./el-card-eae9fa3e.js";const _=t("div",null,"Analysis-待开发",-1),p=a({name:"Analysis",__name:"index",setup(c){return(d,i)=>{const e=r;return s(),n(e,{shadow:"never"},{default:o(()=>[_]),_:1})}}});export{p as default};
