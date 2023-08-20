@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/KYX1234/Element-Admin/compare/v1.4.2...v1.5.0) (2023-08-20)
+
+
+### Features
+
+* navtab增加图标显示 ([1d82127](https://github.com/KYX1234/Element-Admin/commit/1d821270e44079849bbc800eca9fa0047c986111))
+
 ## [1.4.2](https://github.com/KYX1234/Element-Admin/compare/v1.4.1...v1.4.2) (2023-08-20)
 
 
