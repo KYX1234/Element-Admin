@@ -14,7 +14,7 @@ export default {
       path: '/error/404',
       name: '404',
       component: () => import('@/views/error/404.vue'),
-      meta: { title: '404' }
+      meta: { title: '404', icon: 'el-icon-remove' }
     }
   ]
 } as RouteRecordRaw

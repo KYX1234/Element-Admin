@@ -7,7 +7,14 @@
         :name="item.fullPath"
         :label="item.name"
         :closable="!item.affix"
-      />
+      >
+        <template #label>
+          <div class="flex-center gap-2">
+            <Icon :name="item.icon" v-if="item.icon" />
+            <span>{{ item.name }}</span>
+          </div>
+        </template>
+      </el-tab-pane>
     </el-tabs>
     <TabTools />
   </nav>
@@ -41,7 +48,8 @@ const addTab = () => {
   const tab = {
     fullPath: route.fullPath,
     name: route.meta.title,
-    affix: route.meta.affix || false
+    affix: route.meta.affix || false,
+    icon: route.meta.icon
   }
   navTabStore.addTab(tab)
 }
@@ -84,12 +92,15 @@ watch(route, () => {
     .el-tabs__item {
       border: 1px solid var(--el-border-color-light);
       height: 31px;
-      padding: 0 15px;
+      padding: 0 12px;
       margin-left: 8px;
       border-radius: 2px;
     }
     .is-active {
       background: var(--el-color-primary-light-9);
+    }
+    .is-icon-close {
+      margin-left: 8px;
     }
   }
 }

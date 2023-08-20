@@ -22,8 +22,8 @@ export const useNavTabStore = defineStore({
     removeTab(fullPath: string) {
       const isActive = router.currentRoute.value.fullPath === fullPath
       const newTabsList = this.tabsList.filter((v) => v.fullPath !== fullPath)
-      if (this.tabsList.length && isActive) {
-        router.push(this.tabsList[this.tabsList.length - 1].fullPath)
+      if (newTabsList && isActive) {
+        router.push(newTabsList[newTabsList.length - 1].fullPath)
       }
       this.tabsList = newTabsList
     },
@@ -51,7 +51,7 @@ export const useNavTabStore = defineStore({
     /** 清空多页签 */
     clearTabAll() {
       const newTabsList = this.tabsList.filter((v) => v.affix)
-      if (newTabsList.length) router.push(this.tabsList[this.tabsList.length - 1].fullPath)
+      if (newTabsList.length) router.push(newTabsList[newTabsList.length - 1].fullPath)
       this.tabsList = newTabsList
     }
   }

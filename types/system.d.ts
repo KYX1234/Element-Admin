@@ -12,6 +12,7 @@ declare namespace App {
   interface TabsView {
     name: string
     fullPath: string
-    affix: boolean
+    icon?: string
+    affix?: boolean
   }
 }

@@ -3,7 +3,7 @@
     class="w-10 h-10 flex-center border-l border-stone-200 dark:border-stone-700 cursor-pointer"
     @click="handleRefresh"
   >
-    <Icon name="local-icon-refresh" size="15" :class="{ 'animate-spin': loading }" />
+    <Icon name="local-icon-refresh" size="18" :class="{ 'animate-spin': loading }" />
   </div>
   <el-dropdown trigger="click">
     <div class="w-10 h-10 flex-center border-l border-stone-200 dark:border-stone-700">
