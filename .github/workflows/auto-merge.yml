@@ -26,6 +26,7 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.MY_TOKEN2 }}'
           MERGE_LABELS: ''
+          MERGE_DELETE_BRANCH: true
           MERGE_FILTER_AUTHOR: 'KYX1234'
 
   push-to-gh-pages:
@@ -44,26 +45,25 @@ jobs:
         with:
           node-version: 16
 
-      # 添加缓存，逻辑和CI Workflow里的一样
+      # 缓存node_modules
       - name: Cache
-        id: cache-dependencies
+        id: pnpm-cache
         uses: actions/cache@v3
         with:
           path: |
             **/node_modules
-          key: ${{hashFiles('**/pnpm-lock.yaml')}}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
-      # 安装依赖。命中缓存则跳过此步
-      - name: Installing Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: |
-          npm i pnpm -g
-          pnpm install
+      # 如果缓存没有命中，安装依赖
+      - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm install --no-frozen-lockfile
 
-      # 安装项目依赖
+      # 运行构建脚本
       - name: Build Github
-        run: |
-          pnpm run build
+        run: pnpm run build
 
       # 将构建后的文件部署到 gh-pages 分支
       - name: Deploy Github
