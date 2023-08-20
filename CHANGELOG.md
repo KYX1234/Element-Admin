@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/KYX1234/Element-Admin/compare/v1.4.0...v1.4.1) (2023-08-20)
+
+
+### Bug Fixes
+
+* ci ([cac632e](https://github.com/KYX1234/Element-Admin/commit/cac632e5ee6f5b0deeac0c2a74b75e22443e9721))
+
 ## [1.4.0](https://github.com/KYX1234/Element-Admin/compare/v1.3.1...v1.4.0) (2023-08-19)
 
 
