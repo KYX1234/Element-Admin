@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/KYX1234/Element-Admin/compare/v1.3.1...v1.4.0) (2023-08-19)
+
+
+### Features
+
+* 新增navtab选项 ([01e2896](https://github.com/KYX1234/Element-Admin/commit/01e28961cabc3f71d83474d18f6f8a9c81735135))
+
 ## [1.3.1](https://github.com/KYX1234/Element-Admin/compare/v1.3.0...v1.3.1) (2023-08-17)
 
 
