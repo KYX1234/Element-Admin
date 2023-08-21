@@ -4,7 +4,7 @@
       :default-active="activeMenu"
       class="!border-0 !w-full"
       router
-      unique-opened
+      :unique-opened="appStore.menuUnique"
       :collapse-transition="false"
       :collapse="appStore.isCollapse"
     >

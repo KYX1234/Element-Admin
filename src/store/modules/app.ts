@@ -9,7 +9,12 @@ export const useAppStore = defineStore({
     isMobile: false,
     isDark: storage.get('isDark') || false,
     reloadFlag: true,
-    transitionName: 'fade'
+    themeColor: '',
+    breadCrumb: true,
+    navTab: true,
+    menuUnique: false,
+    grayMode: false,
+    animateMode: 'zoom-fade'
   }),
   getters: {},
   actions: {
@@ -33,6 +38,10 @@ export const useAppStore = defineStore({
       nextTick(() => {
         this.reloadFlag = true
       })
+    },
+    setGrayMode(grayMode: boolean) {
+      this.grayMode = grayMode
+      document.documentElement.classList.toggle('html-grey')
     }
   }
 })

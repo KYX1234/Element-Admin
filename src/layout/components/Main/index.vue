@@ -2,7 +2,7 @@
   <el-main class="mt-1px bg-[var(--el-bg-color-page)]">
     <router-view>
       <template #default="{ Component, route }">
-        <transition :name="appStore.transitionName" mode="out-in" appear>
+        <transition :name="appStore.animateMode" mode="out-in" appear>
           <keep-alive :include="routeStore.cacheList">
             <component :is="Component" :key="route.fullPath" v-if="appStore.reloadFlag" />
           </keep-alive>
