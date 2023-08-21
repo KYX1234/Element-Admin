@@ -1,0 +1,1 @@
+import{C as a,I as s,J as n,K as o,M as t}from"./index-6466c8eb.js";import{E as r}from"./el-card-4704e3ee.js";const _=t("div",null,"Analysis-待开发",-1),p=a({name:"Analysis",__name:"index",setup(c){return(d,i)=>{const e=r;return s(),n(e,{shadow:"never"},{default:o(()=>[_]),_:1})}}});export{p as default};
