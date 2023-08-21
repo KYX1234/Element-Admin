@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/KYX1234/Element-Admin/compare/v1.5.0...v1.5.1) (2023-08-21)
+
+
+### Styling
+
+* 侧边栏样式 ([0aacf1e](https://github.com/KYX1234/Element-Admin/commit/0aacf1e1088e313e10323c1b409ef65526e087bb))
+
 ## [1.5.0](https://github.com/KYX1234/Element-Admin/compare/v1.4.2...v1.5.0) (2023-08-20)
 
 
