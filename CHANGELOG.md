@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/KYX1234/Element-Admin/compare/v1.5.1...v1.5.2) (2023-08-22)
+
+
+### Performance Improvements
+
+* 缓存全局设置 ([25e4677](https://github.com/KYX1234/Element-Admin/commit/25e4677d33a89fe66b226129b7c2aaa3d4be575c))
+
 ## [1.5.1](https://github.com/KYX1234/Element-Admin/compare/v1.5.0...v1.5.1) (2023-08-21)
 
 
