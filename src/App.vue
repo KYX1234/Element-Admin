@@ -7,15 +7,17 @@
 <script lang="ts" setup>
 import zhCN from 'element-plus/es/locale/lang/zh-cn'
 // import en from 'element-plus/es/locale/en'
-import { useAppStore } from './store/modules/app'
+import { useThemeStore } from './store/modules/theme'
 import { storage } from './utils/storage'
 
-const appStore = useAppStore()
+const themeStore = useThemeStore()
 
 function setDefaultTheme() {
-  if (storage.get('isDark') !== null) {
-    appStore.setIsDark(storage.get('isDark')!)
-    return
+  if (storage.get('themeSetting')?.isDark) {
+    themeStore.setIsDark(true)
+  }
+  if (storage.get('themeSetting')?.themeColor) {
+    themeStore.setThemeColor(themeStore.themeColor)
   }
 }
 setDefaultTheme()

@@ -4,7 +4,7 @@
       :default-active="activeMenu"
       class="!border-0 !w-full"
       router
-      :unique-opened="appStore.menuUnique"
+      :unique-opened="themeStore.menuUnique"
       :collapse-transition="false"
       :collapse="appStore.isCollapse"
     >
@@ -17,11 +17,13 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/modules/app'
+import { useThemeStore } from '@/store/modules/theme'
 import { useRouteStore } from '@/store/modules/route'
 import MenuItem from './MenuItem.vue'
 
 const route = useRoute()
 const appStore = useAppStore()
+const themeStore = useThemeStore()
 const routeStore = useRouteStore()
 const menus = computed(() => routeStore.menus)
 const activeMenu = computed(() => route.path)

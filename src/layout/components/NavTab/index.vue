@@ -1,7 +1,7 @@
 <template>
   <nav
     class="flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)] relative"
-    v-if="appStore.navTab"
+    v-if="themeStore.navTab"
   >
     <el-tabs :model-value="activeName" @tab-change="handleChange" @tab-remove="handleRemove">
       <el-tab-pane
@@ -29,13 +29,13 @@ import { useRoute, useRouter } from 'vue-router'
 import { filterAffixTags } from './helper'
 import { TabPaneName } from 'element-plus'
 import { useNavTabStore } from '@/store/modules/navTab'
-import { useAppStore } from '@/store/modules/app'
+import { useThemeStore } from '@/store/modules/theme'
 import TabTools from './TabTools.vue'
 
 defineOptions({ name: 'NavTab' })
 const router = useRouter()
 const route = useRoute()
-const appStore = useAppStore()
+const themeStore = useThemeStore()
 const navTabStore = useNavTabStore()
 const activeName = computed(() => route.fullPath)
 
