@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/KYX1234/Element-Admin/compare/v1.5.2...v1.6.0) (2023-08-23)
+
+
+### Features
+
+* 封装echarts-hooks ([ccc4ca2](https://github.com/KYX1234/Element-Admin/commit/ccc4ca2b7d8dfc58e4ed4e20a4142c3949d41877))
+
 ## [1.5.2](https://github.com/KYX1234/Element-Admin/compare/v1.5.1...v1.5.2) (2023-08-22)
 
 
