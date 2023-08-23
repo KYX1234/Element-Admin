@@ -28,8 +28,7 @@ import { computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { filterAffixTags } from './helper'
 import { TabPaneName } from 'element-plus'
-import { useNavTabStore } from '@/store/modules/navTab'
-import { useThemeStore } from '@/store/modules/theme'
+import { useNavTabStore, useThemeStore } from '@/store'
 import TabTools from './TabTools.vue'
 
 defineOptions({ name: 'NavTab' })

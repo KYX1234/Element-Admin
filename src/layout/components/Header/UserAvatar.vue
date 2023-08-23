@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import avatar from '@/assets/image/avatar.jpg'
-import { useUserStore } from '@/store/modules/user'
+import { useUserStore } from '@/store'
 const userStore = useUserStore()
 
 const onLogout = () => userStore.logout()

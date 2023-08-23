@@ -1,7 +1,6 @@
 import type { Router } from 'vue-router'
 import NProgress from '@/utils/nprogress'
-import { useUserStore } from '@/store/modules/user'
-import { useRouteStore } from '@/store/modules/route'
+import { useUserStore, useRouteStore } from '@/store'
 
 const whiteList = ['/login']
 /**

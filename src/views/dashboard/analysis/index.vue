@@ -1,10 +1,12 @@
 <template>
-  <el-card shadow="never">
-    <div>Analysis-待开发</div>
-  </el-card>
+  <div>
+    <TopCard />
+    <MidCard />
+  </div>
 </template>
 
 <script lang="ts" setup>
+import { TopCard, MidCard } from './components'
 defineOptions({ name: 'Analysis' })
 </script>
 

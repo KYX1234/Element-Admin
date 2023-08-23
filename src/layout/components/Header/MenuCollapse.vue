@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from '@/store/modules/app'
+import { useAppStore } from '@/store'
 const appStore = useAppStore()
 const toggleCollapse = () => {
   appStore.setIsCollapse(!appStore.isCollapse)

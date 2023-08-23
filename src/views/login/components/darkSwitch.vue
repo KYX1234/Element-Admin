@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { Sunny, Moon } from '@element-plus/icons-vue'
-import { useThemeStore } from '@/store/modules/theme'
+import { useThemeStore } from '@/store'
 const appStore = useThemeStore()
 </script>
 

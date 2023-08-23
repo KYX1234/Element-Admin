@@ -16,9 +16,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useAppStore } from '@/store/modules/app'
-import { useThemeStore } from '@/store/modules/theme'
-import { useRouteStore } from '@/store/modules/route'
+import { useAppStore, useThemeStore, useRouteStore } from '@/store'
 import MenuItem from './MenuItem.vue'
 
 const route = useRoute()

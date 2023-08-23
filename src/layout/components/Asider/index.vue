@@ -13,7 +13,7 @@
 import { computed } from 'vue'
 import Logo from './Logo.vue'
 import Menu from './Menu.vue'
-import { useAppStore } from '@/store/modules/app'
+import { useAppStore } from '@/store'
 defineOptions({ name: 'Asider' })
 const appStore = useAppStore()
 

@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
-import { useUserStore } from '@/store/modules/user'
+import { useUserStore } from '@/store'
 
 const request = axios.create({
   baseURL: import.meta.env.VITE_GLOB_API_URL,

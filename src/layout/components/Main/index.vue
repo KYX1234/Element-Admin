@@ -13,9 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from '@/store/modules/app'
-import { useRouteStore } from '@/store/modules/route'
-import { useThemeStore } from '@/store/modules/theme'
+import { useAppStore, useRouteStore, useThemeStore } from '@/store'
 
 const appStore = useAppStore()
 const themeStore = useThemeStore()

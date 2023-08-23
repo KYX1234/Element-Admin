@@ -4,7 +4,7 @@ import {
   breakpointsTailwind,
   useBreakpoints
 } from '@vueuse/core'
-import { useAppStore } from '@/store/modules/app'
+import { useAppStore } from '@/store'
 import { unref } from 'vue'
 
 const appStore = useAppStore()

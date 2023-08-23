@@ -21,7 +21,7 @@ import Main from './components/Main/index.vue'
 import AppMask from './components/AppMask/index.vue'
 import AppSetting from './components/AppSetting/index.vue'
 import { deviceDetection } from './utils/deviceDetection'
-import { useAppStore } from '@/store/modules/app'
+import { useAppStore } from '@/store'
 
 defineOptions({ name: 'Layout' })
 

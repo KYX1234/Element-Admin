@@ -39,7 +39,7 @@ import { reactive, ref } from 'vue'
 import LoginBg from './components/loginBg.vue'
 import DarkSwitch from './components/darkSwitch.vue'
 import { formRules } from './helpers/rule'
-import { useUserStore } from '@/store/modules/user'
+import { useUserStore } from '@/store'
 
 defineOptions({ name: 'Login' })
 

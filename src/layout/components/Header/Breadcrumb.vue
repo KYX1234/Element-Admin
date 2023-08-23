@@ -7,11 +7,10 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from '@/store/modules/app'
+import { useAppStore, useThemeStore } from '@/store'
 import { computed } from 'vue'
 import { RouteLocationMatched, useRoute } from 'vue-router'
 import router from '@/router'
-import { useThemeStore } from '@/store/modules/theme'
 
 const route = useRoute()
 const appStore = useAppStore()

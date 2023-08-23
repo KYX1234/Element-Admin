@@ -42,8 +42,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { useAppStore } from '@/store/modules/app'
-import { useNavTabStore } from '@/store/modules/navTab'
+import { useAppStore, useNavTabStore } from '@/store'
 
 const route = useRoute()
 const appStore = useAppStore()

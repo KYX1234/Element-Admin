@@ -50,7 +50,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useThemeStore } from '@/store/modules/theme'
+import { useThemeStore } from '@/store'
 import { Sunny, Moon } from '@element-plus/icons-vue'
 
 const themeStore = useThemeStore()
