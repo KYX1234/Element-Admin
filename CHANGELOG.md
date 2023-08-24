@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/KYX1234/Element-Admin/compare/v1.7.0...v1.7.1) (2023-08-24)
+
+
+### Styling
+
+* tab样式调整 ([b8b1fca](https://github.com/KYX1234/Element-Admin/commit/b8b1fca14a08741f8421ff58f1f76bea27870178))
+
 ## [1.7.0](https://github.com/KYX1234/Element-Admin/compare/v1.6.1...v1.7.0) (2023-08-24)
 
 
