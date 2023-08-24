@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/KYX1234/Element-Admin/compare/v1.6.1...v1.7.0) (2023-08-24)
+
+
+### Features
+
+* 预制主题色 ([a775906](https://github.com/KYX1234/Element-Admin/commit/a77590683bcf5db694aafdf893494fe872377192))
+
 ## [1.6.1](https://github.com/KYX1234/Element-Admin/compare/v1.6.0...v1.6.1) (2023-08-24)
 
 
