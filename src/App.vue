@@ -7,17 +7,18 @@
 <script lang="ts" setup>
 import zhCN from 'element-plus/es/locale/lang/zh-cn'
 // import en from 'element-plus/es/locale/en'
-import { useThemeStore } from './store/modules/theme'
-import { storage } from './utils/storage'
+import { useThemeStore } from '@/store'
+import { storage } from '@/utils/storage'
 
 const themeStore = useThemeStore()
 
 function setDefaultTheme() {
-  if (storage.get('themeSetting')?.isDark) {
+  const themeSetting = storage.get('themeSetting')
+  if (themeSetting?.isDark) {
     themeStore.setIsDark(true)
   }
-  if (storage.get('themeSetting')?.themeColor) {
-    themeStore.setThemeColor(themeStore.themeColor)
+  if (themeSetting?.themeColor) {
+    themeStore.setThemeColor(themeSetting?.themeColor)
   }
 }
 setDefaultTheme()

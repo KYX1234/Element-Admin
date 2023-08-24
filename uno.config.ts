@@ -60,12 +60,13 @@ export default defineConfig({
     colors: {
       primary: 'var(--el-color-primary)',
       primary_dark: 'var(--el-color-primary-light-5)',
-      info: 'var(--el-info-color)',
-      success: 'var(--el-success-color)',
-      warning: 'var(--el-warning-color)',
-      error: 'var(--el-error-color)',
+      info: 'var(--el-color-info)',
+      success: 'var(--el-color-success)',
+      warning: 'var(--el-color-warning)',
+      error: 'var(--el-color-error)',
       fill: 'var(--el-fill-color-lighter)',
       background: 'var(--el-bg-color)',
+      borderColor: 'var(--el-border-color-lighter)',
       dark: '#18181c'
     },
     animation: {

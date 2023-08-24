@@ -8,7 +8,8 @@ export const useEcharts = (elRef: HTMLDivElement, options: Ref<ECOption>) => {
 
   const themeStore = useThemeStore()
 
-  const initCharts = (theme: 'dark' | 'default' = 'default') => {
+  const initCharts = () => {
+    const theme = themeStore.isDark ? 'dark' : 'default'
     myChart = markRaw(echarts.init(elRef, theme))
     setOptions(options.value)
   }
@@ -39,7 +40,7 @@ export const useEcharts = (elRef: HTMLDivElement, options: Ref<ECOption>) => {
     () => {
       if (myChart) {
         myChart.dispose()
-        initCharts(themeStore.isDark ? 'dark' : 'default')
+        initCharts()
       }
     }
   )

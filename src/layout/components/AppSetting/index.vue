@@ -6,11 +6,11 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import ShowButton from './ShowButton.vue'
 import ShowSetting from './ShowSetting.vue'
 
-import { ref } from 'vue'
-
+defineOptions({ name: 'AppSetting' })
 const settingVisible = ref(false)
 </script>
 

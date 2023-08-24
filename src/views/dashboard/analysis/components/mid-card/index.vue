@@ -1,13 +1,13 @@
 <template>
   <el-row :gutter="10">
-    <el-col :span="12">
+    <el-col :span="12" :xs="24" class="pb-2">
       <el-card shadow="never">
-        <div ref="lineEcharts" style="width: 100%; height: 400px"></div>
+        <div ref="lineEcharts" class="w-full h-100">></div>
       </el-card>
     </el-col>
-    <el-col :span="12">
+    <el-col :span="12" :xs="24" class="pb-2">
       <el-card shadow="never">
-        <div ref="BarEcharts" style="width: 100%; height: 400px"></div>
+        <div ref="barEcharts" class="w-full h-100"></div>
       </el-card>
     </el-col>
   </el-row>
@@ -17,7 +17,9 @@
 import { ref, onMounted } from 'vue'
 import { useEcharts } from '@/hooks/useEcharts'
 import { ECOption } from '@/utils/echarts'
+defineOptions({ name: 'MidCard' })
 const lineEcharts = ref<HTMLDivElement | null>(null)
+const barEcharts = ref<HTMLDivElement | null>(null)
 const lineOptions = ref<ECOption>({
   tooltip: {
     trigger: 'axis',
@@ -103,8 +105,54 @@ const lineOptions = ref<ECOption>({
     }
   ]
 })
+const barOptions = ref<ECOption>({
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    left: 'center',
+    itemStyle: {
+      borderWidth: 0
+    }
+  },
+  series: [
+    {
+      color: ['#5da8ff', '#8e9dff', '#fedc69', '#26deca', '#dfceb4'],
+      name: '技能分析',
+      type: 'pie',
+      radius: ['40%', '70%'],
+      avoidLabelOverlap: false,
+      itemStyle: {
+        borderRadius: 10,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
+      label: {
+        show: false,
+        position: 'center'
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: 40
+        }
+      },
+      labelLine: {
+        show: false
+      },
+      data: [
+        { value: 10, name: 'react' },
+        { value: 30, name: 'vue' },
+        { value: 20, name: 'js' },
+        { value: 20, name: 'css' },
+        { value: 20, name: 'html' }
+      ]
+    }
+  ]
+})
 onMounted(() => {
   useEcharts(lineEcharts.value as HTMLDivElement, lineOptions)
+  useEcharts(barEcharts.value as HTMLDivElement, barOptions)
 })
 </script>
 

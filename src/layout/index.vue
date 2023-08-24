@@ -6,7 +6,6 @@
       <Header />
       <NavTab />
       <Main />
-      <el-backtop title="回到顶部" />
       <AppSetting />
     </el-container>
   </el-container>

@@ -16,7 +16,7 @@
         inline-prompt
         :active-icon="Sunny"
         :inactive-icon="Moon"
-        @change="themeStore.setIsDark"
+        @change="handleSetIsDark"
       />
     </li>
     <li class="flex-y-center justify-between py-1">
@@ -61,6 +61,10 @@ const animateMode = [
   { label: '底部滑出', value: 'fade-bottom' },
   { label: '缩放消退', value: 'fade-scale' }
 ]
+const handleSetIsDark = (flag: any) => {
+  themeStore.setIsDark(flag)
+  themeStore.setThemeColor(themeStore.themeColor)
+}
 </script>
 
 <style lang="scss" scoped></style>

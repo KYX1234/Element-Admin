@@ -38,11 +38,15 @@ export const useUserStore = defineStore({
     logout() {
       ElMessageBox.confirm('您确定要退出登录吗？', '提示')
         .then(() => {
-          storage.clear()
+          this.clearCache()
           this.$reset()
           router.push('/login')
         })
         .catch(() => {})
+    },
+    clearCache() {
+      storage.remove('userInfo')
+      storage.remove('token')
     }
   }
 })

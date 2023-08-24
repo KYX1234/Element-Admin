@@ -2,11 +2,12 @@
   <div>
     <TopCard />
     <MidCard />
+    <BotCard />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { TopCard, MidCard } from './components'
+import { TopCard, MidCard, BotCard } from './components'
 defineOptions({ name: 'Analysis' })
 </script>
 

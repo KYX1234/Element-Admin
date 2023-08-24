@@ -1,6 +1,6 @@
 <template>
   <el-row :gutter="10">
-    <el-col class="p-b-2" :span="6" :xs="24" v-for="(item, index) in list" :key="index">
+    <el-col class="pb-2" :span="6" :xs="24" v-for="(item, index) in list" :key="index">
       <el-card shadow="never">
         <template #header>
           <div class="flex-y-center justify-between">
