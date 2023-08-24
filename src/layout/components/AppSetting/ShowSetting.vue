@@ -5,7 +5,7 @@
       <div>主题颜色</div>
       <el-color-picker
         v-model="themeStore.themeColor"
-        :predefine="['#646CFF', '#0F930C', '#0777BC', '#3107BC', '#BC0743', '#BC7707']"
+        :predefine="['#646CFF', '#12A34A', '#0777BC', '#8760DC', '#BC0743', '#BC7707']"
         @change="themeStore.setThemeColor"
       />
     </li>

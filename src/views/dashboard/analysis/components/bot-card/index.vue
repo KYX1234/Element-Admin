@@ -32,7 +32,15 @@
     </el-col>
     <el-col :span="16" :xs="24" class="pb-2">
       <el-card shadow="never">
-        <el-table :data="tableData" class="w-full !h-100">
+        <el-table
+          class="w-full !h-100"
+          border
+          :data="tableData"
+          :header-cell-style="{
+            background: 'var(--el-table-row-hover-bg-color)',
+            color: 'var(--el-text-color-primary)'
+          }"
+        >
           <el-table-column prop="date" label="Date" width="180" />
           <el-table-column prop="name" label="Name" width="180" />
           <el-table-column prop="address" label="Address" />

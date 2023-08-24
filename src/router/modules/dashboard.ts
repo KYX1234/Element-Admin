@@ -19,6 +19,15 @@ export default {
         icon: 'el-icon-dataLine',
         affix: true
       }
+    },
+    {
+      name: 'dashboard_workbench',
+      path: '/dashboard/workbench',
+      component: () => import('@/views/dashboard/workbench/index.vue'),
+      meta: {
+        title: '工作台',
+        icon: 'el-icon-monitor'
+      }
     }
   ]
 } as RouteRecordRaw
