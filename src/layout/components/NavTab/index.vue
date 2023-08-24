@@ -99,9 +99,16 @@ watch(route, () => {
       padding: 0 12px;
       margin-left: 8px;
       border-radius: 2px;
+      &:hover {
+        border-color: var(--el-color-primary-light-3);
+      }
+    }
+    .is-icon-close:hover {
+      background-color: var(--el-color-primary);
     }
     .is-active {
       background: var(--el-color-primary-light-8);
+      border-color: var(--el-color-primary-light-3);
     }
     .is-icon-close {
       margin-left: 8px;
