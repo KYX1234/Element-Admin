@@ -101,7 +101,7 @@ watch(route, () => {
       border-radius: 2px;
     }
     .is-active {
-      background: var(--el-color-primary-light-9);
+      background: var(--el-color-primary-light-8);
     }
     .is-icon-close {
       margin-left: 8px;
