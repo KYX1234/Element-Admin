@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/KYX1234/Element-Admin/compare/v1.6.0...v1.6.1) (2023-08-24)
+
+
+### Bug Fixes
+
+* 切换主体颜色未更新 ([8481128](https://github.com/KYX1234/Element-Admin/commit/8481128aeb690a141a821530374a6ea2ff353c56))
+
 ## [1.6.0](https://github.com/KYX1234/Element-Admin/compare/v1.5.2...v1.6.0) (2023-08-23)
 
 
