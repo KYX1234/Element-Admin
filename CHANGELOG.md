@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/KYX1234/Element-Admin/compare/v1.7.1...v1.8.0) (2023-08-24)
+
+
+### Features
+
+* 新增403&500页面 ([3c76d6b](https://github.com/KYX1234/Element-Admin/commit/3c76d6b44e85701122a5f1aab6df10df786989f4))
+
 ## [1.7.1](https://github.com/KYX1234/Element-Admin/compare/v1.7.0...v1.7.1) (2023-08-24)
 
 
