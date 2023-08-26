@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.5](https://github.com/KYX1234/Element-Admin/compare/v1.9.4...v1.9.5) (2023-08-26)
+
+
+### Bug Fixes
+
+* 根组件 ([8679ade](https://github.com/KYX1234/Element-Admin/commit/8679adedf0b76761abfc03d61514b36fb2641c1f))
+
 ## [1.9.4](https://github.com/KYX1234/Element-Admin/compare/v1.9.3...v1.9.4) (2023-08-26)
 
 
