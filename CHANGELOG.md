@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.3](https://github.com/KYX1234/Element-Admin/compare/v1.9.2...v1.9.3) (2023-08-26)
+
+
+### Bug Fixes
+
+* 修复backtop失效问题 ([37b6a7d](https://github.com/KYX1234/Element-Admin/commit/37b6a7d25194bba0c31b63cfde630a320b6ddf7a))
+
 ## [1.9.2](https://github.com/KYX1234/Element-Admin/compare/v1.9.1...v1.9.2) (2023-08-26)
 
 
