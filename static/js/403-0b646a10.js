@@ -1,1 +1,0 @@
-import{v as o,x as t,o as r,O as a}from"./index-b81f31c3.js";import{E as c}from"./el-card-ce87f075.js";import{_ as s}from"./_plugin-vue_export-helper-c27b6911.js";const _={},n=a("div",null,"403-待开发",-1);function d(f,i){const e=c;return r(),o(e,{shadow:"never"},{default:t(()=>[n]),_:1})}const u=s(_,[["render",d]]);export{u as default};
