@@ -1,4 +1,4 @@
-import { storage } from '@/utils/storage'
+import { storage } from '@/utils/storage';
 
 const defaultThemeSetting = {
   isDark: false, // 暗黑模式
@@ -8,9 +8,9 @@ const defaultThemeSetting = {
   menuUnique: false, // 只展开一个一级菜单
   grayMode: false, // 是否灰色模式
   animateMode: 'zoom-fade' // 动画
-}
+};
 
 export const initThemeSetting = (): typeof defaultThemeSetting => {
-  const themeSetting = storage.get('themeSetting')
-  return themeSetting ? themeSetting : defaultThemeSetting
-}
+  const themeSetting = storage.get('themeSetting');
+  return themeSetting ? themeSetting : defaultThemeSetting;
+};

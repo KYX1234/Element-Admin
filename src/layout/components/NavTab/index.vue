@@ -24,28 +24,28 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { filterAffixTags } from './helper'
-import { TabPaneName } from 'element-plus'
-import { useNavTabStore, useThemeStore } from '@/store'
-import TabTools from './TabTools.vue'
+import { computed, onMounted, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { filterAffixTags } from './helper';
+import { TabPaneName } from 'element-plus';
+import { useNavTabStore, useThemeStore } from '@/store';
+import TabTools from './TabTools.vue';
 
-defineOptions({ name: 'NavTab' })
-const router = useRouter()
-const route = useRoute()
-const themeStore = useThemeStore()
-const navTabStore = useNavTabStore()
-const activeName = computed(() => route.fullPath)
+defineOptions({ name: 'NavTab' });
+const router = useRouter();
+const route = useRoute();
+const themeStore = useThemeStore();
+const navTabStore = useNavTabStore();
+const activeName = computed(() => route.fullPath);
 
 // 初始化tabs
 const initTabs = () => {
-  const routes = router.getRoutes()
-  const tabs = filterAffixTags(routes)
+  const routes = router.getRoutes();
+  const tabs = filterAffixTags(routes);
   for (const tab of tabs) {
-    navTabStore.addTab(tab)
+    navTabStore.addTab(tab);
   }
-}
+};
 
 // 添加tab
 const addTab = () => {
@@ -54,28 +54,28 @@ const addTab = () => {
     name: route.meta.title,
     affix: route.meta.affix || false,
     icon: route.meta.icon
-  }
-  navTabStore.addTab(tab)
-}
+  };
+  navTabStore.addTab(tab);
+};
 
 // 切换tab
 const handleChange = (fullPath: TabPaneName) => {
-  router.push(fullPath as string)
-}
+  router.push(fullPath as string);
+};
 
 // 删除tab
 const handleRemove = (fullPath: TabPaneName) => {
-  navTabStore.removeTab(fullPath as string)
-}
+  navTabStore.removeTab(fullPath as string);
+};
 
 onMounted(() => {
-  initTabs()
-  addTab()
-})
+  initTabs();
+  addTab();
+});
 
 watch(route, () => {
-  addTab()
-})
+  addTab();
+});
 </script>
 
 <style lang="scss" scoped>

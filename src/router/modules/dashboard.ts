@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router';
 
 export default {
   name: 'dashboard',
@@ -31,4 +31,4 @@ export default {
       }
     }
   ]
-} as RouteRecordRaw
+} as RouteRecordRaw;

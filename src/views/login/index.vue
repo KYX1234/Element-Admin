@@ -35,32 +35,32 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
-import LoginBg from './components/loginBg.vue'
-import DarkSwitch from './components/darkSwitch.vue'
-import { formRules } from './helpers/rule'
-import { useUserStore } from '@/store'
+import { reactive, ref } from 'vue';
+import LoginBg from './components/loginBg.vue';
+import DarkSwitch from './components/darkSwitch.vue';
+import { formRules } from './helpers/rule';
+import { useUserStore } from '@/store';
 
-defineOptions({ name: 'Login' })
+defineOptions({ name: 'Login' });
 
-const formRef = ref()
-const checked = ref(false)
-const loading = ref(false)
-const userStore = useUserStore()
+const formRef = ref();
+const checked = ref(false);
+const loading = ref(false);
+const userStore = useUserStore();
 const form = reactive({
   username: 'admin',
   password: '123456'
-})
+});
 
 const onLogin = async () => {
-  await formRef.value?.validate()
+  await formRef.value?.validate();
   try {
-    loading.value = true
-    await userStore.login(form)
+    loading.value = true;
+    await userStore.login(form);
   } finally {
-    loading.value = false
+    loading.value = false;
   }
-}
+};
 </script>
 
 <style lang="scss" scoped></style>

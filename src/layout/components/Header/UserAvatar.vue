@@ -14,11 +14,11 @@
 </template>
 
 <script lang="ts" setup>
-import avatar from '@/assets/image/avatar.jpg'
-import { useUserStore } from '@/store'
-const userStore = useUserStore()
+import avatar from '@/assets/image/avatar.jpg';
+import { useUserStore } from '@/store';
+const userStore = useUserStore();
 
-const onLogout = () => userStore.logout()
+const onLogout = () => userStore.logout();
 </script>
 
 <style lang="scss" scoped></style>

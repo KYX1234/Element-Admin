@@ -1,13 +1,13 @@
-import { h } from 'vue'
-import type { VNode } from 'vue'
-import Icon from '@/components/Icon/index.vue'
+import { h } from 'vue';
+import type { VNode } from 'vue';
+import Icon from '@/components/Icon/index.vue';
 
 interface IconTypes {
-  size?: number
-  color?: string
-  name: string
+  size?: number;
+  color?: string;
+  name: string;
 }
 
 export const useIcon = (props: IconTypes): VNode => {
-  return h(Icon, { ...props })
-}
+  return h(Icon, { ...props });
+};

@@ -14,9 +14,9 @@
 
 <script lang="ts" setup>
 interface Props {
-  menu: App.Menu
+  menu: App.Menu;
 }
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <style lang="scss" scoped></style>

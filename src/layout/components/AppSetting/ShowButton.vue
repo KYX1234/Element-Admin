@@ -10,16 +10,16 @@
 
 <script lang="ts" setup>
 interface Props {
-  modelValue: boolean
+  modelValue: boolean;
 }
-defineProps<Props>()
+defineProps<Props>();
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 // 生产模式不需要可自行修改
-const isShow = import.meta.env.DEV || import.meta.env.VITE_APP_SETTING === 'Y'
+const isShow = import.meta.env.DEV || import.meta.env.VITE_APP_SETTING === 'Y';
 const handleSetting = () => {
-  emit('update:modelValue', true)
-}
+  emit('update:modelValue', true);
+};
 </script>
 
 <style lang="scss" scoped></style>

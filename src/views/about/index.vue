@@ -53,9 +53,9 @@
 </template>
 
 <script lang="ts" setup>
-defineOptions({ name: 'About' })
-const { pkg, lastBuildTime } = __APP_INFO__
-const { dependencies, devDependencies, version } = pkg
+defineOptions({ name: 'About' });
+const { pkg, lastBuildTime } = __APP_INFO__;
+const { dependencies, devDependencies, version } = pkg;
 </script>
 
 <style lang="scss" scoped></style>

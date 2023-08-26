@@ -51,18 +51,18 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-import { ECOption } from '@/utils/echarts'
-import { graphic } from 'echarts/core'
-import { useEcharts } from '@/hooks/useEcharts'
-defineOptions({ name: 'BotCard' })
+import { ref, onMounted } from 'vue';
+import { ECOption } from '@/utils/echarts';
+import { graphic } from 'echarts/core';
+import { useEcharts } from '@/hooks/useEcharts';
+defineOptions({ name: 'BotCard' });
 
-const lineEcharts = ref<HTMLDivElement | null>(null)
+const lineEcharts = ref<HTMLDivElement | null>(null);
 const lineOptions = ref<ECOption>({
   tooltip: {
     trigger: 'axis',
     formatter(params: any) {
-      return '当前销售额' + params[0].data
+      return '当前销售额' + params[0].data;
     }
   },
   grid: {
@@ -120,7 +120,7 @@ const lineOptions = ref<ECOption>({
       }
     }
   ]
-})
+});
 const list = [
   {
     title: '辣子鸡面馆',
@@ -142,7 +142,7 @@ const list = [
     value: '2886',
     status: 'desc'
   }
-]
+];
 const tableData = [
   {
     date: '2016-05-03',
@@ -164,10 +164,10 @@ const tableData = [
     name: 'Tom',
     address: 'No. 189, Grove St, Los Angeles'
   }
-]
+];
 onMounted(() => {
-  useEcharts(lineEcharts.value as HTMLDivElement, lineOptions)
-})
+  useEcharts(lineEcharts.value as HTMLDivElement, lineOptions);
+});
 </script>
 
 <style lang="scss" scoped></style>

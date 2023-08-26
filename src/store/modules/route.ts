@@ -1,18 +1,18 @@
-import { defineStore } from 'pinia'
-import router from '@/router'
-import { useUserStore } from './user'
-import { asyncRouter } from '@/router/modules'
-import { filterRoutesByRole, filterRoutesToMenus } from '@/router/helpers'
+import { defineStore } from 'pinia';
+import router from '@/router';
+import { useUserStore } from './user';
+import { asyncRouter } from '@/router/modules';
+import { filterRoutesByRole, filterRoutesToMenus } from '@/router/helpers';
 
 interface IRouteState {
   /** 权限路由的模式(static|dynamic) */
-  routeMode: ImportMetaEnv['VITE_ROUTE_MODE']
+  routeMode: ImportMetaEnv['VITE_ROUTE_MODE'];
   /** 是否初始化权限路由的生成 */
-  isInitRoute: boolean
+  isInitRoute: boolean;
   /** 菜单渲染数据 */
-  menus: App.Menu[]
+  menus: App.Menu[];
   /** 缓存的路由 */
-  cacheList: string[]
+  cacheList: string[];
 }
 
 export const useRouteStore = defineStore({
@@ -28,27 +28,27 @@ export const useRouteStore = defineStore({
     /** 初始化权限路由 */
     initRoute() {
       if (this.routeMode === 'static') {
-        this.initStaticRoute()
+        this.initStaticRoute();
       } else {
-        this.initDynamicRoute()
+        this.initDynamicRoute();
       }
     },
     /** 静态权限路由 */
     initStaticRoute() {
-      const userStore = useUserStore()
-      const routes = filterRoutesByRole(asyncRouter, userStore.userInfo.role)
+      const userStore = useUserStore();
+      const routes = filterRoutesByRole(asyncRouter, userStore.userInfo.role);
       routes.forEach((route) => {
-        route.children?.length ? router.addRoute(route) : router.addRoute('root', route)
-      })
-      const menus = filterRoutesToMenus(routes)
-      this.setMenus(menus)
-      this.isInitRoute = true
+        route.children?.length ? router.addRoute(route) : router.addRoute('root', route);
+      });
+      const menus = filterRoutesToMenus(routes);
+      this.setMenus(menus);
+      this.isInitRoute = true;
     },
     /** 动态权限路由 */
     initDynamicRoute() {},
     /** 设置菜单 */
     setMenus(menus: App.Menu[]) {
-      this.menus = menus
+      this.menus = menus;
     }
   }
-})
+});

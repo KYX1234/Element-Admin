@@ -40,21 +40,21 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { useAppStore, useNavTabStore } from '@/store'
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+import { useAppStore, useNavTabStore } from '@/store';
 
-const route = useRoute()
-const appStore = useAppStore()
-const navTabStore = useNavTabStore()
-const loading = ref(false)
+const route = useRoute();
+const appStore = useAppStore();
+const navTabStore = useNavTabStore();
+const loading = ref(false);
 const handleRefresh = () => {
-  loading.value = true
-  appStore.setReloadFlag()
+  loading.value = true;
+  appStore.setReloadFlag();
   setTimeout(() => {
-    loading.value = false
-  }, 1000)
-}
+    loading.value = false;
+  }, 1000);
+};
 </script>
 
 <style lang="scss" scoped></style>

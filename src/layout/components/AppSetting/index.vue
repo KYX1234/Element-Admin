@@ -6,12 +6,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import ShowButton from './ShowButton.vue'
-import ShowSetting from './ShowSetting.vue'
+import { ref } from 'vue';
+import ShowButton from './ShowButton.vue';
+import ShowSetting from './ShowSetting.vue';
 
-defineOptions({ name: 'AppSetting' })
-const settingVisible = ref(false)
+defineOptions({ name: 'AppSetting' });
+const settingVisible = ref(false);
 </script>
 
 <style lang="scss" scoped></style>

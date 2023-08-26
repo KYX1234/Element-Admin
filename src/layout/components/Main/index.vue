@@ -14,12 +14,12 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore, useRouteStore, useThemeStore } from '@/store'
+import { useAppStore, useRouteStore, useThemeStore } from '@/store';
 
-defineOptions({ name: 'MainPage' })
-const appStore = useAppStore()
-const themeStore = useThemeStore()
-const routeStore = useRouteStore()
+defineOptions({ name: 'MainPage' });
+const appStore = useAppStore();
+const themeStore = useThemeStore();
+const routeStore = useRouteStore();
 </script>
 
 <style lang="scss" scoped></style>

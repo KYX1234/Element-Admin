@@ -1,5 +1,5 @@
 // 默认缓存期限为7天
-const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7
+const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
 
 /**
  * @description 操作本地 `localStorage`
@@ -10,41 +10,41 @@ const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7
  */
 const creatStorage = () => {
   const get = <T = any>(key: string): T | null => {
-    const item = localStorage.getItem(key)
+    const item = localStorage.getItem(key);
     if (item) {
-      const data = JSON.parse(item)
-      const { value, expire } = data
+      const data = JSON.parse(item);
+      const { value, expire } = data;
       if (expire === null || expire >= Date.now()) {
-        return value
+        return value;
       } else {
-        remove(key)
+        remove(key);
       }
     }
-    return null
-  }
+    return null;
+  };
 
   const set = <T = any>(key: string, value: T, expire: number | null = DEFAULT_CACHE_TIME) => {
     const localStorageItem = JSON.stringify({
       value,
       expire: expire !== null ? new Date().getTime() + expire * 1000 : null
-    })
-    localStorage.setItem(key, localStorageItem)
-  }
+    });
+    localStorage.setItem(key, localStorageItem);
+  };
 
   const remove = (key: string) => {
-    localStorage.removeItem(key)
-  }
+    localStorage.removeItem(key);
+  };
 
   const clear = () => {
-    localStorage.clear()
-  }
+    localStorage.clear();
+  };
 
   return {
     set,
     get,
     remove,
     clear
-  }
-}
+  };
+};
 
-export const storage = creatStorage()
+export const storage = creatStorage();

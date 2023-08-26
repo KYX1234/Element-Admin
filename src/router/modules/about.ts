@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router';
 
 export default {
   name: 'about_index',
@@ -9,4 +9,4 @@ export default {
     icon: 'el-icon-Files',
     sort: 10
   }
-} as RouteRecordRaw
+} as RouteRecordRaw;

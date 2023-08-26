@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router';
 
 export default {
   path: '/error',
@@ -36,4 +36,4 @@ export default {
       }
     }
   ]
-} as RouteRecordRaw
+} as RouteRecordRaw;

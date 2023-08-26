@@ -1,8 +1,8 @@
 <script lang="ts">
-import { h, defineComponent, resolveComponent } from 'vue'
-import { ElIcon } from 'element-plus'
-import svgIcon from './src/svgIcon.vue'
-import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './src/util'
+import { h, defineComponent, resolveComponent } from 'vue';
+import { ElIcon } from 'element-plus';
+import svgIcon from './src/svgIcon.vue';
+import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './src/util';
 
 export default defineComponent({
   name: 'Icon',
@@ -31,12 +31,12 @@ export default defineComponent({
             color: props.color
           },
           () => h(resolveComponent(props.name.replace(`${VITE_EL_ICON_PREFIX}-`, '')))
-        )
+        );
     }
     // 本地icon
     if (props.name.indexOf(VITE_LOCAL_ICON_PREFIX) === 0) {
-      return () => h('i', h(svgIcon, { ...props }))
+      return () => h('i', h(svgIcon, { ...props }));
     }
   }
-})
+});
 </script>

@@ -47,7 +47,7 @@ const list = [
     content: '收藏了你的文章',
     avatar: 'https://i02piccdn.sogoucdn.com/3511ebcfa16882d6'
   }
-]
+];
 </script>
 
 <style lang="scss" scoped></style>

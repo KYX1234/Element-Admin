@@ -14,17 +14,17 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-import { useAppStore, useThemeStore, useRouteStore } from '@/store'
-import MenuItem from './MenuItem.vue'
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { useAppStore, useThemeStore, useRouteStore } from '@/store';
+import MenuItem from './MenuItem.vue';
 
-const route = useRoute()
-const appStore = useAppStore()
-const themeStore = useThemeStore()
-const routeStore = useRouteStore()
-const menus = computed(() => routeStore.menus)
-const activeMenu = computed(() => route.path)
+const route = useRoute();
+const appStore = useAppStore();
+const themeStore = useThemeStore();
+const routeStore = useRouteStore();
+const menus = computed(() => routeStore.menus);
+const activeMenu = computed(() => route.path);
 </script>
 
 <style lang="scss" scoped></style>

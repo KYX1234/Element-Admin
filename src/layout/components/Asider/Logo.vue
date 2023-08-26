@@ -6,9 +6,9 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from '@/store'
+import { useAppStore } from '@/store';
 
-const app = useAppStore()
+const app = useAppStore();
 </script>
 
 <style lang="scss" scoped></style>

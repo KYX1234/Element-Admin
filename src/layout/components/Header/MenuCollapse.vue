@@ -6,11 +6,11 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore } from '@/store'
-const appStore = useAppStore()
+import { useAppStore } from '@/store';
+const appStore = useAppStore();
 const toggleCollapse = () => {
-  appStore.setIsCollapse(!appStore.isCollapse)
-}
+  appStore.setIsCollapse(!appStore.isCollapse);
+};
 </script>
 
 <style lang="scss" scoped></style>

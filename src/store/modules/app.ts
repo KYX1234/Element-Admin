@@ -1,5 +1,5 @@
-import { nextTick } from 'vue'
-import { defineStore } from 'pinia'
+import { nextTick } from 'vue';
+import { defineStore } from 'pinia';
 
 export const useAppStore = defineStore({
   id: 'app',
@@ -11,16 +11,16 @@ export const useAppStore = defineStore({
   getters: {},
   actions: {
     setIsCollapse(collapse: boolean) {
-      this.isCollapse = collapse
+      this.isCollapse = collapse;
     },
     setIsMobile(mobile: boolean) {
-      this.isMobile = mobile
+      this.isMobile = mobile;
     },
     setReloadFlag() {
-      this.reloadFlag = false
+      this.reloadFlag = false;
       nextTick(() => {
-        this.reloadFlag = true
-      })
+        this.reloadFlag = true;
+      });
     }
   }
-})
+});

@@ -14,12 +14,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-import { useEcharts } from '@/hooks/useEcharts'
-import { ECOption } from '@/utils/echarts'
-defineOptions({ name: 'MidCard' })
-const lineEcharts = ref<HTMLDivElement | null>(null)
-const barEcharts = ref<HTMLDivElement | null>(null)
+import { ref, onMounted } from 'vue';
+import { useEcharts } from '@/hooks/useEcharts';
+import { ECOption } from '@/utils/echarts';
+defineOptions({ name: 'MidCard' });
+const lineEcharts = ref<HTMLDivElement | null>(null);
+const barEcharts = ref<HTMLDivElement | null>(null);
 const lineOptions = ref<ECOption>({
   tooltip: {
     trigger: 'axis',
@@ -104,7 +104,7 @@ const lineOptions = ref<ECOption>({
       }
     }
   ]
-})
+});
 const barOptions = ref<ECOption>({
   tooltip: {
     trigger: 'item'
@@ -149,11 +149,11 @@ const barOptions = ref<ECOption>({
       ]
     }
   ]
-})
+});
 onMounted(() => {
-  useEcharts(lineEcharts.value as HTMLDivElement, lineOptions)
-  useEcharts(barEcharts.value as HTMLDivElement, barOptions)
-})
+  useEcharts(lineEcharts.value as HTMLDivElement, lineOptions);
+  useEcharts(barEcharts.value as HTMLDivElement, barOptions);
+});
 </script>
 
 <style lang="scss" scoped></style>

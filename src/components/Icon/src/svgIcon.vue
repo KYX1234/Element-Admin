@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 const props = defineProps({
   name: {
@@ -20,13 +20,13 @@ const props = defineProps({
     type: [Number, String],
     default: 16
   }
-})
-const symbolId = computed(() => `#${props.name}`)
+});
+const symbolId = computed(() => `#${props.name}`);
 const styles = computed(() => {
   return {
     width: props.size + 'px',
     height: props.size + 'px',
     color: props.color
-  }
-})
+  };
+});
 </script>

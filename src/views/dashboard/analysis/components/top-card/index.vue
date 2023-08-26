@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-defineOptions({ name: 'TopCard' })
+defineOptions({ name: 'TopCard' });
 const list = [
   {
     name: '访问量',
@@ -59,7 +59,7 @@ const list = [
     color: '#2ccb98',
     ratio: '-13%'
   }
-]
+];
 </script>
 
 <style lang="scss" scoped></style>

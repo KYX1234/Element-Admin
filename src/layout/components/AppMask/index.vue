@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-defineOptions({ name: 'AppMask' })
+defineOptions({ name: 'AppMask' });
 </script>
 
 <style lang="scss" scoped></style>

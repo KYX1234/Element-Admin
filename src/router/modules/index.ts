@@ -1,5 +1,5 @@
-import { getModulesRoutes } from '@/router/helpers'
+import { getModulesRoutes } from '@/router/helpers';
 
-const modules = import.meta.glob('./*.ts', { eager: true })
+const modules = import.meta.glob('./*.ts', { eager: true });
 
-export const asyncRouter = getModulesRoutes(modules)
+export const asyncRouter = getModulesRoutes(modules);

@@ -50,21 +50,21 @@
 </template>
 
 <script lang="ts" setup>
-import { useThemeStore } from '@/store'
-import { Sunny, Moon } from '@element-plus/icons-vue'
+import { useThemeStore } from '@/store';
+import { Sunny, Moon } from '@element-plus/icons-vue';
 
-const themeStore = useThemeStore()
+const themeStore = useThemeStore();
 const animateMode = [
   { label: '默认', value: 'zoom-fade' },
   { label: '滑动', value: 'fade-slide' },
   { label: '渐变', value: 'fade' },
   { label: '底部滑出', value: 'fade-bottom' },
   { label: '缩放消退', value: 'fade-scale' }
-]
+];
 const handleSetIsDark = (flag: any) => {
-  themeStore.setIsDark(flag)
-  themeStore.setThemeColor(themeStore.themeColor)
-}
+  themeStore.setIsDark(flag);
+  themeStore.setThemeColor(themeStore.themeColor);
+};
 </script>
 
 <style lang="scss" scoped></style>

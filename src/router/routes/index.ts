@@ -1,5 +1,5 @@
-import { RouteRecordRaw } from 'vue-router'
-const Layout = () => import('@/layout/index.vue')
+import { RouteRecordRaw } from 'vue-router';
+const Layout = () => import('@/layout/index.vue');
 
 /** 根路由 */
 export const RootRoute: RouteRecordRaw = {
@@ -10,7 +10,7 @@ export const RootRoute: RouteRecordRaw = {
   meta: {
     title: 'root'
   }
-}
+};
 
 /** 登录 */
 export const LoginRoute: RouteRecordRaw = {
@@ -20,7 +20,7 @@ export const LoginRoute: RouteRecordRaw = {
   meta: {
     title: '登录'
   }
-}
+};
 
 /** 任意路由 */
 export const PathMatchRoute: RouteRecordRaw = {
@@ -30,4 +30,4 @@ export const PathMatchRoute: RouteRecordRaw = {
   meta: {
     title: '未找到'
   }
-}
+};

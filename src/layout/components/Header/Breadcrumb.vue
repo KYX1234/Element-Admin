@@ -7,19 +7,19 @@
 </template>
 
 <script lang="ts" setup>
-import { useAppStore, useThemeStore } from '@/store'
-import { computed } from 'vue'
-import { RouteLocationMatched, useRoute } from 'vue-router'
-import router from '@/router'
+import { useAppStore, useThemeStore } from '@/store';
+import { computed } from 'vue';
+import { RouteLocationMatched, useRoute } from 'vue-router';
+import router from '@/router';
 
-const route = useRoute()
-const appStore = useAppStore()
-const themeStore = useThemeStore()
-const breadcrumbList = computed(() => route.matched.filter((item) => item.meta.title))
+const route = useRoute();
+const appStore = useAppStore();
+const themeStore = useThemeStore();
+const breadcrumbList = computed(() => route.matched.filter((item) => item.meta.title));
 const handleLink = (item: RouteLocationMatched) => {
-  const { redirect, path } = item
-  redirect ? router.push(redirect as string) : router.push(path)
-}
+  const { redirect, path } = item;
+  redirect ? router.push(redirect as string) : router.push(path);
+};
 </script>
 
 <style lang="scss" scoped></style>

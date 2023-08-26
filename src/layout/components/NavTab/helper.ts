@@ -1,8 +1,8 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router';
 
 /** 过滤固定页签 */
 export const filterAffixTags = (routes: RouteRecordRaw[]) => {
-  const tags: App.TabsView[] = []
+  const tags: App.TabsView[] = [];
   routes.forEach((route: RouteRecordRaw) => {
     if (route.meta?.affix) {
       tags.push({
@@ -10,9 +10,9 @@ export const filterAffixTags = (routes: RouteRecordRaw[]) => {
         fullPath: route.path,
         icon: route.meta?.icon,
         affix: route.meta?.affix
-      })
+      });
     }
-  })
+  });
 
-  return tags
-}
+  return tags;
+};

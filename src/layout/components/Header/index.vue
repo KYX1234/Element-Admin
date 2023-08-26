@@ -15,14 +15,14 @@
 </template>
 
 <script lang="ts" setup>
-import MenuCollapse from './MenuCollapse.vue'
-import Breadcrumb from './Breadcrumb.vue'
-import Search from './Search.vue'
-import Language from './Language.vue'
-import UserAvatar from './UserAvatar.vue'
-import SystemMessage from './SystemMessage.vue'
-import FullScreen from './FullScreen.vue'
-defineOptions({ name: 'PageHeader' })
+import MenuCollapse from './MenuCollapse.vue';
+import Breadcrumb from './Breadcrumb.vue';
+import Search from './Search.vue';
+import Language from './Language.vue';
+import UserAvatar from './UserAvatar.vue';
+import SystemMessage from './SystemMessage.vue';
+import FullScreen from './FullScreen.vue';
+defineOptions({ name: 'PageHeader' });
 </script>
 
 <style lang="scss" scoped>
