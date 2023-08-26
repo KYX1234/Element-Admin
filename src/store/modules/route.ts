@@ -38,7 +38,7 @@ export const useRouteStore = defineStore({
       const userStore = useUserStore()
       const routes = filterRoutesByRole(asyncRouter, userStore.userInfo.role)
       routes.forEach((route) => {
-        router.addRoute(route)
+        route.children?.length ? router.addRoute(route) : router.addRoute('root', route)
       })
       const menus = filterRoutesToMenus(routes)
       this.setMenus(menus)

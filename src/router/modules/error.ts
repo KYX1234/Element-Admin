@@ -7,7 +7,8 @@ export default {
   component: () => import('@/layout/index.vue'),
   meta: {
     title: '异常页面',
-    icon: 'el-icon-warning'
+    icon: 'el-icon-warning',
+    sort: 3
   },
   children: [
     {

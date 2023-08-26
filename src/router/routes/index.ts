@@ -5,6 +5,7 @@ const Layout = () => import('@/layout/index.vue')
 export const RootRoute: RouteRecordRaw = {
   name: 'root',
   path: '/',
+  component: Layout,
   redirect: import.meta.env.VITE_ROUTE_HOME_PATH,
   meta: {
     title: 'root'

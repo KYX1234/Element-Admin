@@ -7,7 +7,8 @@ export default {
   redirect: '/dashboard/analysis',
   meta: {
     title: '仪表盘',
-    icon: 'el-icon-odometer'
+    icon: 'el-icon-odometer',
+    sort: 0
   },
   children: [
     {

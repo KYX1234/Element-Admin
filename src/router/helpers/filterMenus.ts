@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router'
 /** 路由过滤成菜单 */
 export function filterRoutesToMenus(routes: RouteRecordRaw[]) {
   const menus: App.Menu[] = []
+
   routes.forEach((route: RouteRecordRaw) => {
     const menuItem: App.Menu = {
       path: route.path,
