@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/KYX1234/Element-Admin/compare/v1.8.0...v1.9.0) (2023-08-26)
+
+
+### Features
+
+* 关于页面 ([56394d2](https://github.com/KYX1234/Element-Admin/commit/56394d2cfe197c5b7c7b981eeebd139b8c8b367a))
+
 ## [1.8.0](https://github.com/KYX1234/Element-Admin/compare/v1.7.1...v1.8.0) (2023-08-24)
 
 
