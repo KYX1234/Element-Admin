@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/KYX1234/Element-Admin/compare/v1.9.1...v1.9.2) (2023-08-26)
+
+
+### Styling
+
+* 布局调整 ([dabad45](https://github.com/KYX1234/Element-Admin/commit/dabad4588a832770d11458e36220390db300ef65))
+
 ## [1.9.1](https://github.com/KYX1234/Element-Admin/compare/v1.9.0...v1.9.1) (2023-08-26)
 
 
