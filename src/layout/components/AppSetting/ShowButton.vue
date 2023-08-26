@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="isShow"
-    class="fixed flex-center w-10 h-10 right-0 bg-primary top-50% rounded-l-md cursor-pointer"
+    class="fixed z-99 flex-center w-10 h-10 right-0 bg-primary top-50% rounded-l-md cursor-pointer"
     @click="handleSetting"
   >
     <Icon name="el-icon-setting" size="22" color="#fff" />
