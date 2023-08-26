@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.4](https://github.com/KYX1234/Element-Admin/compare/v1.9.3...v1.9.4) (2023-08-26)
+
+
+### Bug Fixes
+
+* 移动端下布局异常 ([988cad5](https://github.com/KYX1234/Element-Admin/commit/988cad5d4d0ac1f13aeed7f40c9e02b08707bc34))
+
 ## [1.9.3](https://github.com/KYX1234/Element-Admin/compare/v1.9.2...v1.9.3) (2023-08-26)
 
 
