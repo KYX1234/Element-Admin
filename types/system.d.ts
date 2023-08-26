@@ -1,3 +1,5 @@
+type Recordable<T = any> = Record<string, T>
+
 declare namespace App {
   /** 菜单属性 */
   interface Menu {
@@ -15,4 +17,15 @@ declare namespace App {
     icon?: string
     affix?: boolean
   }
+}
+
+/* __APP_INFO__ */
+declare const __APP_INFO__: {
+  pkg: {
+    name: string
+    version: string
+    dependencies: Recordable<string>
+    devDependencies: Recordable<string>
+  }
+  lastBuildTime: string
 }
