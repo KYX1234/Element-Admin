@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/KYX1234/Element-Admin/compare/v1.9.0...v1.9.1) (2023-08-26)
+
+
+### Styling
+
+* 分号 ([16494cf](https://github.com/KYX1234/Element-Admin/commit/16494cfbf1b5cb2c3b060f63599287781669fc77))
+
 ## [1.9.0](https://github.com/KYX1234/Element-Admin/compare/v1.8.0...v1.9.0) (2023-08-26)
 
 
