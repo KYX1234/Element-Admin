@@ -1,15 +1,19 @@
 <template>
-  <el-main class="mt-1px bg-[var(--el-bg-color-page)]">
-    <router-view>
-      <template #default="{ Component, route }">
-        <el-backtop title="回到顶部" target=".el-main" />
-        <transition :name="themeStore.animateMode" mode="out-in" appear>
-          <keep-alive :include="routeStore.cacheList">
-            <component :is="Component" :key="route.fullPath" v-if="appStore.reloadFlag" />
-          </keep-alive>
-        </transition>
-      </template>
-    </router-view>
+  <el-main class="mt-1px !p-0 bg-[var(--el-bg-color-page)]">
+    <el-scrollbar>
+      <div class="p-3">
+        <router-view>
+          <template #default="{ Component, route }">
+            <el-backtop title="回到顶部" target=".el-main" />
+            <transition :name="themeStore.animateMode" mode="out-in" appear>
+              <keep-alive :include="routeStore.cacheList">
+                <component :is="Component" :key="route.fullPath" v-if="appStore.reloadFlag" />
+              </keep-alive>
+            </transition>
+          </template>
+        </router-view>
+      </div>
+    </el-scrollbar>
   </el-main>
 </template>
 
