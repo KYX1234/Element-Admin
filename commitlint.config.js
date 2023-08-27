@@ -22,7 +22,7 @@ module.exports = {
         'ci', // 持续集成
         'chore', // 其它提交
         'revert', // 代码回滚
-        'type', // ts
+        'types', // ts
         'wip' // 功能开发中
       ]
     ]
