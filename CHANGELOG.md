@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.8](https://github.com/KYX1234/Element-Admin/compare/v1.9.7...v1.9.8) (2023-08-27)
+
+
+### Bug Fixes
+
+* 去除默认history模式 ([84e4733](https://github.com/KYX1234/Element-Admin/commit/84e47338fa143d03d20f71e5378c18fdf98d4cad))
+
 ## [1.9.7](https://github.com/KYX1234/Element-Admin/compare/v1.9.6...v1.9.7) (2023-08-27)
 
 
