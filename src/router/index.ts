@@ -5,10 +5,10 @@ import { createRouterGuard } from './guard';
 /** 静态路由 */
 export const constantRoutes: RouteRecordRaw[] = [LoginRoute, RootRoute, PathMatchRoute];
 
-const { VITE_ROUTE_HASH } = import.meta.env;
+const { VITE_ROUTE_HASH = 'Y' } = import.meta.env;
 
 const router = createRouter({
-  history: VITE_ROUTE_HASH === 'hash' ? createWebHashHistory() : createWebHistory(),
+  history: VITE_ROUTE_HASH === 'Y' ? createWebHashHistory() : createWebHistory(),
   routes: constantRoutes,
   scrollBehavior: () => ({ left: 0, top: 0 })
 });

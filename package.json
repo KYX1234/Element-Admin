@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run typecheck && vite build",
+    "build:page": "VITE_APP_SETTING=Y VITE_ROUTE_HASH=N vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "lint": "eslint \"{src,mock,build}/**/*.{vue,ts,tsx}\" --fix",

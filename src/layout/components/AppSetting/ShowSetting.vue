@@ -47,6 +47,12 @@
       </el-select>
     </li>
   </ul>
+  <el-divider>提示</el-divider>
+  <el-alert
+    title="配置栏只在开发环境用于预览，生产环境不会展现，请手动修改配置文件 /src/config/theme"
+    type="warning"
+    :closable="false"
+  />
 </template>
 
 <script lang="ts" setup>
