@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.9.7](https://github.com/KYX1234/Element-Admin/compare/v1.9.6...v1.9.7) (2023-08-27)
+
+
+### CI
+
+* 修改ci报错 ([e9e415e](https://github.com/KYX1234/Element-Admin/commit/e9e415ed091300b10a7d9d1f6e73c0213630ad9b))
+* 修改配置 ([ed9d813](https://github.com/KYX1234/Element-Admin/commit/ed9d813a7f7471b7f8c53edf7cbe681e2e361cc8))
+
+
+### Miscellaneous Chores
+
+* 其他修改 ([10715e0](https://github.com/KYX1234/Element-Admin/commit/10715e0cf4201252b2f4c00b30bc5dfce76ffffd))
+
 ## [1.9.6](https://github.com/KYX1234/Element-Admin/compare/v1.9.5...v1.9.6) (2023-08-26)
 
 
