@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.9](https://github.com/KYX1234/Element-Admin/compare/v1.9.8...v1.9.9) (2023-08-28)
+
+
+### Bug Fixes
+
+* 首页暗黑模式切换问题 ([bc8091a](https://github.com/KYX1234/Element-Admin/commit/bc8091a7666417d3962dce8b4b2188d2b0937d6b))
+
 ## [1.9.8](https://github.com/KYX1234/Element-Admin/compare/v1.9.7...v1.9.8) (2023-08-27)
 
 
