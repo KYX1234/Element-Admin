@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/KYX1234/Element-Admin/compare/v1.9.9...v1.10.0) (2023-08-28)
+
+
+### Features
+
+* navTab增加缓存 ([8fdf9c4](https://github.com/KYX1234/Element-Admin/commit/8fdf9c43235d584a6b4634cd6e4521fb585e5a7f))
+
 ## [1.9.9](https://github.com/KYX1234/Element-Admin/compare/v1.9.8...v1.9.9) (2023-08-28)
 
 
