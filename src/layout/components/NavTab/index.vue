@@ -80,7 +80,7 @@ watch(route, () => {
 
 <style lang="scss" scoped>
 :deep(.el-tabs) {
-  width: 100%;
+  width: calc(100% - 80px);
   .el-tabs__header {
     margin-bottom: 0;
     .el-tabs__nav-wrap::after {

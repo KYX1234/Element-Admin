@@ -1,7 +1,7 @@
 <template>
-  <el-card shadow="never">
-    <div>403-待开发</div>
-  </el-card>
+  <div class="flex-center mt-10">
+    <img src="@/assets/image/403.png" width="350" />
+  </div>
 </template>
 
 <script lang="ts" setup></script>
