@@ -23,6 +23,7 @@ export const useThemeStore = defineStore({
       storage.set('themeSetting', this.$state);
     },
     setThemeColor(color: string) {
+      console.log(color);
       if (!color) return;
       const colors = {
         '--el-color-primary': color,

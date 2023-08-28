@@ -1,12 +1,7 @@
 <template>
-  <div class="relative wh-full flex-center bg-#eef2f6 dark:bg-[var(--el-color-primary-light-9)]">
-    <LoginBg />
-    <DarkSwitch />
-    <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80" shadow="never">
-      <div class="flex-y-center justify-between">
-        <Icon name="local-icon-logo" size="64" color="var(--el-color-primary)" />
-        <el-text class="!text-7" type="primary">ElementAdmin</el-text>
-      </div>
+  <div class="login-container">
+    <Header />
+    <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80">
       <h3 class="mt-6 font-500 text-primary text-18px" type="primary">登录</h3>
       <el-form ref="formRef" :model="form" :rules="formRules" class="mt-6" size="large">
         <el-form-item prop="username">
@@ -36,8 +31,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
-import LoginBg from './components/loginBg.vue';
-import DarkSwitch from './components/darkSwitch.vue';
+import Header from './components/Header.vue';
 import { formRules } from './helpers/rule';
 import { useUserStore } from '@/store';
 
@@ -63,5 +57,11 @@ const onLogin = async () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
-./helpers/rule
+<style lang="scss" scoped>
+.login-container {
+  @apply relative wh-full flex-center dark:bg-#101628;
+  background-image: url('@/assets/image/background.svg');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+</style>
