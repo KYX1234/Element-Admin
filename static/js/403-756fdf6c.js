@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{v as t,o,m as c}from"./index-1f0cd854.js";const s=""+new URL("../png/403-9cf50c2e.png",import.meta.url).href,r={},n={class:"flex-center mt-10"},_=c("img",{src:s,width:"350"},null,-1),a=[_];function i(m,f){return o(),t("div",n,a)}const p=e(r,[["render",i]]);export{p as default};
