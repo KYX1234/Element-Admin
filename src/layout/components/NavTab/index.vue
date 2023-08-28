@@ -30,7 +30,7 @@ import { filterAffixTags } from './helper';
 import { TabPaneName } from 'element-plus';
 import { useNavTabStore, useThemeStore } from '@/store';
 import TabTools from './TabTools.vue';
-
+import { storage } from '@/utils/storage';
 defineOptions({ name: 'NavTab' });
 const router = useRouter();
 const route = useRoute();
@@ -41,7 +41,7 @@ const activeName = computed(() => route.fullPath);
 // 初始化tabs
 const initTabs = () => {
   const routes = router.getRoutes();
-  const tabs = filterAffixTags(routes);
+  const tabs = storage.get('navTab') ?? filterAffixTags(routes);
   for (const tab of tabs) {
     navTabStore.addTab(tab);
   }

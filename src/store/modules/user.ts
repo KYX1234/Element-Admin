@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import router from '@/router';
 import { getUserInfo, login } from '@/api/user';
 import { storage } from '@/utils/storage';
+import { useNavTabStore } from './navTab';
 
 export const useUserStore = defineStore({
   id: 'user',
@@ -15,6 +16,13 @@ export const useUserStore = defineStore({
     }
   },
   actions: {
+    resetUser() {
+      const navTabStore = useNavTabStore();
+      storage.remove('userInfo');
+      storage.remove('token');
+      navTabStore.resetTab();
+      this.$reset();
+    },
     setToken(token: string) {
       this.token = token;
       storage.set('token', token);
@@ -38,15 +46,10 @@ export const useUserStore = defineStore({
     logout() {
       ElMessageBox.confirm('您确定要退出登录吗？', '提示')
         .then(() => {
-          this.clearCache();
-          this.$reset();
+          this.resetUser();
           router.push('/login');
         })
         .catch(() => {});
-    },
-    clearCache() {
-      storage.remove('userInfo');
-      storage.remove('token');
     }
   }
 });
