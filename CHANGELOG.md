@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/KYX1234/Element-Admin/compare/v1.10.0...v1.11.0) (2023-08-28)
+
+
+### Features
+
+* 403页面 ([6fb76a9](https://github.com/KYX1234/Element-Admin/commit/6fb76a919ab3635eb6be7cc02bf60b1df98592b9))
+
 ## [1.10.0](https://github.com/KYX1234/Element-Admin/compare/v1.9.9...v1.10.0) (2023-08-28)
 
 
