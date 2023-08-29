@@ -6,6 +6,15 @@
   .el-sub-menu__title {
     height: 50px;
     line-height: 50px;
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 24px;
+      margin-right: 5px;
+      text-align: center;
+    }
     & > * {
       z-index: 1;
     }
@@ -22,7 +31,12 @@
     height: 50px;
     line-height: 50px;
     i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
       margin-right: 5px;
+      text-align: center;
     }
     & > * {
       z-index: 1;
