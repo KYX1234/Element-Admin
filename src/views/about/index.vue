@@ -28,7 +28,7 @@
         </el-descriptions-item>
         <el-descriptions-item label="Github">
           <el-link type="primary" href="https://github.com/KYX1234/Element-Admin" target="_blank">
-            Gitee
+            Github
           </el-link>
         </el-descriptions-item>
       </el-descriptions>
