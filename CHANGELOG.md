@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/KYX1234/Element-Admin/compare/v1.12.0...v1.13.0) (2023-08-29)
+
+
+### Features
+
+* 新增菜单 ([ad4c6a9](https://github.com/KYX1234/Element-Admin/commit/ad4c6a9554333f48a1003809b5122ffb29b67fb3))
+
 ## [1.12.0](https://github.com/KYX1234/Element-Admin/compare/v1.11.0...v1.12.0) (2023-08-29)
 
 
