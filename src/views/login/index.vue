@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <Header />
+    <Top />
     <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80">
       <h3 class="mt-6 font-500 text-primary text-18px" type="primary">登录</h3>
       <el-form ref="formRef" :model="form" :rules="formRules" class="mt-6" size="large">
@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue';
-import Header from './components/Header.vue';
+import { Top } from './components';
 import { formRules } from './helpers/rule';
 import { useUserStore } from '@/store';
 

@@ -1,7 +1,10 @@
 <template>
-  <el-card shadow="never">
-    <div>404-待开发</div>
-  </el-card>
+  <div class="flex-col-center gap-6 h-full">
+    <img src="@/assets/image/404.png" width="350" />
+    <router-link to="/">
+      <el-button type="primary">返回首页</el-button>
+    </router-link>
+  </div>
 </template>
 
 <script lang="ts" setup></script>

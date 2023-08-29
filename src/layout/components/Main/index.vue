@@ -1,7 +1,7 @@
 <template>
   <el-main class="mt-1px !p-0 bg-[var(--el-bg-color-page)]">
     <el-scrollbar>
-      <div class="p-3">
+      <div class="p-3 h-full">
         <router-view>
           <template #default="{ Component, route }">
             <el-backtop title="回到顶部" target=".el-main .el-scrollbar__wrap" />
