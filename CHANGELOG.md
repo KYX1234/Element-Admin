@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/KYX1234/Element-Admin/compare/v1.13.0...v1.14.0) (2023-08-30)
+
+
+### Features
+
+* 适配外链菜单 ([8a1b921](https://github.com/KYX1234/Element-Admin/commit/8a1b921f02f9b4210164d4492ce2a79c79b6c6cc))
+
 ## [1.13.0](https://github.com/KYX1234/Element-Admin/compare/v1.12.0...v1.13.0) (2023-08-29)
 
 
