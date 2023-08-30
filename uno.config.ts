@@ -1,6 +1,6 @@
-import { defineConfig } from '@unocss/vite'
-import presetUno from '@unocss/preset-uno'
-import transformerDirectives from '@unocss/transformer-directives'
+import { defineConfig } from '@unocss/vite';
+import presetUno from '@unocss/preset-uno';
+import transformerDirectives from '@unocss/transformer-directives';
 
 export default defineConfig({
   content: {
@@ -68,11 +68,6 @@ export default defineConfig({
       background: 'var(--el-bg-color)',
       borderColor: 'var(--el-border-color-lighter)',
       dark: '#18181c'
-    },
-    animation: {
-      keyframes: {
-        wiggle: '{0%,100%{transform: translateX(-10px);}50%{transform: translateX(10px);}}'
-      }
     }
   }
-})
+});

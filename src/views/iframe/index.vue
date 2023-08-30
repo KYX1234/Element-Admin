@@ -16,19 +16,13 @@ const loading = ref(false);
 const init = () => {
   loading.value = true;
   if (unref(route.meta)?.iframeLink) {
-    src.value = unref(route.meta)?.iframeLink;
+    src.value = unref(route.meta).iframeLink!;
   }
   const iframe = unref(iframeRef);
   if (!iframe) return;
-  if (iframe.attachEvent) {
-    iframe.attachEvent('onload', () => {
-      loading.value = false;
-    });
-  } else {
-    iframe.onload = () => {
-      loading.value = false;
-    };
-  }
+  iframe.addEventListener('load', () => {
+    loading.value = false;
+  });
 };
 
 onMounted(init);

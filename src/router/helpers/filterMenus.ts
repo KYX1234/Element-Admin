@@ -8,8 +8,7 @@ export function filterRoutesToMenus(routes: RouteRecordRaw[]) {
     const menuItem: App.Menu = {
       path: route.path,
       name: route.meta?.title,
-      icon: route.meta?.icon,
-      isLink: route.meta?.isLink
+      icon: route.meta?.icon
     };
     if (route.children && route.children.length > 0) {
       menuItem.children = filterRoutesToMenus(route.children);

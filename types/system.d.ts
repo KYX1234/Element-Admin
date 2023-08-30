@@ -6,7 +6,6 @@ declare namespace App {
     path: string
     name?: string
     icon?: string
-    isLink?: boolean
     affix?: boolean
     children?: Menu[]
   }
