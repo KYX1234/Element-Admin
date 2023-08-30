@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.1](https://github.com/KYX1234/Element-Admin/compare/v1.14.0...v1.14.1) (2023-08-30)
+
+
+### Bug Fixes
+
+* iframe错误 ([7dea658](https://github.com/KYX1234/Element-Admin/commit/7dea658e96d5b6d53ef390e37fd29c1409c34e0f))
+
 ## [1.14.0](https://github.com/KYX1234/Element-Admin/compare/v1.13.0...v1.14.0) (2023-08-30)
 
 
