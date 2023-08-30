@@ -28,8 +28,10 @@ export const useNavTabStore = defineStore({
     /** 删除多页签 */
     removeTab(fullPath: string) {
       const isActive = router.currentRoute.value.fullPath === fullPath;
-      const newTabsList = this.tabsList.filter((v) => v.fullPath !== fullPath);
-      if (newTabsList && isActive) {
+      const newTabsList = this.tabsList.filter((v) => {
+        return v.fullPath !== fullPath;
+      });
+      if (newTabsList.length && isActive) {
         router.push(newTabsList[newTabsList.length - 1].fullPath);
       }
       this.tabsList = newTabsList;

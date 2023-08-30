@@ -1,6 +1,6 @@
 .el-menu {
   --el-menu-hover-bg-color: transparent;
-  .el-sub-menu.is-active .el-sub-menu__title {
+  .el-sub-menu.is-active > .el-sub-menu__title {
     color: var(--el-color-primary);
   }
   .el-sub-menu__title {
@@ -62,6 +62,7 @@
     }
   }
 }
+
 .el-main .el-scrollbar__view {
   height: 100%;
 }

@@ -7,7 +7,7 @@ export default {
   component: () => import('@/layout/index.vue'),
   meta: {
     title: '多级菜单',
-    icon: 'local-icon-menu',
+    icon: 'el-icon-memo',
     sort: 4
   },
   children: [
@@ -17,14 +17,14 @@ export default {
       component: () => import('@/views/menu/menu1/index.vue'),
       meta: {
         title: '二级菜单',
-        icon: 'local-icon-menu'
+        icon: 'el-icon-more'
       }
     },
     {
       path: '/menu/menu2',
       name: 'menu_menu2',
       component: () => import('@/layout/parentLayout.vue'),
-      meta: { title: '二级菜单', icon: 'local-icon-menu' },
+      meta: { title: '二级菜单', icon: 'el-icon-more' },
       children: [
         {
           path: '/menu/menu2/menu21',
@@ -32,7 +32,7 @@ export default {
           component: () => import('@/views/menu/menu2/index.vue'),
           meta: {
             title: '三级菜单',
-            icon: 'local-icon-menu'
+            icon: 'el-icon-more'
           }
         }
       ]

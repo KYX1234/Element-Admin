@@ -59,9 +59,6 @@ const onLogin = async () => {
 
 <style lang="scss" scoped>
 .login-container {
-  @apply relative wh-full flex-center dark:bg-#101628;
-  background-image: url('@/assets/image/background.svg');
-  background-repeat: no-repeat;
-  background-position: center top;
+  @apply relative wh-full flex-center dark:bg-#101628 bg-[url('/src/assets/image/background.svg')] bg-no-repeat bg-center-top;
 }
 </style>

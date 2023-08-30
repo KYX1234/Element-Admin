@@ -1,20 +1,26 @@
 <template>
   <nav
-    class="flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)] relative"
+    class="navTab flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)] relative"
     v-if="themeStore.navTab"
   >
-    <el-tabs :model-value="activeName" @tab-change="handleChange" @tab-remove="handleRemove">
+    <el-tabs :model-value="activeName" @tab-change="handleChange">
       <el-tab-pane
         v-for="item in navTabStore.tabsList"
         :key="item.fullPath"
         :name="item.fullPath"
         :label="item.name"
-        :closable="!item.affix"
       >
         <template #label>
           <div class="flex-center gap-2">
             <Icon :name="item.icon" v-if="item.icon" />
             <span>{{ item.name }}</span>
+            <Icon
+              v-if="!item.affix"
+              class="mt-1px hover:bg-primary rounded-full hover:color-white"
+              name="el-icon-close"
+              @click.prevent.stop="handleRemove(item.fullPath)"
+              size="14"
+            />
           </div>
         </template>
       </el-tab-pane>
@@ -73,9 +79,12 @@ onMounted(() => {
   addTab();
 });
 
-watch(route, () => {
-  addTab();
-});
+watch(
+  () => route.fullPath,
+  () => {
+    addTab();
+  }
+);
 </script>
 
 <style lang="scss" scoped>

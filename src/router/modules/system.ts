@@ -17,14 +17,14 @@ export default {
       component: () => import('@/views/system/menu/index.vue'),
       meta: {
         title: '菜单管理',
-        icon: 'local-icon-403'
+        icon: 'el-icon-more'
       }
     },
     {
       path: '/system/role',
       name: 'system_role',
       component: () => import('@/views/system/role/index.vue'),
-      meta: { title: '角色管理', icon: 'local-icon-404' }
+      meta: { title: '角色管理', icon: 'el-icon-more' }
     },
     {
       path: '/system/user',
@@ -32,7 +32,7 @@ export default {
       component: () => import('@/views/system/user/index.vue'),
       meta: {
         title: '用户管理',
-        icon: 'local-icon-500'
+        icon: 'el-icon-more'
       }
     }
   ]
