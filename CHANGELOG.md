@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.15.3](https://github.com/KYX1234/Element-Admin/compare/v1.15.2...v1.15.3) (2023-08-31)
+
+
+### CI
+
+* 修改 ([ea00823](https://github.com/KYX1234/Element-Admin/commit/ea00823d126792dfd3031cd9d05a078b893bb9dc))
+
+
+### Miscellaneous Chores
+
+* 测试 ([5542f89](https://github.com/KYX1234/Element-Admin/commit/5542f89a22eb1bc0bb816a41409d0527929585b2))
+
 ## [1.15.2](https://github.com/KYX1234/Element-Admin/compare/v1.15.1...v1.15.2) (2023-08-31)
 
 
