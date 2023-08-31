@@ -1,20 +1,19 @@
 on:
   push:
     tags:
-      - v*
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+name: Release
 
 jobs:
-  release:
-    name: Create Release
+  release-please:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN2 }}
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        id: release
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          draft: false
-          prerelease: false
+          token: ${{ secrets.MY_TOKEN2 }}
+          release-type: node
+          package-name: standard-version
+          changelog-types: '[{"type": "types", "section":"Types", "hidden": false},{"type": "revert", "section":"Reverts", "hidden": false},{"type": "feat", "section": "Features", "hidden": false},{"type": "fix", "section": "Bug Fixes", "hidden": false},{"type": "improvement", "section": "Feature Improvements", "hidden": false},{"type": "docs", "section":"Docs", "hidden": false},{"type": "style", "section":"Styling", "hidden": false},{"type": "refactor", "section":"Code Refactoring", "hidden": false},{"type": "perf", "section":"Performance Improvements", "hidden": false},{"type": "test", "section":"Tests", "hidden": false},{"type": "build", "section":"Build System", "hidden": false},{"type": "ci", "section":"CI", "hidden":false},{"type": "chore", "section": "Miscellaneous Chores", "hidden": false }]'
+
