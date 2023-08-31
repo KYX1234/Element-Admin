@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.2](https://github.com/KYX1234/Element-Admin/compare/v1.15.1...v1.15.2) (2023-08-31)
+
+
+### Styling
+
+* 工作台样式 ([dd19348](https://github.com/KYX1234/Element-Admin/commit/dd1934854a2ad0122490577fd53974364be32e4d))
+
 ## [1.15.1](https://github.com/KYX1234/Element-Admin/compare/v1.15.0...v1.15.1) (2023-08-31)
 
 
