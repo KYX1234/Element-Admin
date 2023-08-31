@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/KYX1234/Element-Admin/compare/v1.15.0...v1.15.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* el-menu-icon 大小18下卡顿 ([ce1a04b](https://github.com/KYX1234/Element-Admin/commit/ce1a04bd5651d865b79c49b32249b89e27273283))
+
 ## [1.15.0](https://github.com/KYX1234/Element-Admin/compare/v1.14.1...v1.15.0) (2023-08-31)
 
 
