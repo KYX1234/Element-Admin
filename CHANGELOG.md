@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/KYX1234/Element-Admin/compare/v1.14.1...v1.15.0) (2023-08-31)
+
+
+### Features
+
+* 菜单文字溢出 ([b18d71f](https://github.com/KYX1234/Element-Admin/commit/b18d71f3a0c5b90cbf6bcebe2649fe5313d8fcdf))
+
 ## [1.14.1](https://github.com/KYX1234/Element-Admin/compare/v1.14.0...v1.14.1) (2023-08-30)
 
 
