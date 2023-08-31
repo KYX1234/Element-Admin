@@ -1,6 +1,6 @@
 {
   "name": "element-admin",
-  "version": "1.15.3",
+  "version": "1.15.4",
   "private": true,
   "scripts": {
     "dev": "vite",
