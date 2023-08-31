@@ -27,7 +27,7 @@ export default defineComponent({
         h(
           ElIcon,
           {
-            size: props.size,
+            size: props.size || '16px',
             color: props.color
           },
           () => h(resolveComponent(props.name.replace(`${VITE_EL_ICON_PREFIX}-`, '')))
