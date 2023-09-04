@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.1](https://github.com/KYX1234/Element-Admin/compare/v1.17.0...v1.17.1) (2023-09-04)
+
+
+### Styling
+
+* 移动端下布局调整 ([837cd0b](https://github.com/KYX1234/Element-Admin/commit/837cd0b657059455e6a8a224930e8c00886b3c3c))
+
 ## [1.17.0](https://github.com/KYX1234/Element-Admin/compare/v1.16.0...v1.17.0) (2023-09-04)
 
 
