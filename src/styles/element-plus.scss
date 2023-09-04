@@ -20,10 +20,10 @@
     }
     &:hover::before {
       position: absolute;
-      inset: 2px 8px;
+      inset: 2px 12px;
       clear: both;
       content: '';
-      background: var(--el-fill-color-light);
+      background: var(--el-fill-color);
       border-radius: 4px;
     }
   }
@@ -46,15 +46,15 @@
     }
     &:hover::before {
       position: absolute;
-      inset: 2px 8px;
+      inset: 2px 12px;
       clear: both;
       content: '';
-      background: var(--el-fill-color-light);
+      background: var(--el-fill-color);
       border-radius: 2px;
     }
     &.is-active::before {
       position: absolute;
-      inset: 2px 8px;
+      inset: 2px 12px;
       clear: both;
       content: '';
       background: var(--el-color-primary-light-8);

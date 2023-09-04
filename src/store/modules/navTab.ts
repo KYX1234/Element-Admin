@@ -21,7 +21,7 @@ export const useNavTabStore = defineStore({
     /** 添加多页签 */
     addTab(tab: App.TabsView) {
       if (this.tabsList.some((v: App.TabsView) => v.fullPath === tab.fullPath)) return;
-      if (tab.name) this.tabsList.push(tab);
+      if (tab.title) this.tabsList.push(tab);
       storage.set('navTab', this.tabsList);
     },
 

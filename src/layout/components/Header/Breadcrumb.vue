@@ -1,7 +1,7 @@
 <template>
   <el-breadcrumb v-if="themeStore.breadCrumb && !appStore.isMobile" separator="/" class="p-x-2">
     <el-breadcrumb-item v-for="(item, index) in breadcrumbList" :key="index">
-      <a @click.prevent="handleLink(item)" class="!font-normal"> {{ item.meta.title }}</a>
+      <a @click.prevent="handleLink(item)" class="!font-normal"> {{ $t(item.meta.title) }}</a>
     </el-breadcrumb-item>
   </el-breadcrumb>
 </template>

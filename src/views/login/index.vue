@@ -2,7 +2,7 @@
   <div class="login-container">
     <Top />
     <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80">
-      <h3 class="mt-6 font-500 text-primary text-18px" type="primary">登录</h3>
+      <h3 class="mt-6 font-500 text-primary text-18px" type="primary">{{ $t('login.login') }}</h3>
       <el-form ref="formRef" :model="form" :rules="formRules" class="mt-6" size="large">
         <el-form-item prop="username">
           <el-input v-model="form.username" placeholder="请输入账号" />
@@ -12,17 +12,19 @@
         </el-form-item>
         <el-form-item>
           <div class="w-full flex-y-center justify-between">
-            <el-checkbox v-model="checked">记住密码</el-checkbox>
-            <el-text type="primary" class="cursor-pointer">忘记密码?</el-text>
+            <el-checkbox v-model="checked"> {{ $t('login.remember') }}</el-checkbox>
+            <el-text type="primary" class="cursor-pointer">
+              {{ $t('login.forgetPassword') }}
+            </el-text>
           </div>
         </el-form-item>
         <el-form-item>
-          <el-button class="w-full" type="primary" @click="onLogin" :loading="loading"
-            >登录
+          <el-button class="w-full" type="primary" @click="onLogin" :loading="loading">
+            {{ $t('login.login') }}
           </el-button>
         </el-form-item>
         <el-form-item>
-          <el-button class="w-full">注册</el-button>
+          <el-button class="w-full"> {{ $t('login.register') }}</el-button>
         </el-form-item>
       </el-form>
     </el-card>
@@ -41,6 +43,7 @@ const formRef = ref();
 const checked = ref(false);
 const loading = ref(false);
 const userStore = useUserStore();
+
 const form = reactive({
   username: 'admin',
   password: '123456'

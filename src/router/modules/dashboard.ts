@@ -6,7 +6,7 @@ export default {
   component: () => import('@/layout/index.vue'),
   redirect: '/dashboard/analysis',
   meta: {
-    title: '仪表盘',
+    title: 'menus.dashboard',
     icon: 'el-icon-odometer',
     sort: 0
   },
@@ -16,7 +16,7 @@ export default {
       path: '/dashboard/analysis',
       component: () => import('@/views/dashboard/analysis/index.vue'),
       meta: {
-        title: '分析页',
+        title: 'menus.analysis',
         icon: 'el-icon-dataLine',
         affix: true
       }
@@ -26,7 +26,7 @@ export default {
       path: '/dashboard/workbench',
       component: () => import('@/views/dashboard/workbench/index.vue'),
       meta: {
-        title: '工作台',
+        title: 'menus.workbench',
         icon: 'el-icon-monitor'
       }
     }

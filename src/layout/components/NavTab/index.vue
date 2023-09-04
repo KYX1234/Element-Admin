@@ -8,12 +8,12 @@
         v-for="item in navTabStore.tabsList"
         :key="item.fullPath"
         :name="item.fullPath"
-        :label="item.name"
+        :label="item.title"
       >
         <template #label>
           <div class="flex-center gap-2">
             <Icon :name="item.icon" v-if="item.icon" />
-            <span>{{ item.name }}</span>
+            <span>{{ $t(item.title) }}</span>
             <Icon
               v-if="!item.affix"
               class="mt-1px hover:bg-primary rounded-full hover:color-white"
@@ -37,7 +37,9 @@ import { TabPaneName } from 'element-plus';
 import { useNavTabStore, useThemeStore } from '@/store';
 import TabTools from './TabTools.vue';
 import { storage } from '@/utils/storage';
+
 defineOptions({ name: 'NavTab' });
+
 const router = useRouter();
 const route = useRoute();
 const themeStore = useThemeStore();
@@ -57,7 +59,7 @@ const initTabs = () => {
 const addTab = () => {
   const tab = {
     fullPath: route.fullPath,
-    name: route.meta.title,
+    title: route.meta.title,
     affix: route.meta.affix || false,
     icon: route.meta.icon
   };

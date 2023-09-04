@@ -6,7 +6,7 @@ export default {
   redirect: '/system/menu',
   component: () => import('@/layout/index.vue'),
   meta: {
-    title: '系统管理',
+    title: 'menus.systemManagement',
     icon: 'el-icon-setting',
     sort: 5
   },
@@ -16,22 +16,22 @@ export default {
       name: 'system_menu',
       component: () => import('@/views/system/menu/index.vue'),
       meta: {
-        title: '菜单管理',
+        title: 'menus.menuManagement',
         icon: 'el-icon-more'
       }
     },
     {
       path: '/system/role',
-      name: 'system_role',
+      name: 'roleManagement',
       component: () => import('@/views/system/role/index.vue'),
-      meta: { title: '角色管理', icon: 'el-icon-more' }
+      meta: { title: 'menus.roleManagement', icon: 'el-icon-more' }
     },
     {
       path: '/system/user',
       name: 'system_user',
       component: () => import('@/views/system/user/index.vue'),
       meta: {
-        title: '用户管理',
+        title: 'menus.userManagement',
         icon: 'el-icon-more'
       }
     }

@@ -6,7 +6,7 @@ export default {
   redirect: '/iframe/vue',
   component: () => import('@/layout/index.vue'),
   meta: {
-    title: '外部页面',
+    title: 'menus.externalPage',
     icon: 'el-icon-paperclip',
     sort: 6
   },
@@ -15,7 +15,7 @@ export default {
       path: 'https://juejin.cn/user/444659755917560',
       name: 'iframe_jiejin',
       meta: {
-        title: '掘金主页(外链)',
+        title: 'menus.juejinPage',
         icon: 'el-icon-more'
       }
     },
@@ -24,7 +24,7 @@ export default {
       name: 'iframe_element_plus',
       component: () => import('@/views/iframe/index.vue'),
       meta: {
-        title: 'element-plus文档',
+        title: 'menus.elementDocs',
         iframeLink: 'https://element-plus.gitee.io/zh-CN/',
         icon: 'el-icon-more'
       }

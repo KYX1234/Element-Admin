@@ -5,7 +5,7 @@ export default {
   path: '/about/index',
   component: () => import('@/views/about/index.vue'),
   meta: {
-    title: '关于项目',
+    title: 'menus.about',
     icon: 'el-icon-Files',
     sort: 10
   }

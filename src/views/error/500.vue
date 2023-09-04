@@ -2,7 +2,7 @@
   <div class="flex-col-center gap-6 h-full">
     <img src="@/assets/image/500.png" width="350" />
     <router-link to="/">
-      <el-button type="primary">返回首页</el-button>
+      <el-button type="primary">{{ $t('error.returnToHome') }}</el-button>
     </router-link>
   </div>
 </template>

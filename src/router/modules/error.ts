@@ -6,7 +6,7 @@ export default {
   redirect: '/error/404',
   component: () => import('@/layout/index.vue'),
   meta: {
-    title: '异常页面',
+    title: 'menus.errorPage',
     icon: 'el-icon-warning',
     sort: 3
   },
@@ -16,7 +16,7 @@ export default {
       name: '403',
       component: () => import('@/views/error/403.vue'),
       meta: {
-        title: '403',
+        title: 'menus.403',
         icon: 'local-icon-403'
       }
     },
@@ -24,14 +24,14 @@ export default {
       path: '/error/404',
       name: '404',
       component: () => import('@/views/error/404.vue'),
-      meta: { title: '404', icon: 'local-icon-404' }
+      meta: { title: 'menus.404', icon: 'local-icon-404' }
     },
     {
       path: '/error/500',
       name: '500',
       component: () => import('@/views/error/500.vue'),
       meta: {
-        title: '500',
+        title: 'menus.500',
         icon: 'local-icon-500'
       }
     }

@@ -6,7 +6,7 @@ export const filterAffixTags = (routes: RouteRecordRaw[]) => {
   routes.forEach((route: RouteRecordRaw) => {
     if (route.meta?.affix) {
       tags.push({
-        name: route.meta?.title,
+        title: route.meta?.title,
         fullPath: route.path,
         icon: route.meta?.icon,
         affix: route.meta?.affix
