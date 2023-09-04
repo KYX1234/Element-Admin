@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <Top />
-    <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-80">
+    <el-card class="z-1 !border-none w-100 !rounded-4% <sm:w-83">
       <h3 class="mt-6 font-500 text-primary text-18px" type="primary">{{ $t('login.login') }}</h3>
       <el-form ref="formRef" :model="form" :rules="formRules" class="mt-6" size="large">
         <el-form-item prop="username">
@@ -12,8 +12,10 @@
         </el-form-item>
         <el-form-item>
           <div class="w-full flex-y-center justify-between">
-            <el-checkbox v-model="checked"> {{ $t('login.remember') }}</el-checkbox>
-            <el-text type="primary" class="cursor-pointer">
+            <el-checkbox v-model="checked" class="<sm:text-sm">
+              {{ $t('login.remember') }}
+            </el-checkbox>
+            <el-text type="primary" class="cursor-pointer <sm:!text-sm">
               {{ $t('login.forgetPassword') }}
             </el-text>
           </div>
