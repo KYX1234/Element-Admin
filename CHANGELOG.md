@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/KYX1234/Element-Admin/compare/v1.16.0...v1.17.0) (2023-09-04)
+
+
+### Features
+
+* 国际化 ([cdd0e25](https://github.com/KYX1234/Element-Admin/commit/cdd0e25f37d20dec5a4c007c55548f14f6dc6b4c))
+
 ## [1.16.0](https://github.com/KYX1234/Element-Admin/compare/v1.15.2...v1.16.0) (2023-08-31)
 
 
