@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/KYX1234/Element-Admin/compare/v1.17.1...v1.18.0) (2023-09-05)
+
+
+### Features
+
+* 系统设置国际化完善 ([0134620](https://github.com/KYX1234/Element-Admin/commit/0134620d13d2b5bdb87a4f2d17f75097830b222f))
+
 ## [1.17.1](https://github.com/KYX1234/Element-Admin/compare/v1.17.0...v1.17.1) (2023-09-04)
 
 
