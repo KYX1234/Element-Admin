@@ -22,6 +22,22 @@ export const useThemeStore = defineStore({
       document.documentElement.classList.toggle('html-grey');
       storage.set('themeSetting', this.$state);
     },
+    setBreadCrumb(breadCrumb: boolean) {
+      this.breadCrumb = breadCrumb;
+      storage.set('themeSetting', this.$state);
+    },
+    setMenuUnique(menuUnique: boolean) {
+      this.menuUnique = menuUnique;
+      storage.set('themeSetting', this.$state);
+    },
+    setNavTab(navTab: boolean) {
+      this.navTab = navTab;
+      storage.set('themeSetting', this.$state);
+    },
+    setNavTabIcon(navTabIcon: boolean) {
+      this.navTabIcon = navTabIcon;
+      storage.set('themeSetting', this.$state);
+    },
     setThemeColor(color: string) {
       if (!color) return;
       const colors = {
@@ -44,6 +60,10 @@ export const useThemeStore = defineStore({
         document.head.append(style);
       }
       this.themeColor = color;
+      storage.set('themeSetting', this.$state);
+    },
+    setAnimateMode(animateMode: string) {
+      this.animateMode = animateMode;
       storage.set('themeSetting', this.$state);
     }
   }

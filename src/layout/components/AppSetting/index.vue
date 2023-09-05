@@ -1,6 +1,6 @@
 <template>
   <ShowButton v-model="settingVisible" />
-  <el-drawer v-model="settingVisible" title="项目配置" :size="330">
+  <el-drawer v-model="settingVisible" :title="$t('setting.projectSetting')" :size="330">
     <ShowSetting />
   </el-drawer>
 </template>

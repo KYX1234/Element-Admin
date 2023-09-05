@@ -12,7 +12,7 @@
       >
         <template #label>
           <div class="flex-center gap-2">
-            <Icon :name="item.icon" v-if="item.icon" />
+            <Icon :name="item.icon" v-if="item.icon && themeStore.navTabIcon" />
             <span>{{ $t(item.title) }}</span>
             <Icon
               v-if="!item.affix"

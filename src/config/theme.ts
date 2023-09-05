@@ -5,6 +5,7 @@ const defaultThemeSetting = {
   themeColor: '', // 主题色
   breadCrumb: true, // 是否显示面包屑
   navTab: true, // 是否开启多页签
+  navTabIcon: true, // 是否开启多页签图标
   menuUnique: false, // 只展开一个一级菜单
   grayMode: false, // 是否灰色模式
   animateMode: 'zoom-fade' // 动画

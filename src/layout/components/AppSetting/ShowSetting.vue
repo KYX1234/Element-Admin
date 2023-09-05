@@ -1,8 +1,8 @@
 <template>
-  <el-divider>界面显示</el-divider>
+  <el-divider>{{ $t('setting.interfaceShow') }}</el-divider>
   <ul>
     <li class="flex-y-center justify-between py-1">
-      <div>主题颜色</div>
+      <div>{{ $t('setting.themeColor') }}</div>
       <el-color-picker
         v-model="themeStore.themeColor"
         :predefine="['#646CFF', '#12A34A', '#0777BC', '#8760DC', '#BC0743', '#BC7707']"
@@ -10,7 +10,7 @@
       />
     </li>
     <li class="flex-y-center justify-between py-1">
-      <div>深色主题</div>
+      <div>{{ $t('setting.darkTheme') }}</div>
       <el-switch
         :model-value="themeStore.isDark"
         inline-prompt
@@ -20,24 +20,32 @@
       />
     </li>
     <li class="flex-y-center justify-between py-1">
-      <div>显示面包屑</div>
-      <el-switch v-model="themeStore.breadCrumb" />
+      <div>{{ $t('setting.breadCrumb') }}</div>
+      <el-switch :model-value="themeStore.breadCrumb" @change="themeStore.setBreadCrumb" />
     </li>
     <li class="flex-y-center justify-between py-1">
-      <div>显示标签页</div>
-      <el-switch v-model="themeStore.navTab" />
+      <div>{{ $t('setting.navTab') }}</div>
+      <el-switch :model-value="themeStore.navTab" @change="themeStore.setNavTab" />
     </li>
     <li class="flex-y-center justify-between py-1">
-      <div>菜单手风琴模式</div>
-      <el-switch v-model="themeStore.menuUnique" />
+      <div>{{ $t('setting.navTabIcon') }}</div>
+      <el-switch :model-value="themeStore.navTabIcon" @change="themeStore.setNavTabIcon" />
     </li>
     <li class="flex-y-center justify-between py-1">
-      <div>灰色模式</div>
+      <div>{{ $t('setting.menuUnique') }}</div>
+      <el-switch :model-value="themeStore.menuUnique" @change="themeStore.setMenuUnique" />
+    </li>
+    <li class="flex-y-center justify-between py-1">
+      <div>{{ $t('setting.grayMode') }}</div>
       <el-switch :model-value="themeStore.grayMode" @change="themeStore.setGrayMode" />
     </li>
     <li class="flex-y-center justify-between py-1">
-      <div>动画类型</div>
-      <el-select v-model="themeStore.animateMode" class="w-35">
+      <div>{{ $t('setting.animateMode') }}</div>
+      <el-select
+        :model-value="themeStore.animateMode"
+        class="w-35"
+        @change="themeStore.setAnimateMode"
+      >
         <el-option
           v-for="item in animateMode"
           :key="item.value"
@@ -47,7 +55,7 @@
       </el-select>
     </li>
   </ul>
-  <el-divider>提示</el-divider>
+  <el-divider>{{ $t('setting.tips') }}</el-divider>
   <el-alert
     title="配置栏只在开发环境用于预览，生产环境不会展现，请手动修改配置文件 /src/config/theme"
     type="warning"

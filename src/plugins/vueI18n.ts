@@ -3,7 +3,7 @@ import { createI18n } from 'vue-i18n';
 import { storage } from '@/utils/storage';
 import messages from '@/locales';
 
-const i18n = createI18n({
+export const i18n = createI18n({
   globalInjection: true, //全局生效$t
   locale: storage.get('lang') || 'zh-CN',
   fallbackLocale: 'en',

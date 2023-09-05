@@ -5,6 +5,19 @@ export default {
   error: {
     returnToHome: 'Back Home'
   },
+  setting: {
+    projectSetting: 'Project Setting',
+    interfaceShow: 'Interface Show',
+    themeColor: 'Theme Color',
+    darkTheme: 'Dark Theme',
+    breadCrumb: 'Bread Crumb',
+    menuUnique: 'Menu Unique',
+    navTab: 'NavTab',
+    navTabIcon: 'NavTabIcon',
+    grayMode: 'Gray Mode',
+    animateMode: 'Animate Mode',
+    tips: 'Tips'
+  },
   menus: {
     dashboard: 'Dashboard',
     analysis: 'Analysis',
