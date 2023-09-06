@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/KYX1234/Element-Admin/compare/v1.18.0...v1.19.0) (2023-09-06)
+
+
+### Features
+
+* 深色菜单栏&缓存增加关键字 ([d8e1734](https://github.com/KYX1234/Element-Admin/commit/d8e173444c3b414f9a7687ce955cda3a3a527383))
+
 ## [1.18.0](https://github.com/KYX1234/Element-Admin/compare/v1.17.1...v1.18.0) (2023-09-05)
 
 
