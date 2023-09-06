@@ -1,6 +1,6 @@
 <template>
   <el-aside
-    :class="['sider', appStore.isMobile && 'fixed top-0 bottom-0 left-0 z-99']"
+    :class="['sider', appStore.isMobile && 'fixed top-0 bottom-0 left-0']"
     :width="collapseWidth"
   >
     <Logo />
@@ -28,6 +28,6 @@ const collapseWidth = computed(() => {
 
 <style lang="scss" scoped>
 .sider {
-  @apply flex-col-stretch bg-background  shadow-[0_0_1px_#888] transition-width duration-300;
+  @apply flex-col-stretch bg-background  shadow-[0_0_1px_#888] z-99 transition-width duration-300;
 }
 </style>

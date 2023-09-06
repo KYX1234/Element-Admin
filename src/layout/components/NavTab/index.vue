@@ -92,6 +92,9 @@ watch(
 <style lang="scss" scoped>
 :deep(.el-tabs) {
   width: calc(100% - 80px);
+  .is-scrollable .el-tabs__item:nth-child(2) {
+    margin-left: 0 !important;
+  }
   .el-tabs__header {
     margin-bottom: 0;
     .el-tabs__nav-wrap::after {
@@ -104,11 +107,15 @@ watch(
     .el-tabs__active-bar {
       display: none;
     }
+    .el-tabs__item:nth-child(2) {
+      margin-left: 12px;
+    }
     .el-tabs__item {
       border: 1px solid var(--el-border-color-light);
       height: 31px;
       padding: 0 12px;
       margin-left: 8px;
+      padding-right: 9px;
       border-radius: 2px;
       &:hover {
         border-color: var(--el-color-primary-light-3);
