@@ -7,6 +7,7 @@
       :collapse-transition="false"
       :collapse="appStore.isCollapse"
       @select="handleSelect"
+      popper-effect="dark"
     >
       <MenuItem v-for="item in menus" :key="item.path" :menu="item" />
     </el-menu>

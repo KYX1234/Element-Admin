@@ -20,6 +20,15 @@
       />
     </li>
     <li class="flex-y-center justify-between py-1">
+      <div>{{ $t('setting.menuMode') }}</div>
+      <el-switch
+        :model-value="themeStore.menuMode"
+        active-value="dark"
+        inactive-value="light"
+        @change="themeStore.setMenuMode"
+      />
+    </li>
+    <li class="flex-y-center justify-between py-1">
       <div>{{ $t('setting.breadCrumb') }}</div>
       <el-switch :model-value="themeStore.breadCrumb" @change="themeStore.setBreadCrumb" />
     </li>

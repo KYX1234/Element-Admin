@@ -22,6 +22,11 @@ export const useThemeStore = defineStore({
       document.documentElement.classList.toggle('html-grey');
       storage.set('themeSetting', this.$state);
     },
+    setMenuMode(menuMode: string) {
+      this.menuMode = menuMode;
+      document.documentElement.className = `layout-menu-${menuMode}`;
+      storage.set('themeSetting', this.$state);
+    },
     setBreadCrumb(breadCrumb: boolean) {
       this.breadCrumb = breadCrumb;
       storage.set('themeSetting', this.$state);

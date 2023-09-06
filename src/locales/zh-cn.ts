@@ -10,6 +10,7 @@ export default {
     interfaceShow: '界面显示',
     themeColor: '主题颜色',
     darkTheme: '深色主题',
+    menuMode: '深色菜单栏',
     breadCrumb: '显示面包屑',
     menuUnique: '菜单手风琴模式',
     navTab: '显示标签页',

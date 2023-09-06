@@ -10,6 +10,7 @@ export default {
     interfaceShow: 'Interface Show',
     themeColor: 'Theme Color',
     darkTheme: 'Dark Theme',
+    menuMode: 'Menu Mode',
     breadCrumb: 'Bread Crumb',
     menuUnique: 'Menu Unique',
     navTab: 'NavTab',

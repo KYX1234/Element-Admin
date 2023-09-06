@@ -35,7 +35,15 @@ export default defineComponent({
     }
     // 本地icon
     if (props.name.indexOf(VITE_LOCAL_ICON_PREFIX) === 0) {
-      return () => h('i', h(svgIcon, { ...props }));
+      return () =>
+        h(
+          ElIcon,
+          {
+            size: props.size || '16px',
+            color: props.color
+          },
+          () => h(svgIcon, { ...props })
+        );
     }
   }
 });

@@ -1,7 +1,6 @@
 <template>
   <el-aside
-    class="sider"
-    :class="appStore.isMobile ? 'fixed top-0 bottom-0 left-0 z-99' : ''"
+    :class="['sider', appStore.isMobile && 'fixed top-0 bottom-0 left-0 z-99']"
     :width="collapseWidth"
   >
     <Logo />
@@ -14,9 +13,10 @@ import { computed } from 'vue';
 import Logo from './Logo.vue';
 import Menu from './Menu.vue';
 import { useAppStore } from '@/store';
-defineOptions({ name: 'Asider' });
-const appStore = useAppStore();
 
+defineOptions({ name: 'Asider' });
+
+const appStore = useAppStore();
 const collapseWidth = computed(() => {
   if (appStore.isMobile) {
     return appStore.isCollapse ? '0' : '210px';

@@ -20,6 +20,9 @@ const setDefaultTheme = () => {
   if (themeSetting?.isDark) {
     themeStore.setIsDark(true);
   }
+  if (themeSetting?.menuMode) {
+    themeStore.setMenuMode(themeSetting?.menuMode);
+  }
   if (themeSetting?.themeColor) {
     themeStore.setThemeColor(themeSetting?.themeColor);
   }

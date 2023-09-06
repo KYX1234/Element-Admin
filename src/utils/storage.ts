@@ -1,5 +1,7 @@
 // 默认缓存期限为7天
 const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
+// 默认缓存关键字前缀
+const CACHE_KEY = 'Element-Admin-';
 
 /**
  * @description 操作本地 `localStorage`
@@ -10,14 +12,14 @@ const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
  */
 const creatStorage = () => {
   const get = <T = any>(key: string): T | null => {
-    const item = localStorage.getItem(key);
+    const item = localStorage.getItem(CACHE_KEY + key);
     if (item) {
       const data = JSON.parse(item);
       const { value, expire } = data;
       if (expire === null || expire >= Date.now()) {
         return value;
       } else {
-        remove(key);
+        remove(CACHE_KEY + key);
       }
     }
     return null;
@@ -28,11 +30,11 @@ const creatStorage = () => {
       value,
       expire: expire !== null ? new Date().getTime() + expire * 1000 : null
     });
-    localStorage.setItem(key, localStorageItem);
+    localStorage.setItem(CACHE_KEY + key, localStorageItem);
   };
 
   const remove = (key: string) => {
-    localStorage.removeItem(key);
+    localStorage.removeItem(CACHE_KEY + key);
   };
 
   const clear = () => {
