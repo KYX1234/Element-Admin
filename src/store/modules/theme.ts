@@ -11,7 +11,8 @@ export const useThemeStore = defineStore({
     setIsDark(dark: boolean) {
       this.isDark = dark;
       if (dark) {
-        document.documentElement.classList.add('dark');
+        this.menuMode = 'light';
+        document.documentElement.className = 'layout-menu-light dark';
       } else {
         document.documentElement.classList.remove('dark');
       }
@@ -24,7 +25,8 @@ export const useThemeStore = defineStore({
     },
     setMenuMode(menuMode: string) {
       this.menuMode = menuMode;
-      document.documentElement.className = `layout-menu-${menuMode}`;
+      const dark = this.isDark ? 'dark' : '';
+      document.documentElement.className = `layout-menu-${menuMode} ${dark}`;
       storage.set('themeSetting', this.$state);
     },
     setBreadCrumb(breadCrumb: boolean) {
