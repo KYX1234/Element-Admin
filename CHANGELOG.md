@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.1](https://github.com/KYX1234/Element-Admin/compare/v1.19.0...v1.19.1) (2023-09-06)
+
+
+### Styling
+
+* 样式调整 ([efe400b](https://github.com/KYX1234/Element-Admin/commit/efe400bc67f83957424a32d543746d78a26f6b27))
+
 ## [1.19.0](https://github.com/KYX1234/Element-Admin/compare/v1.18.0...v1.19.0) (2023-09-06)
 
 
