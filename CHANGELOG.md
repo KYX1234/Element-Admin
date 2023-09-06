@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.2](https://github.com/KYX1234/Element-Admin/compare/v1.19.1...v1.19.2) (2023-09-06)
+
+
+### Bug Fixes
+
+* 暗黑模式与侧边栏bug ([d3427a7](https://github.com/KYX1234/Element-Admin/commit/d3427a72306aca2d9dde8957dd043784e7389d54))
+
 ## [1.19.1](https://github.com/KYX1234/Element-Admin/compare/v1.19.0...v1.19.1) (2023-09-06)
 
 
