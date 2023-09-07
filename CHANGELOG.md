@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.3](https://github.com/KYX1234/Element-Admin/compare/v1.19.2...v1.19.3) (2023-09-07)
+
+
+### Bug Fixes
+
+* 修复首次加载样式错误问题 ([ddbf236](https://github.com/KYX1234/Element-Admin/commit/ddbf2363ca9c11cb765f391a9fe84f710a427de7))
+
 ## [1.19.2](https://github.com/KYX1234/Element-Admin/compare/v1.19.1...v1.19.2) (2023-09-06)
 
 
