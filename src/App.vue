@@ -16,13 +16,14 @@ const themeStore = useThemeStore();
 const language = computed(() => (appStore.language === 'zh-CN' ? zhCN : en));
 
 const setDefaultTheme = () => {
+  themeStore.setMenuMode(themeStore.menuMode);
+
   const themeSetting = storage.get('themeSetting');
+
   if (themeSetting?.isDark) {
     themeStore.setIsDark(true);
   }
-  if (themeSetting?.menuMode) {
-    themeStore.setMenuMode(themeSetting?.menuMode);
-  }
+
   if (themeSetting?.themeColor) {
     themeStore.setThemeColor(themeSetting?.themeColor);
   }
