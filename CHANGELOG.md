@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.5](https://github.com/KYX1234/Element-Admin/compare/v1.19.4...v1.19.5) (2023-09-07)
+
+
+### Bug Fixes
+
+* 修复全屏图标显示 ([cd6d170](https://github.com/KYX1234/Element-Admin/commit/cd6d170124782f00eac7ecb0bfc842247eae4e3b))
+
 ## [1.19.4](https://github.com/KYX1234/Element-Admin/compare/v1.19.3...v1.19.4) (2023-09-07)
 
 
