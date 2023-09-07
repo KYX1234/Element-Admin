@@ -24,9 +24,17 @@ ElementAdmin 是一个基于 Vue3、Vite、TypeScript、Unocss、Element plus、
 
 ## 项目示例图
 
-- 首页：
-https://ooo.0x0.ooo/2023/09/07/OnNMsc.png
+- 登录：
+  ![login](https://ooo.0x0.ooo/2023/09/07/OnNaor.png)
 
+- 首页：
+  ![home](https://ooo.0x0.ooo/2023/09/07/OnNMsc.png)
+
+- 暗黑：
+  ![dark](https://ooo.0x0.ooo/2023/09/07/OnNorM.png)
+
+- 移动端：
+  ![mobile](https://ooo.0x0.ooo/2023/09/07/OnNqGG.png)
 
 ## 安装使用
 
