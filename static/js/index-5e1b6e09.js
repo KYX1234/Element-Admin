@@ -1,0 +1,1 @@
+import{h as o,w as r,o as t,x as a}from"./index-4ba4d6ce.js";import{E as c}from"./el-card-0e823b24.js";import{_ as n}from"./_plugin-vue_export-helper-c27b6911.js";const s={};function _(d,f){const e=c;return t(),o(e,{shadow:"never"},{default:r(()=>[a("系统管理-菜单管理")]),_:1})}const x=n(s,[["render",_]]);export{x as default};
