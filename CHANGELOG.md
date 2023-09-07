@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.4](https://github.com/KYX1234/Element-Admin/compare/v1.19.3...v1.19.4) (2023-09-07)
+
+
+### Miscellaneous Chores
+
+* readme ([3cfda13](https://github.com/KYX1234/Element-Admin/commit/3cfda13564acec6ffce8b862c42976cb08ef07df))
+
 ## [1.19.3](https://github.com/KYX1234/Element-Admin/compare/v1.19.2...v1.19.3) (2023-09-07)
 
 
