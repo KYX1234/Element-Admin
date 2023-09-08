@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/KYX1234/Element-Admin/compare/v1.19.5...v1.20.0) (2023-09-08)
+
+
+### Features
+
+* tab增加右键菜单功能 ([e8cd30a](https://github.com/KYX1234/Element-Admin/commit/e8cd30ade73f8b25dab2016e03ff627b2066a41e))
+
 ## [1.19.5](https://github.com/KYX1234/Element-Admin/compare/v1.19.4...v1.19.5) (2023-09-07)
 
 
