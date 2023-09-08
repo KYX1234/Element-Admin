@@ -35,7 +35,7 @@
       :visible="contextmenuVisible"
       :style="contextMenuStyle"
     />
-    <TabTools :options="tabMenuOptions" :currentPath="currentPath" />
+    <TabTools :options="tabMenuOptions" :currentPath="currentPath" @update-status="updateStatus" />
   </nav>
 </template>
 
@@ -139,17 +139,19 @@ const handleContextMenu = (e: any, fullPath: string, affix?: boolean) => {
   contextmenuVisible.value = true;
 };
 
+const updateStatus = () => {
+  showFilterMenu(route.fullPath, route.meta.affix);
+};
+
 onMounted(() => {
   initTabs();
   addTab();
-  showFilterMenu(route.fullPath, route.meta.affix);
 });
 
 watch(
   () => route.fullPath,
   () => {
     addTab();
-    showFilterMenu(route.fullPath, route.meta.affix);
   }
 );
 </script>
