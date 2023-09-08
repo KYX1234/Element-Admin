@@ -47,13 +47,13 @@ pnpm install
 - 运行
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
 - 打包
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 ## 更新日志

@@ -5,34 +5,20 @@
   >
     <Icon name="local-icon-refresh" size="18" :class="{ 'animate-spin': loading }" />
   </div>
-  <el-dropdown trigger="click">
+  <el-dropdown trigger="click" @command="handleCommand" @handleOpen="handleOpen">
     <div class="w-10 h-10 flex-center border-l border-stone-200 dark:border-stone-700">
       <Icon name="el-icon-arrowDown" size="18" />
     </div>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item
-          @click="navTabStore.removeTab(route.fullPath)"
-          :disabled="route.meta.affix"
+          v-for="item in options"
+          :key="item.key"
+          :command="item.key"
+          :disabled="item.disabled"
         >
-          <Icon name="el-icon-close" />
-          关闭当前
-        </el-dropdown-item>
-        <el-dropdown-item @click="navTabStore.clearLeftTab(route.fullPath)">
-          <Icon name="el-icon-dArrowLeft" />
-          关闭左侧
-        </el-dropdown-item>
-        <el-dropdown-item @click="navTabStore.clearRightTab(route.fullPath)">
-          <Icon name="el-icon-dArrowRight" />
-          关闭右侧
-        </el-dropdown-item>
-        <el-dropdown-item @click="navTabStore.clearTabOther(route.fullPath)">
-          <Icon name="el-icon-switch" />
-          关闭其他
-        </el-dropdown-item>
-        <el-dropdown-item @click="navTabStore.clearTabAll">
-          <Icon name="el-icon-minus" />
-          关闭所有
+          <Icon :name="item.icon" />
+          {{ item.label }}
         </el-dropdown-item>
       </el-dropdown-menu>
     </template>
@@ -41,13 +27,19 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { useRoute } from 'vue-router';
 import { useAppStore, useNavTabStore } from '@/store';
+import { useRoute } from 'vue-router';
 
+interface Props {
+  currentPath: string;
+  options: any;
+}
+defineProps<Props>();
 const route = useRoute();
 const appStore = useAppStore();
 const navTabStore = useNavTabStore();
 const loading = ref(false);
+
 const handleRefresh = () => {
   loading.value = true;
   appStore.setReloadFlag();
@@ -55,6 +47,31 @@ const handleRefresh = () => {
     loading.value = false;
   }, 1000);
 };
+const handleCommand = (key: string) => {
+  switch (key) {
+    case 'refresh':
+      appStore.setReloadFlag();
+      break;
+    case 'closeCurrent':
+      navTabStore.closeCurrent(route.fullPath);
+      break;
+    case 'closeLeft':
+      navTabStore.closeLeft(route.fullPath);
+      break;
+    case 'closeRight':
+      navTabStore.closeRight(route.fullPath);
+      break;
+    case 'closeOther':
+      navTabStore.closeOther(route.fullPath);
+      break;
+    case 'closeAll':
+      navTabStore.closeAll();
+      break;
+    default:
+      break;
+  }
+};
+const handleOpen = () => {};
 </script>
 
 <style lang="scss" scoped></style>

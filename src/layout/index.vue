@@ -2,7 +2,7 @@
   <el-container class="h-full" ref="appWrapperRef">
     <AppMask v-show="showAppMask" @click="closeAppMask" />
     <Asider />
-    <el-container direction="vertical">
+    <el-container direction="vertical" class="relative">
       <Header />
       <NavTab />
       <Main />

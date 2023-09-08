@@ -1,8 +1,8 @@
 <script lang="ts">
 import { h, defineComponent, resolveComponent } from 'vue';
 import { ElIcon } from 'element-plus';
-import svgIcon from './src/svgIcon.vue';
-import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './src/util';
+import svgIcon from './svgIcon.vue';
+import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './util';
 
 export default defineComponent({
   name: 'Icon',

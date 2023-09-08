@@ -64,7 +64,7 @@ export default defineConfig({
       success: 'var(--el-color-success)',
       warning: 'var(--el-color-warning)',
       error: 'var(--el-color-error)',
-      fill: 'var(--el-fill-color-lighter)',
+      fill: 'var(--el-fill-color-light)',
       background: 'var(--el-bg-color)',
       borderColor: 'var(--el-border-color-lighter)',
       dark: '#18181c'

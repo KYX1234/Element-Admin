@@ -1,6 +1,7 @@
 <template>
   <nav
-    class="navTab flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)] relative"
+    ref="navTabRef"
+    class="navTab flex-y-center h-10 shadow-[0_0_1px_#888] bg-[var(--el-bg-color)]"
     v-if="themeStore.navTab"
   >
     <el-tabs :model-value="activeName" @tab-change="handleChange">
@@ -11,7 +12,10 @@
         :label="item.title"
       >
         <template #label>
-          <div class="flex-center gap-2">
+          <div
+            class="flex-center gap-2 h-full pl-12px pr-9px"
+            @contextmenu.prevent="handleContextMenu($event, item.fullPath, item.affix)"
+          >
             <Icon :name="item.icon" v-if="item.icon && themeStore.navTabIcon" />
             <span>{{ $t(item.title) }}</span>
             <Icon
@@ -25,33 +29,44 @@
         </template>
       </el-tab-pane>
     </el-tabs>
-    <TabTools />
+    <TabDropdown
+      :currentPath="currentPath"
+      :options="tabMenuOptions"
+      :visible="contextmenuVisible"
+      :style="contextMenuStyle"
+    />
+    <TabTools :options="tabMenuOptions" :currentPath="currentPath" />
   </nav>
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { filterAffixTags } from './helper';
 import { TabPaneName } from 'element-plus';
 import { useNavTabStore, useThemeStore } from '@/store';
-import TabTools from './TabTools.vue';
 import { storage } from '@/utils/storage';
-
+import TabTools from './TabTools.vue';
+import TabDropdown from './TabDropdown.vue';
+import { useTab } from '@/hooks/useTab';
 defineOptions({ name: 'NavTab' });
 
 const router = useRouter();
 const route = useRoute();
 const themeStore = useThemeStore();
 const navTabStore = useNavTabStore();
+const navTabRef = ref();
+const currentPath = ref('');
 const activeName = computed(() => route.fullPath);
+const { contextmenuLeft, contextmenuTop, contextmenuVisible, tabMenuOptions, contextMenuStyle } =
+  useTab();
 
 // 初始化tabs
 const initTabs = () => {
   const routes = router.getRoutes();
   const tabs = storage.get('navTab') ?? filterAffixTags(routes);
   for (const tab of tabs) {
-    navTabStore.addTab(tab);
+    navTabStore.add(tab);
   }
 };
 
@@ -63,28 +78,78 @@ const addTab = () => {
     affix: route.meta.affix || false,
     icon: route.meta.icon
   };
-  navTabStore.addTab(tab);
+  navTabStore.add(tab);
 };
 
 // 切换tab
 const handleChange = (fullPath: TabPaneName) => {
   router.push(fullPath as string);
+  resetMenuStatus();
 };
 
 // 删除tab
 const handleRemove = (fullPath: TabPaneName) => {
-  navTabStore.removeTab(fullPath as string);
+  navTabStore.closeCurrent(fullPath as string);
+};
+
+const resetMenuStatus = () => {};
+
+// 筛选显示的右键菜单
+const showFilterMenu = (fullPath: string, affix?: boolean) => {
+  Array.of(0, 1, 2, 3, 4, 5).forEach((v) => {
+    tabMenuOptions[v].show = true;
+    tabMenuOptions[v].disabled = false;
+  });
+  const index = navTabStore.tabsList.findIndex((v) => v.fullPath === fullPath);
+  if (route.fullPath !== fullPath) {
+    tabMenuOptions[0].show = false;
+  }
+  if (affix) {
+    tabMenuOptions[1].show = false;
+    tabMenuOptions[1].disabled = true;
+  }
+  // 左侧菜单
+  if (index === 0) {
+    tabMenuOptions[2].show = false;
+    tabMenuOptions[2].disabled = true;
+  }
+  // 右侧菜单
+  if (index === navTabStore.tabsList.length - 1) {
+    tabMenuOptions[3].show = false;
+    tabMenuOptions[3].disabled = true;
+  }
+  if (navTabStore.tabsList.length < 2) {
+    tabMenuOptions[4].show = false;
+    tabMenuOptions[5].show = false;
+    tabMenuOptions[4].disabled = true;
+    tabMenuOptions[5].disabled = true;
+  }
+  currentPath.value = fullPath;
+};
+
+const handleContextMenu = (e: any, fullPath: string, affix?: boolean) => {
+  showFilterMenu(fullPath, affix);
+  const menuMinWidth = 105;
+  const offsetLeft = navTabRef.value.getBoundingClientRect().left; // container margin left
+  const offsetWidth = navTabRef.value.offsetWidth; // container width
+  const maxLeft = offsetWidth - menuMinWidth; // left boundary
+  const left = e.clientX - offsetLeft + 15; // 15: margin right
+  contextmenuLeft.value = left > maxLeft ? maxLeft : left;
+  contextmenuTop.value = e.clientY;
+  contextmenuVisible.value = true;
 };
 
 onMounted(() => {
   initTabs();
   addTab();
+  showFilterMenu(route.fullPath, route.meta.affix);
 });
 
 watch(
   () => route.fullPath,
   () => {
     addTab();
+    showFilterMenu(route.fullPath, route.meta.affix);
   }
 );
 </script>
@@ -113,9 +178,8 @@ watch(
     .el-tabs__item {
       border: 1px solid var(--el-border-color-light);
       height: 31px;
-      padding: 0 12px;
+      padding: 0;
       margin-left: 8px;
-      padding-right: 9px;
       border-radius: 2px;
       &:hover {
         border-color: var(--el-color-primary-light-3);
@@ -134,3 +198,4 @@ watch(
   }
 }
 </style>
+@/hooks/useTab
