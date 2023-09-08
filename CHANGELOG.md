@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.1](https://github.com/KYX1234/Element-Admin/compare/v1.20.0...v1.20.1) (2023-09-08)
+
+
+### Bug Fixes
+
+* 首次打开菜单栏异常 ([503e644](https://github.com/KYX1234/Element-Admin/commit/503e644b2a6ca18be739e135b74d01a9afc483e0))
+
 ## [1.20.0](https://github.com/KYX1234/Element-Admin/compare/v1.19.5...v1.20.0) (2023-09-08)
 
 
