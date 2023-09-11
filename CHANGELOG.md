@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/KYX1234/Element-Admin/compare/v1.20.1...v1.21.0) (2023-09-11)
+
+
+### Features
+
+* table hooks ([b86019a](https://github.com/KYX1234/Element-Admin/commit/b86019af022178e7f30a0f7f07501748cc488e94))
+
 ## [1.20.1](https://github.com/KYX1234/Element-Admin/compare/v1.20.0...v1.20.1) (2023-09-08)
 
 
