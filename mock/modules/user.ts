@@ -1,33 +1,36 @@
 import { MockMethod } from 'vite-plugin-mock';
+import Mock from 'mockjs';
 
 export default [
   {
-    url: '/mock/api/login',
-    timeout: 1000,
-    method: 'post',
-    response: ({ body }) => {
-      return {
-        code: 200,
-        message: 'ok',
-        data: {
-          token: `${body.username}_@string`
-        }
-      };
-    }
-  },
-  {
-    url: '/mock/api/userInfo',
-    timeout: 200,
+    url: '/mock/user',
     method: 'get',
-    response: (options) => {
-      const role = options.headers.authorization.split('_')[0];
-      const roleName = role === 'admin' ? '系统管理员' : '普通用户';
+    timeout: 1000,
+    response: ({ query }: any) => {
+      const result: any[] = [];
+      const { page = 1, pageSize = 10 } = query;
+      for (let i = 0; i < pageSize; i++) {
+        result.push({
+          id: '@integer(10,100)',
+          name: '@cname()',
+          avatar: Mock.Random.image('200x100', Mock.Random.color(), '#FFF', 'png', '!'),
+          phone: /^1[34578]\d{9}$/,
+          email: '@email',
+          'role|1': ['超级管理员', '普通用户'],
+          'sex|1': [0, 1],
+          'status|1': [0, 1],
+          creat_at: '@datetime',
+          end_at: '@datetime'
+        });
+      }
       return {
         code: 200,
         message: 'ok',
         data: {
-          username: roleName,
-          role: role
+          page: +page,
+          pageSize: +pageSize,
+          total: 100,
+          list: result
         }
       };
     }

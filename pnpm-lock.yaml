@@ -23,6 +23,9 @@ dependencies:
   element-plus:
     specifier: ^2.3.8
     version: 2.3.8(vue@3.3.4)
+  mockjs:
+    specifier: ^1.1.0
+    version: 1.1.0
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -46,6 +49,9 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: ^17.6.7
     version: 17.6.7
+  '@types/mockjs':
+    specifier: ^1.0.7
+    version: 1.0.7
   '@types/node':
     specifier: ^18.16.19
     version: 18.16.19
@@ -100,9 +106,6 @@ devDependencies:
   lint-staged:
     specifier: ^13.2.3
     version: 13.2.3
-  mockjs:
-    specifier: ^1.1.0
-    version: 1.1.0
   prettier:
     specifier: ^3.0.0
     version: 3.0.0
@@ -1441,6 +1444,10 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
+  /@types/mockjs@1.0.7:
+    resolution: {integrity: sha512-OCxXz6hEaJOVpRwuJMiVY5a6LtJcih+br9gwB/Q8ooOBikvk5FpBQ31OlNimXo3EqKha1Z7PFBni+q9m+8NCWg==}
+    dev: true
+
   /@types/node@10.17.60:
     resolution: {integrity: sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==}
     dev: true
@@ -2553,7 +2560,6 @@ packages:
   /commander@11.0.0:
     resolution: {integrity: sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==}
     engines: {node: '>=16'}
-    dev: true
 
   /commander@7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
@@ -4599,7 +4605,6 @@ packages:
     hasBin: true
     dependencies:
       commander: 11.0.0
-    dev: true
 
   /mrmime@1.0.1:
     resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
@@ -6380,6 +6385,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.3.4
+    dev: false
 
   /vue-demi@0.14.6(vue@3.3.4):
     resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
@@ -6394,7 +6400,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.3.4
-    dev: true
 
   /vue-eslint-parser@9.3.1(eslint@8.45.0):
     resolution: {integrity: sha512-Clr85iD2XFZ3lJ52/ppmUDG/spxQu6+MAeHXjjyI4I1NUYZ9xmenQp4N0oaHJhrA8OOxltCVxMRfANGa70vU0g==}
@@ -6647,12 +6652,6 @@ packages:
       fastq: registry.npmmirror.com/fastq@1.15.0
     dev: true
 
-  registry.npmmirror.com/@types/mockjs@1.0.7:
-    resolution: {integrity: sha512-OCxXz6hEaJOVpRwuJMiVY5a6LtJcih+br9gwB/Q8ooOBikvk5FpBQ31OlNimXo3EqKha1Z7PFBni+q9m+8NCWg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@types/mockjs/-/mockjs-1.0.7.tgz}
-    name: '@types/mockjs'
-    version: 1.0.7
-    dev: true
-
   registry.npmmirror.com/@types/web-bluetooth@0.0.16:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz}
     name: '@types/web-bluetooth'
@@ -6673,7 +6672,7 @@ packages:
       '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.17
       '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@10.2.1
       '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@10.2.1(vue@3.3.4)
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6702,7 +6701,7 @@ packages:
       '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.16
       '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@9.13.0
       '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.3.4)
-      vue-demi: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6731,7 +6730,7 @@ packages:
     name: '@vueuse/shared'
     version: 10.2.1
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6743,7 +6742,7 @@ packages:
     name: '@vueuse/shared'
     version: 10.3.0
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6754,7 +6753,7 @@ packages:
     name: '@vueuse/shared'
     version: 9.13.0
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7350,7 +7349,7 @@ packages:
       mockjs: '>=1.1.0'
       vite: '>=2.0.0'
     dependencies:
-      '@types/mockjs': registry.npmmirror.com/@types/mockjs@1.0.7
+      '@types/mockjs': 1.0.7
       chalk: registry.npmmirror.com/chalk@4.1.2
       chokidar: registry.npmmirror.com/chokidar@3.5.3
       connect: registry.npmmirror.com/connect@3.7.0

@@ -1,4 +1,4 @@
 import Icon from './src/Icon.vue';
-import svgIcon from './src/svgIcon.vue';
+import SvgIcon from './src/SvgIcon.vue';
 
-export { Icon, svgIcon };
+export { Icon, SvgIcon };

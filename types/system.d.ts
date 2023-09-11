@@ -16,6 +16,19 @@ declare namespace App {
     icon?: string;
     affix?: boolean;
   }
+  /** 请求结果 */
+  interface RequestResult<T = any> {
+    code: number;
+    message: string;
+    data: T;
+  }
+  /** 表格结果 */
+  interface TableResult<T = any> {
+    total: number;
+    list: T[];
+  }
+  /** 请求表格结果 */
+  type RequestTableResult<T = any> = RequestResult<TableResult<T> | T>;
 }
 
 /* __APP_INFO__ */

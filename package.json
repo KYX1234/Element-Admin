@@ -24,6 +24,7 @@
     "dayjs": "^1.11.9",
     "echarts": "^5.4.3",
     "element-plus": "^2.3.8",
+    "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
+    "@types/mockjs": "^1.0.7",
     "@types/node": "^18.16.19",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
@@ -51,7 +53,6 @@
     "eslint-plugin-vue": "^9.15.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "mockjs": "^1.1.0",
     "prettier": "^3.0.0",
     "rollup-plugin-visualizer": "^5.9.2",
     "sass": "^1.63.6",

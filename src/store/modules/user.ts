@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import router from '@/router';
-import { getUserInfo, login } from '@/api/user';
+import { getUserInfo, login } from '@/api/auth';
 import { storage } from '@/utils/storage';
 import { useNavTabStore } from './navTab';
 
@@ -20,7 +20,7 @@ export const useUserStore = defineStore({
       const navTabStore = useNavTabStore();
       storage.remove('userInfo');
       storage.remove('token');
-      navTabStore.resetTab();
+      navTabStore.reset();
       this.$reset();
     },
     setToken(token: string) {
