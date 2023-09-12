@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.2](https://github.com/KYX1234/Element-Admin/compare/v1.22.1...v1.22.2) (2023-09-12)
+
+
+### Bug Fixes
+
+* ts错误 ([1d6a4c7](https://github.com/KYX1234/Element-Admin/commit/1d6a4c70847ad5f8f3995e9520209cf0ad39ca76))
+
 ## [1.22.1](https://github.com/KYX1234/Element-Admin/compare/v1.22.0...v1.22.1) (2023-09-12)
 
 
