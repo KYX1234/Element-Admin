@@ -8,10 +8,10 @@
       </template>
       <el-form :model="searchForm" inline>
         <el-form-item>
-          <el-input class="w-220px" v-model="searchForm.phone" placeholder="手机号搜索" />
+          <el-input v-model="searchForm.phone" class="w-220px" placeholder="手机号搜索" />
         </el-form-item>
         <el-form-item>
-          <el-select v-model="searchForm.status" placeholder="状态" class="w-220px" clearable>
+          <el-select v-model="searchForm.status" placeholder="状态" clearable class="w-220px">
             <el-option label="启用" :value="1" />
             <el-option label="禁用" :value="0" />
           </el-select>

@@ -9,8 +9,8 @@
     </div>
     <div class="content" v-if="visible">
       <el-row class="w-full">
-        <el-col :span="21" :xs="24"> <slot></slot></el-col>
-        <el-col :span="3" :xs="24" class="text-right mb-15px">
+        <el-col :span="20" :xs="24"> <slot></slot></el-col>
+        <el-col :span="4" :xs="24" class="text-right mb-15px">
           <el-button type="primary" :icon="searchIcon" @click="emits('handleSearch')" />
           <el-button type="default" :icon="clearIcon" @click="emits('handleReset')" />
         </el-col>
@@ -45,10 +45,10 @@ const onShow = () => {
   border-radius: 4px;
   color: var(--el-text-color-primary);
   margin-bottom: 10px;
-  .header {
+  :deep(.header) {
     display: flex;
     justify-content: space-between;
-    &-l {
+    .header-l {
       display: flex;
       align-items: center;
       font-size: 15px;
@@ -62,12 +62,17 @@ const onShow = () => {
         background-color: var(--el-color-primary);
       }
     }
+    .header-r {
+      .el-button {
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+    }
   }
   :deep(.content) {
     display: flex;
     justify-content: space-between;
     border-radius: 4px;
-    margin-top: 10px;
     padding: 15px 10px 0;
     background-color: var(--el-fill-color-lighter);
     .el-form-item {
