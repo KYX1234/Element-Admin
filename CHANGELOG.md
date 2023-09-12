@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/KYX1234/Element-Admin/compare/v1.21.0...v1.22.0) (2023-09-12)
+
+
+### Features
+
+* 搜索面板 ([92004cc](https://github.com/KYX1234/Element-Admin/commit/92004cccd45d13989c512a3b1cfb2d388447c7fa))
+
 ## [1.21.0](https://github.com/KYX1234/Element-Admin/compare/v1.20.1...v1.21.0) (2023-09-11)
 
 
