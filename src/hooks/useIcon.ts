@@ -1,6 +1,6 @@
 import { h } from 'vue';
 import type { VNode } from 'vue';
-import Icon from '@/components/Icon/index.vue';
+import { Icon } from '@/components/Icon';
 
 interface IconTypes {
   size?: number;

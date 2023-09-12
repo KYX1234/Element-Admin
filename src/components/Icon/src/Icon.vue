@@ -1,7 +1,7 @@
 <script lang="ts">
 import { h, defineComponent, resolveComponent } from 'vue';
 import { ElIcon } from 'element-plus';
-import svgIcon from './svgIcon.vue';
+import SvgIcon from './SvgIcon.vue';
 import { VITE_EL_ICON_PREFIX, VITE_LOCAL_ICON_PREFIX } from './util';
 
 export default defineComponent({
@@ -42,7 +42,7 @@ export default defineComponent({
             size: props.size || '16px',
             color: props.color
           },
-          () => h(svgIcon, { ...props })
+          () => h(SvgIcon, { ...props })
         );
     }
   }

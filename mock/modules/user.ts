@@ -8,7 +8,7 @@ export default [
     timeout: 1000,
     response: ({ query }: any) => {
       const result: any[] = [];
-      const { page = 1, pageSize = 10 } = query;
+      const { page = 1, pageSize = 20 } = query;
       for (let i = 0; i < pageSize; i++) {
         result.push({
           id: '@integer(10,100)',

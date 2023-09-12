@@ -4,7 +4,7 @@ interface Options<T = any> {
   // api
   apiFn: (params: any) => Promise<App.RequestTableResult>;
   // api请求参数
-  apiParams?: Recordable;
+  params?: Recordable;
   // api返回值不是约定的TableResponse的处理
   callback?: (data: any) => App.TableResult<T>;
   // 显示分页数据
@@ -16,9 +16,11 @@ interface Options<T = any> {
 export const useTable = <T = any>(options: Options) => {
   const tableData = ref<T[]>([]);
   const loading = ref<boolean>(false);
+  const paramsInit = JSON.parse(JSON.stringify(options.params));
   const page = reactive({
     page: 1,
-    pageSize: 10,
+    pageSize: 20,
+    pageSizes: [10, 20, 30, 50],
     total: 10
   });
 
@@ -26,7 +28,7 @@ export const useTable = <T = any>(options: Options) => {
     loading.value = true;
     const isPageable = options.isPageable ?? true;
     const pageParams = isPageable ? { page: page.page, pageSize: page.pageSize } : {};
-    const totalParams = Object.assign({}, options.apiParams, pageParams);
+    const totalParams = Object.assign({}, options.params, pageParams);
     let { data } = await options.apiFn(totalParams).finally(() => (loading.value = false));
     options.callback && (data = options.callback(data));
     tableData.value = isPageable ? data.list : data;
@@ -40,9 +42,17 @@ export const useTable = <T = any>(options: Options) => {
   };
 
   const handleCurrentChange = async (val: number) => {
-    page.pageSize = val;
+    page.page = val;
     await getList();
   };
+
+  const resetParams = () => {
+    Object.keys(paramsInit).forEach((item) => {
+      options.params![item] = paramsInit[item];
+    });
+    getList();
+  };
+
   if (options.immediate ?? true) getList();
 
   return {
@@ -50,6 +60,7 @@ export const useTable = <T = any>(options: Options) => {
     page,
     loading,
     getList,
+    resetParams,
     handleSizeChange,
     handleCurrentChange
   };

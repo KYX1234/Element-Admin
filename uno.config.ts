@@ -54,6 +54,7 @@ export default defineConfig({
     'fixed-center': 'fixed-lt flex-center wh-full',
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden text-ellipsis',
+    'page-card': 'flex-col overflow-hidden p-5 rounded color-text bg-card',
     'transition-base': 'transition-all duration-300 ease-in-out'
   },
   theme: {
@@ -65,9 +66,10 @@ export default defineConfig({
       warning: 'var(--el-color-warning)',
       error: 'var(--el-color-error)',
       fill: 'var(--el-fill-color-light)',
+      text: 'var(--el-text-color-primary)',
+      card: 'var(--el-bg-color-overlay)',
       background: 'var(--el-bg-color)',
-      borderColor: 'var(--el-border-color-lighter)',
-      dark: '#18181c'
+      borderColor: 'var(--el-border-color-lighter)'
     }
   }
 });

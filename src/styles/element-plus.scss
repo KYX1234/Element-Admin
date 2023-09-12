@@ -117,3 +117,11 @@
 .el-main .el-scrollbar__view {
   height: 100%;
 }
+
+//element-plus from
+.el-form .el-col {
+  .el-select,
+  .el-form-item {
+    width: 100%;
+  }
+}
