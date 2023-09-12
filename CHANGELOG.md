@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.1](https://github.com/KYX1234/Element-Admin/compare/v1.22.0...v1.22.1) (2023-09-12)
+
+
+### Miscellaneous Chores
+
+* 其它修改 ([95b4f7a](https://github.com/KYX1234/Element-Admin/commit/95b4f7ae371c057e92509a0d26f720f619fc5806))
+
 ## [1.22.0](https://github.com/KYX1234/Element-Admin/compare/v1.21.0...v1.22.0) (2023-09-12)
 
 
