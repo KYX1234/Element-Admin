@@ -68,7 +68,7 @@ jobs:
 
       # 运行构建脚本
       - name: Build Github
-        run: pnpm run build:page
+        run: pnpm build:page
 
       # 将构建后的文件部署到 gh-pages 分支
       - name: Deploy Github
