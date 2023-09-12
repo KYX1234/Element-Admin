@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.3](https://github.com/KYX1234/Element-Admin/compare/v1.22.2...v1.22.3) (2023-09-12)
+
+
+### Styling
+
+* 搜索面板样式调整 ([5c97638](https://github.com/KYX1234/Element-Admin/commit/5c9763856d1c06f6c51b52edff74a0c0a8cd9ead))
+
 ## [1.22.2](https://github.com/KYX1234/Element-Admin/compare/v1.22.1...v1.22.2) (2023-09-12)
 
 
