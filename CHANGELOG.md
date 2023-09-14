@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/KYX1234/Element-Admin/compare/v1.22.3...v1.23.0) (2023-09-14)
+
+
+### Features
+
+* 角色管理 ([a4b95e0](https://github.com/KYX1234/Element-Admin/commit/a4b95e07a6794e61eefdbd5bbb94be8e09dd03a5))
+
 ## [1.22.3](https://github.com/KYX1234/Element-Admin/compare/v1.22.2...v1.22.3) (2023-09-12)
 
 
