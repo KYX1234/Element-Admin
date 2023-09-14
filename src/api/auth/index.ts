@@ -9,3 +9,8 @@ export const login = (data: object) => {
 export const getUserInfo = () => {
   return request.get('/mock/api/userInfo');
 };
+
+/** 获取tree菜单列表 */
+export const getMenuList = () => {
+  return request.get('/mock/api/menuList');
+};

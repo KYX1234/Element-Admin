@@ -16,7 +16,7 @@ interface Options<T = any> {
 export const useTable = <T = any>(options: Options) => {
   const tableData = ref<T[]>([]);
   const loading = ref<boolean>(false);
-  const paramsInit = JSON.parse(JSON.stringify(options.params));
+  const paramsInit = JSON.parse(JSON.stringify(options.params || {}));
   const page = reactive({
     page: 1,
     pageSize: 20,

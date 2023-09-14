@@ -57,7 +57,7 @@ const onShow = () => {
         display: inline-block;
         content: '';
         width: 4px;
-        height: 60%;
+        height: 50%;
         margin-right: 5px;
         background-color: var(--el-color-primary);
       }
