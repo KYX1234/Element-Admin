@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.1](https://github.com/KYX1234/Element-Admin/compare/v1.23.0...v1.23.1) (2023-09-14)
+
+
+### Styling
+
+* 样式 ([d4c8716](https://github.com/KYX1234/Element-Admin/commit/d4c8716804fd4345c044fb5a6fe5e762c242f6eb))
+
 ## [1.23.0](https://github.com/KYX1234/Element-Admin/compare/v1.22.3...v1.23.0) (2023-09-14)
 
 
