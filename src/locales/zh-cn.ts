@@ -37,7 +37,9 @@ export default {
     403: '403',
     404: '404',
     500: '500',
-    about: '关于项目'
+    about: '关于项目',
+    feature: '功能示例',
+    directives: '指令'
   },
   login: {
     login: '登录',

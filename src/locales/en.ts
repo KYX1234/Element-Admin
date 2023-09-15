@@ -37,7 +37,9 @@ export default {
     403: '403',
     404: '404',
     500: '500',
-    about: 'About Project'
+    about: 'About Project',
+    feature: 'Feature',
+    directives: 'Directives'
   },
   login: {
     login: 'Sign in',

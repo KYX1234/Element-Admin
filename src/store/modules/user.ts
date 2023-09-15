@@ -4,11 +4,21 @@ import { getUserInfo, login } from '@/api/auth';
 import { storage } from '@/utils/storage';
 import { useNavTabStore } from './navTab';
 
+interface IUserState {
+  token: string | null;
+  userInfo: {
+    username: string;
+    role: string;
+  };
+  permissions: string[];
+}
+
 export const useUserStore = defineStore({
   id: 'user',
-  state: () => ({
+  state: (): IUserState => ({
     token: storage.get('token'),
-    userInfo: storage.get('userInfo') || { username: '', role: '' }
+    userInfo: storage.get('userInfo') || { username: '', role: '' },
+    permissions: []
   }),
   getters: {
     isLogin(state) {
@@ -29,8 +39,12 @@ export const useUserStore = defineStore({
     },
     async setUserInfo() {
       const { data } = await getUserInfo();
+      if (data?.permissions?.length) this.setPermissions(data.permissions);
       this.userInfo = data;
       storage.set('userInfo', data);
+    },
+    setPermissions(permissions: string[]) {
+      this.permissions = permissions;
     },
     async login(params: any) {
       const { data } = await login(params);
