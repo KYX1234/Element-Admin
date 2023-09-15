@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/KYX1234/Element-Admin/compare/v1.23.1...v1.24.0) (2023-09-15)
+
+
+### Features
+
+* 指令 ([22f0292](https://github.com/KYX1234/Element-Admin/commit/22f0292bcf38c2f99d15008d1d3bc16b68d37904))
+
 ## [1.23.1](https://github.com/KYX1234/Element-Admin/compare/v1.23.0...v1.23.1) (2023-09-14)
 
 
