@@ -1,1 +1,0 @@
-import{e as o,w as t,o as r,t as a}from"./index-f4c496f9.js";import{E as c}from"./el-card-52f86267.js";import{_ as n}from"./_plugin-vue_export-helper-c27b6911.js";const s={};function _(d,f){const e=c;return r(),o(e,{shadow:"never"},{default:t(()=>[a("二级菜单")]),_:1})}const l=n(s,[["render",_]]);export{l as default};
