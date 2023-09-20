@@ -11,6 +11,6 @@ export const getUserInfo = () => {
 };
 
 /** 获取tree菜单列表 */
-export const getMenuList = () => {
+export const getMenuList = (): Promise<App.RequestResult> => {
   return request.get('/mock/api/menuList');
 };
