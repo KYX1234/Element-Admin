@@ -3,9 +3,8 @@
     <el-form :model="form" label-width="100" ref="formRef" :rules="formRules">
       <el-form-item label="菜单类型" prop="type">
         <el-radio-group v-model="form.type">
-          <el-radio :label="0">目录</el-radio>
-          <el-radio :label="1">菜单</el-radio>
-          <el-radio :label="2">内链</el-radio>
+          <el-radio-button :label="0">目录</el-radio-button>
+          <el-radio-button :label="1">菜单</el-radio-button>
         </el-radio-group>
       </el-form-item>
       <el-form-item label="父级菜单" prop="pid">
@@ -31,15 +30,15 @@
         <el-input v-model="form.path" placeholder="请输入路由路径" clearable />
         <div class="text-neutral text-xs">如为外链访问则以`http(s)://`开头</div>
       </el-form-item>
-      <el-form-item label="组件路径" prop="component" v-if="form.type === 1">
+      <el-form-item label="组件路径" prop="component" v-if="form.type">
         <el-input v-model="form.component" placeholder="请输入组件路径" clearable />
         <div class="text-neutral text-xs">如：`system/menu/index`，默认在`views`目录下</div>
       </el-form-item>
-      <el-form-item label="按钮权限" prop="permission" v-if="form.type === 1">
+      <el-form-item label="按钮权限" prop="permission" v-if="form.type">
         <el-input v-model="form.permission" placeholder="请输入组件路径" clearable />
         <div class="text-neutral text-xs">如有多个权限，请以`,`分割</div>
       </el-form-item>
-      <el-form-item label="内链地址" prop="iframeLink" v-if="form.type === 2">
+      <el-form-item label="内链地址" prop="iframeLink" v-if="form.type">
         <el-input v-model="form.iframeLink" placeholder="请输入内链地址" clearable />
       </el-form-item>
       <el-form-item label="是否显示">

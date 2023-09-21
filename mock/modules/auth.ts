@@ -50,6 +50,7 @@ export default [
             icon: 'el-icon-odometer',
             hidden: 0,
             sort: 1,
+            type: 0,
             children: [
               {
                 id: 11,
@@ -59,7 +60,8 @@ export default [
                 icon: 'el-icon-dataLine',
                 component: '/dashboard/analysis/index',
                 hidden: 0,
-                sort: 0
+                sort: 0,
+                type: 1
               },
               {
                 id: 12,
@@ -69,7 +71,8 @@ export default [
                 component: '/dashboard/workbench/index',
                 icon: 'el-icon-monitor',
                 hidden: 0,
-                sort: 0
+                sort: 0,
+                type: 1
               }
             ]
           },
@@ -82,6 +85,7 @@ export default [
             icon: 'el-icon-setting',
             hidden: 0,
             sort: 2,
+            type: 0,
             children: [
               {
                 id: 21,
@@ -91,7 +95,8 @@ export default [
                 component: '/system/menu/index',
                 icon: 'el-icon-more',
                 hidden: 0,
-                sort: 0
+                sort: 0,
+                type: 1
               },
               {
                 id: 22,
@@ -101,7 +106,8 @@ export default [
                 component: '/system/role/index',
                 icon: 'el-icon-more',
                 hidden: 0,
-                sort: 0
+                sort: 0,
+                type: 1
               },
               {
                 id: 23,
@@ -111,7 +117,8 @@ export default [
                 component: '/system/user/index',
                 icon: 'el-icon-more',
                 hidden: 0,
-                sort: 0
+                sort: 0,
+                type: 1
               }
             ]
           }
