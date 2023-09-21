@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.1](https://github.com/KYX1234/Element-Admin/compare/v1.25.0...v1.25.1) (2023-09-21)
+
+
+### Bug Fixes
+
+* 优化菜单管理 ([d72bac5](https://github.com/KYX1234/Element-Admin/commit/d72bac5f7ff66121a702655b6ae213ac4f1493ed))
+
 ## [1.25.0](https://github.com/KYX1234/Element-Admin/compare/v1.24.0...v1.25.0) (2023-09-20)
 
 
