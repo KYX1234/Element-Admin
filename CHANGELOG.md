@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.0](https://github.com/KYX1234/Element-Admin/compare/v1.25.1...v1.26.0) (2023-09-22)
+
+
+### Features
+
+* 水印hooks ([2f54bae](https://github.com/KYX1234/Element-Admin/commit/2f54baef927dd49f20718b4ae430e6005bdd8927))
+
 ## [1.25.1](https://github.com/KYX1234/Element-Admin/compare/v1.25.0...v1.25.1) (2023-09-21)
 
 
