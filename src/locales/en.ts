@@ -39,7 +39,9 @@ export default {
     500: '500',
     about: 'About Project',
     feature: 'Feature',
-    directives: 'Directives'
+    directives: 'Directives',
+    watermark: 'Watermark',
+    selectIcon: 'SelectIcon'
   },
   login: {
     login: 'Sign in',

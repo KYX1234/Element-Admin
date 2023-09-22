@@ -2,11 +2,13 @@
   <el-popover
     placement="bottom-start"
     v-model:visible="visible"
-    :width="widthProps"
+    :disabled="disabled"
+    :width="widthPopover"
     trigger="click"
   >
     <template #reference>
       <el-input
+        :style="{ width: width ? width + 'px' : '100%' }"
         v-model="inputValue"
         placeholder="请选择图标"
         :disabled="disabled"
@@ -42,11 +44,12 @@ import { ref, computed } from 'vue';
 import { getElIconNames, getLocalIconNames } from '@/components/Icon/src/util';
 interface Props {
   modelValue: string;
-  widthProps?: string;
+  width?: string;
+  widthPopover?: string;
   disabled?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
-  widthProps: '380',
+  widthPopover: '380',
   modelValue: '',
   disabled: false
 });

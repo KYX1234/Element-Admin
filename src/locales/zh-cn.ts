@@ -39,7 +39,9 @@ export default {
     500: '500',
     about: '关于项目',
     feature: '功能示例',
-    directives: '指令'
+    directives: '指令',
+    watermark: '水印',
+    selectIcon: '图标选择器'
   },
   login: {
     login: '登录',

@@ -19,6 +19,24 @@ export default {
         title: 'menus.directives',
         icon: 'el-icon-more'
       }
+    },
+    {
+      path: '/feature/watermark',
+      name: 'feature_watermark',
+      component: () => import('@/views/feature/watermark/index.vue'),
+      meta: {
+        title: 'menus.watermark',
+        icon: 'el-icon-more'
+      }
+    },
+    {
+      path: '/feature/selectIcon',
+      name: 'feature_selectIcon',
+      component: () => import('@/views/feature/selectIcon/index.vue'),
+      meta: {
+        title: 'menus.selectIcon',
+        icon: 'el-icon-more'
+      }
     }
   ]
 } as RouteRecordRaw;
