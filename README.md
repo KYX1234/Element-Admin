@@ -22,6 +22,9 @@ ElementAdmin 是一个基于 Vue3、Vite、TypeScript、Unocss、Element plus、
 - [gitee](https://gitee.com/A1059784729/Element-Admin)
 - [github](https://github.com/KYX1234/Element-Admin)
 
+## 项目解析
+- [掘金](https://juejin.cn/user/444659755917560/posts)
+
 ## 项目示例图
 
 - 登录：
