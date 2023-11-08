@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.1](https://github.com/KYX1234/Element-Admin/compare/v1.26.0...v1.26.1) (2023-11-08)
+
+
+### Miscellaneous Chores
+
+* readme ([ae30e0a](https://github.com/KYX1234/Element-Admin/commit/ae30e0a2848688c667f6ce41de5a82c1fab4cd2b))
+
 ## [1.26.0](https://github.com/KYX1234/Element-Admin/compare/v1.25.1...v1.26.0) (2023-09-22)
 
 
